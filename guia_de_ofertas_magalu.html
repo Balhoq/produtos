@@ -9,13 +9,27 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-/* NOVO ESTILO PARA A SUGESTÃO DE PREÇO/AÇÃO */
 .preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
-/* ESTILO ANTIGO FOI REMOVIDO/SUBSTITUÍDO */
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+/* .meta FOI REMOVIDO DO CSS */
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
@@ -30,7 +44,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/cO=4j0cl" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -41,7 +54,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/HLfyT9P-" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -52,7 +64,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/-4jeJM9f" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -63,7 +74,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/P0pYsLOL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -74,7 +84,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/pq3aW0_x" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -85,7 +94,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/yYJX993A" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -96,7 +104,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/TMeWV_dr" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -107,7 +114,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/R3lrgHcC" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -118,7 +124,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/rFYbIVHb" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -129,7 +134,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/DwzjMpZe" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -140,7 +144,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/iw_5CxYt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -151,7 +154,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/rFkgVS8d" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -162,7 +164,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/PSJuvktA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -173,7 +174,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/V9dyMV3V" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -184,7 +184,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/Gzf6Cbxz" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -195,7 +194,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/Ir4JoWEO" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -206,7 +204,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/X1dmcjsJ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -217,7 +214,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/6dgp-0UR" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -228,7 +224,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/65hb25Ue" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -239,7 +234,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/l2QdfxZL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -250,7 +244,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/YHAON7Yx" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -261,7 +254,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/2hmpod1H" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -272,7 +264,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/OI0spr0P" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -283,7 +274,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · eletroportateis</p>
       <a class="botao" href="https://divulgador.magalu.com/T9IS6HOt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -294,7 +284,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · tv audio</p>
       <a class="botao" href="https://divulgador.magalu.com/P0t-PtJ2" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
@@ -305,7 +294,6 @@ header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
       <p class="preco-sugestao">
         💰 Ver Ofertas e Preço Atualizado
       </p>
-      <p class="meta">magalu · casa construcao</p>
       <a class="botao" href="https://divulgador.magalu.com/2E8ATT09" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
