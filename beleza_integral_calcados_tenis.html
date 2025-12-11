@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+.produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
+.produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
+.produto-card h3{font-size:15px;margin:6px 0;color:#111}
+.descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
+.botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
+</style>
+</head>
+<body>
+<main><div class="produtos">
+    <div class="produto-card">
+      <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/tenis-feminino-olympikus-treinos-amortecedor-corrida-apolis-206/kaiuscalcados/0000001030136/6282d3597dfb47bf6e07ad4704a21ed0.jpeg" alt="Tenis Feminino Olympikus treinos Amortecedor Corrida Apolis 206"></div>
+      <h3>Tenis Feminino Olympikus treinos Amortecedor Corrida Apolis 206</h3>
+      <p class="descricao">Tênis Olympikus Apolis 206 com tecnologia Evasense, cabedal em jacquard resistente e design moderno. Leve, confortável e ideal para treinos e uso diário. Produto original com nota fiscal.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/obLcdoWd" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_869227-MLB86137499213_062025-F-sandalia-chinelo-havaianas-brasil-bandeira-original.webp" alt="Sandália Chinelo Havaianas Brasil Bandeira Original"></div>
+      <h3>Sandália Chinelo Havaianas Brasil Bandeira Original</h3>
+      <p class="descricao">Havaianas Brasil Original com bandeira icônica, sola macia e tiras confortáveis. Clássica, resistente e perfeita para qualquer momento com leveza e estilo. Unissex e 100% original</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/1frknND" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    </div></main>
+<footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
+</body></html>
