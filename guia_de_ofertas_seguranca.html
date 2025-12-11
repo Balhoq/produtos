@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+.produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
+.produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
+.produto-card h3{font-size:15px;margin:6px 0;color:#111}
+.descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
+.botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
+</style>
+</head>
+<body>
+<main><div class="produtos">
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/41my1ycj8gL._AC_SX522_.jpg" alt="CAMERA IP IM1 FULL HD WIFI 3.6MM IR 10M 2MP INTELBRAS"></div>
+      <h3>CAMERA IP IM1 FULL HD WIFI 3.6MM IR 10M 2MP INTELBRAS</h3>
+      <p class="descricao">Câmera Intelbras iM1 Full HD com visão noturna, sensor de movimento, Wi-Fi, acesso pelo app Mibo e instalação fácil. Ideal para segurança residencial com imagens nítidas e controle totalmente remoto.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4pCDrBg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/sensor-infravermelho-passivo-sem-fio-intelbras-ivp-2000-sf-intelbras/dgssegurancaeletronica/f023af0a866f11eabace4201ac18501e/f8f94d160b8cc28e688197a0d6965e6f.jpeg" alt="Sensor Infravermelho Passivo Sem Fio Intelbras Ivp 2000 Sf - Intelbrás"></div>
+      <h3>Sensor Infravermelho Passivo Sem Fio Intelbras Ivp 2000 Sf - Intelbrás</h3>
+      <p class="descricao">Sensor IVP 2000 SF Intelbras, sem fio, com alcance de 100m, ângulo de 115°, tecnologia digital, alta precisão e instalação fácil. Ideal para segurança residencial ou comercial com ótimo custo-benefício.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/j=oiutQz" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    </div></main>
+<footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
+</body></html>
