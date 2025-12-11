@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+.produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
+.produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
+.produto-card h3{font-size:15px;margin:6px 0;color:#111}
+.descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
+.botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
+</style>
+</head>
+<body>
+<main><div class="produtos">
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/71YSI1xysDL._AC_SX522_.jpg" alt="kit 4 Tampinha Tampas Da Válvula Do Pneu Universal Capa Automotiva Bico De Carro De Metal Alumínio Caminhão Carro Biquinho Moto Bicicleta Bike Premium DAFALUI (Preta)"></div>
+      <h3>kit 4 Tampinha Tampas Da Válvula Do Pneu Universal Capa Automotiva Bico De Carro De Metal Alumínio Caminhão Carro Biquinho Moto Bicicleta Bike Premium DAFALUI (Preta)</h3>
+      <p class="descricao">Kit com 4 tampas de válvula DAFALUI em alumínio preto, compatíveis com carro, moto, bike e caminhão. Protegem contra sujeira e danos, têm visual premium, encaixe universal e são duráveis e fáceis de instalar.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/48ungjg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/pneu-milever-mp270-185-60r15-aro-15-88v/clubedaborracha/126420/48a4d9c3f034898a755ed02da39b5910.jpeg" alt="Pneu Milever MP270 185/60R15 Aro 15 88V"></div>
+      <h3>Pneu Milever MP270 185/60R15 Aro 15 88V</h3>
+      <p class="descricao">Pneu Milever MP270 185/60R15 com excelente estabilidade, tração confiável e índice de velocidade V para até 240 km/h. Ideal para carros e caminhonetes, garantindo segurança e ótimo custo-benefício.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/20146uTR" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    </div></main>
+<footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
+</body></html>
