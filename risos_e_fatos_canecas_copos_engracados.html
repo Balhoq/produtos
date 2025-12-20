@@ -5,118 +5,83 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:12px;
-    text-align:center;
-    transition:transform .16s;
-    /* NOVO CSS PARA ALINHAMENTO */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
-    min-height: 350px;
-}
+.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-
-
-/* CSS CORRIGIDO PARA AS IMAGENS */
-.produto-card .thumb{
-    height:160px; /* Altura fixa para todos os cards */
-    display:flex; /* Usado para centralizar a imagem */
-    align-items:center;
-    justify-content:center;
-    margin-bottom:8px;
-}
-.produto-card .thumb img{
-    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
-    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
-    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
-    border-radius:8px;
-}
-/* FIM DO CSS CORRIGIDO */
-
+.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
+.meta{font-size:12px;color:#888;margin-bottom:8px}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
+<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/3c624557922ef5a0a08143781aab3b7a.webp" alt="CANECA PERSONALIZADA FLORK BENTO FRASES DIVERTIDAS, ENGRAÇADA, MEME, HUMOR, DEBOCHE XICARA CERAMICA"></div>
       <h3>CANECA PERSONALIZADA FLORK BENTO FRASES DIVERTIDAS, ENGRAÇADA, MEME, HUMOR, DEBOCHE XICARA CERAMICA</h3>
       <p class="descricao">Caneca Flork personalizada de 325ml em cerâmica, com impressão por sublimação de alta qualidade, cores vivas, ideal para presentear e compatível com micro-ondas e lava-louças.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/1qSz53TGjj" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">35,99</p>
+      <p class="meta">shopee · canecas copos engracados</p>
+      <a class="botao" href="https://s.shopee.com.br/1qSz53TGjj" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/49844f66808be5084ebe6edd457da1de.webp" alt="Caneca Jack O Estranho Mundo de Jack Adesivo Dedo do Meio Personalizada de Cerâmica Porcelana - Presente Criativo"></div>
       <h3>Caneca Jack O Estranho Mundo de Jack Adesivo Dedo do Meio Personalizada de Cerâmica Porcelana - Presente Criativo</h3>
       <p class="descricao">Caneca personalizada O Estranho Mundo de Jack, em cerâmica 325 ml, com adesivo divertido do Jack e opção de personalização. Ideal para presente criativo, micro-ondas e lava-louças.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/AA870Xt24A" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">39,99</p>
+      <p class="meta">shopee · canecas copos engracados</p>
+      <a class="botao" href="https://s.shopee.com.br/AA870Xt24A" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mdep4ntcepbt40.webp" alt="Caneca Personalizada Gato Preto Meme Sabe Onde Eu Tô Tô Nem Aí"></div>
       <h3>Caneca Personalizada Gato Preto Meme Sabe Onde Eu Tô Tô Nem Aí</h3>
       <p class="descricao">Caneca de porcelana 325ml com o meme do gato preto e a frase “Sabe onde eu tô? Tô nem aí”. Divertida, estilosa e perfeita para fãs de humor e presentes criativos.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/9pVGcGPosw" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">28,90</p>
+      <p class="meta">shopee · canecas copos engracados</p>
+      <a class="botao" href="https://s.shopee.com.br/9pVGcGPosw" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-metamb772q6bec.webp" alt="Canecas xicara personalizadas frases divertidas, engraçadas, meme, humor, amizade, flork bento- porcelana 325ml"></div>
       <h3>Canecas xicara personalizadas frases divertidas, engraçadas, meme, humor, amizade, flork bento- porcelana 325ml</h3>
       <p class="descricao">Caneca personalizada de porcelana 325ml com frases, memes e artes divertidas. Impressão duradoura, cores vivas e ideal para uso diário ou presentear.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/2g265Hv7ik" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">21,21</p>
+      <p class="meta">shopee · canecas copos engracados</p>
+      <a class="botao" href="https://s.shopee.com.br/2g265Hv7ik" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-metamb7kqcxsce.webp" alt="Caneca xicara Personalizada- flork bento, humor, amizade, porcelana 325 ml."></div>
       <h3>Caneca xicara Personalizada- flork bento, humor, amizade, porcelana 325 ml.</h3>
       <p class="descricao">Caneca personalizada de porcelana 325ml, com impressão duradoura, cores vivas e perfeita para uso diário ou para presentear.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/70B5FO1nGa" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">24,50</p>
+      <p class="meta">shopee · canecas copos engracados</p>
+      <a class="botao" href="https://s.shopee.com.br/70B5FO1nGa" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/caneca-snoopy-talvez-seja-so-falta-de-cafe-mega-oferta-ng-decor-canecas/ngdecorcanecas/4ea6592ebc1511ec86394201ac18506b/0352ca46ead3fb31110a69ec3d155feb.jpeg" alt="Caneca Snoopy Talvez Seja Só Falta De Café - Mega Oferta!!! - NG Decor Canecas"></div>
       <h3>Caneca Snoopy Talvez Seja Só Falta De Café - Mega Oferta!!! - NG Decor Canecas</h3>
       <p class="descricao">Caneca Snoopy “Talvez Seja Só Falta de Café” da NG Decor, 325ml, resistente a micro-ondas e lava-louças, perfeita para presentear ou curtir seu café diário.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/GKRh9n5Y" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">23,90</p>
+      <p class="meta">magalu · canecas copos engracados</p>
+      <a class="botao" href="https://divulgador.magalu.com/GKRh9n5Y" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-mgjfabbgm2v8a6.webp" alt="Caneca Unicórnio Frases Indelicadas - Teu Cu"></div>
       <h3>Caneca Unicórnio Frases Indelicadas - Teu Cu</h3>
       <p class="descricao">Caneca Unicórnio Frases Indelicadas “Teu Cu”, feita em cerâmica de alta qualidade e com impressão durável. Perfeita para dar risada, presentear amigos e transformar qualquer café em pura sinceridade bem-humorada.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/6fYErBjlCr" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">21,90</p>
+      <p class="meta">shopee · canecas copos engracados</p>
+      <a class="botao" href="https://s.shopee.com.br/6fYErBjlCr" target="_blank" rel="noopener">Ver produto</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
