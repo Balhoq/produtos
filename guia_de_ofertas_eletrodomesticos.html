@@ -5,65 +5,98 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/ventilador-de-teto-ventisol-fenix-branco-3-velocidades-premium/techshop/venven00010/0943f334d50a5eeb94c0858e997db5d4.jpeg" alt="Ventilador de Teto Ventisol Fenix Branco 3 Velocidades Premium"></div>
       <h3>Ventilador de Teto Ventisol Fenix Branco 3 Velocidades Premium</h3>
       <p class="descricao">Ventilador de Teto Ventisol Fênix 110V com 3 velocidades, 3 pás, luminária para duas lâmpadas, função exaustor e modo reverso. Potente, silencioso e ideal para refrescar ambientes com economia e conforto.</p>
-      <p class="preco">199,00</p>
-      <p class="meta">magalu · eletrodomesticos</p>
-      <a class="botao" href="https://divulgador.magalu.com/NBVvgqoQ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/NBVvgqoQ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-8225c-mhjam72ohtl0d5.webp" alt="Ventilador 2 em 1 Britânia Tecnologia Maxx Force 60W BVT301"></div>
       <h3>Ventilador 2 em 1 Britânia Tecnologia Maxx Force 60W BVT301</h3>
       <p class="descricao">Ventilador 2 em 1 Britânia Maxx Force 60W com hélice de 6 pás, 3 velocidades, oscilação automática, baixo consumo de energia e opção de uso na mesa ou parede. Potência, economia e praticidade para refrescar seu ambiente.</p>
-      <p class="preco">99,90</p>
-      <p class="meta">shopee · eletrodomesticos</p>
-      <a class="botao" href="https://s.shopee.com.br/VzRgnhGjY" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/VzRgnhGjY" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_829171-MLA95636422238_102025-F.webp" alt="Cooktop Indução ACKLl01l-02 Preto 1 Boca 2000W Agratto"></div>
       <h3>Cooktop Indução ACKLl01l-02 Preto 1 Boca 2000W Agratto</h3>
       <p class="descricao">Cooktop de indução Agratto 1 boca com controle touch, até 2000W de potência, superfície vitrocerâmica fria e timer, ideal para cozinhas compactas e uso portátil.</p>
-      <p class="preco">195,90</p>
-      <p class="meta">mercadolivre · eletrodomesticos</p>
-      <a class="botao" href="https://mercadolivre.com/sec/24XVNDZ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/24XVNDZ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m5vs9bqk5etse9.webp" alt="DPS Clamper Protetor Eletrodoméstico Pocket 3 Pinos 20A LCF - Proteção Contra Surtos e Raios Bivolt"></div>
       <h3>DPS Clamper Protetor Eletrodoméstico Pocket 3 Pinos 20A LCF - Proteção Contra Surtos e Raios Bivolt</h3>
       <p class="descricao">O DPS iClamper Pocket Fit 3P 20A é um protetor contra surtos elétricos de classe III desenvolvido para proteger eletroeletrônicos próximos à tomada, oferecendo proteção eficiente contra raios e picos de energia em redes 110V e 220V, com design compacto, portátil e discreto, LED indicativo de funcionamento, tecnologia de varistor de óxido de zinco, proteção entre linha, neutro e terra, funcionamento mesmo em ambientes sem aterramento, corrente máxima de 20A, potência máxima de até 4400W, tempo de resposta rápido, plugue no padrão brasileiro de três pinos, estrutura em material não propagante a chamas, peso aproximado de 40g, fácil instalação plug and use e garantia de fábrica de até 6 anos, sendo ideal para proteger notebooks, celulares, TVs, computadores, videogames, impressoras, geladeiras e diversos outros equipamentos essenciais do dia a dia.</p>
-      <p class="preco">79,90</p>
-      <p class="meta">shopee · eletrodomesticos</p>
-      <a class="botao" href="https://s.shopee.com.br/LgFz7tnIS" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/LgFz7tnIS" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_622706-MLA99827273474_122025-F.webp" alt="Ferro de Passar Roupa Black Decker VFA1110TM2 Com Base de Alumínio 127V"></div>
       <h3>Ferro de Passar Roupa Black Decker VFA1110TM2 Com Base de Alumínio 127V</h3>
       <p class="descricao">O Ferro de Passar Black+Decker VFA1110TM2 127V oferece 1100W de potência, base de alumínio, controle de temperatura e sistema antigotejamento, ideal para uso doméstico com eficiência e praticidade.</p>
-      <p class="preco">120,00</p>
-      <p class="meta">mercadolivre · eletrodomesticos</p>
-      <a class="botao" href="https://mercadolivre.com/sec/2GYJwJa" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/2GYJwJa" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
