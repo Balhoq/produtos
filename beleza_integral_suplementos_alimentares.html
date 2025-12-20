@@ -5,56 +5,88 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_762196-MLA99425566736_112025-F.webp" alt="Whey Protein 100% Concentrado Refil 900g Sabor Morango - FTW"></div>
       <h3>Whey Protein 100% Concentrado Refil 900g Sabor Morango - FTW</h3>
       <p class="descricao">Whey Protein 100% Concentrado FTW sabor morango, com alto valor biológico e excelente perfil de aminoácidos, ideal para recuperação muscular, ganho de massa magra e complemento proteico diário.</p>
-      <p class="preco">97,86</p>
-      <p class="meta">mercadolivre · suplementos alimentares</p>
-      <a class="botao" href="https://mercadolivre.com/sec/2oQa9st" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/2oQa9st" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134211-7r98o-m9z216s54niad5.webp" alt="Hibisco com Cavalinha 500 mg 60 / 90 / 120 Cápsulas - Suplemento Alimentar Natural - Original Arkad Suplementos"></div>
       <h3>Hibisco com Cavalinha 500 mg 60 / 90 / 120 Cápsulas - Suplemento Alimentar Natural - Original Arkad Suplementos</h3>
       <p class="descricao">Hibisco com Cavalinha Arkad 500mg em cápsulas auxilia no metabolismo, na retenção líquida e no bem-estar geral. Suplemento natural, sem glúten, ideal para a rotina de autocuidado.</p>
-      <p class="preco">20,70</p>
-      <p class="meta">shopee · suplementos alimentares</p>
-      <a class="botao" href="https://s.shopee.com.br/9zqkAlGpJa" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/9zqkAlGpJa" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/718xWbpxwaL._AC_SX679_.jpg" alt="Nutren Suplemento Alimentar Senior 370G"></div>
       <h3>Nutren Suplemento Alimentar Senior 370G</h3>
       <p class="descricao">Nutren Senior é um suplemento alimentar em pó, sem sabor, que complementa a nutrição diária com proteínas, vitaminas e minerais, ideal para apoiar saúde, disposição e bem-estar.</p>
-      <p class="preco">72,98</p>
-      <p class="meta">amazon · suplementos alimentares</p>
-      <a class="botao" href="https://amzn.to/49f54dF" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/49f54dF" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/kit-2-frasco-levedura-de-cerveja-suplemento-alimentar-natural-100-puro-po-original-premium-green-120-capsulas-natunectar/natu7suplementos/2xnt0015/2fce310f0c8dd2bf249cf1af2f475df1.jpeg" alt="Kit 2 Frasco Levedura de Cerveja Suplemento Alimentar Natural 100% Puro Pó Original Premium Green 120 Cápsulas Natunéctar"></div>
       <h3>Kit 2 Frasco Levedura de Cerveja Suplemento Alimentar Natural 100% Puro Pó Original Premium Green 120 Cápsulas Natunéctar</h3>
       <p class="descricao">Suplemento alimentar natural à base de levedura de cerveja, em cápsulas, ideal para complementar a alimentação e apoiar saúde, beleza e bem-estar no dia a dia.</p>
-      <p class="preco">44,90</p>
-      <p class="meta">magalu · suplementos alimentares</p>
-      <a class="botao" href="https://divulgador.magalu.com/9rxiYihg" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/9rxiYihg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
