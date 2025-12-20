@@ -5,65 +5,98 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81fKcstBvkL._AC_SX679_.jpg" alt="Hogwarts Legacy - PlayStation 5"></div>
       <h3>Hogwarts Legacy - PlayStation 5</h3>
       <p class="descricao">Hogwarts Legacy para PS5 é um RPG de ação em mundo aberto ambientado no universo de Harry Potter, com exploração, magia, criaturas fantásticas e uma história inédita nos anos 1800. Ideal para fãs do mundo bruxo.</p>
-      <p class="preco">149,90</p>
-      <p class="meta">amazon · games consoles</p>
-      <a class="botao" href="https://amzn.to/4rJBX9P" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4rJBX9P" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/controle-sony-dualsense-ps5-sem-fio-branco-3005767/kabum/115801/3a3dea44dad1f4a6a1ceb60279113575.jpeg" alt="Controle Sony DualSense PS5, Sem Fio, Branco - 3005767"></div>
       <h3>Controle Sony DualSense PS5, Sem Fio, Branco - 3005767</h3>
       <p class="descricao">O Controle Sony DualSense PS5 oferece resposta tátil, gatilhos adaptáveis, microfone embutido, Bluetooth e design icônico para uma jogabilidade ultrarrealista no PS5 e PC, elevando a imersão a outro nível.</p>
-      <p class="preco">389,67</p>
-      <p class="meta">magalu · games consoles</p>
-      <a class="botao" href="https://divulgador.magalu.com/PSmP5eLu" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/PSmP5eLu" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51W1GgQs40L._AC_SX679_.jpg" alt="Game Retro Mini Super Nintendo + 150 mil Jogos + 2 Controles + Pack com todos os Jogos de Snes (Controles SNES)"></div>
       <h3>Game Retro Mini Super Nintendo + 150 mil Jogos + 2 Controles + Pack com todos os Jogos de Snes (Controles SNES)</h3>
       <p class="descricao">Game Retro Mini Super Nintendo com mais de 150 mil jogos, dois controles USB estilo SNES, menu em português, emulação fluida e compatibilidade do Atari ao PS1. É só conectar na TV e jogar.</p>
-      <p class="preco">327,75</p>
-      <p class="meta">amazon · games consoles</p>
-      <a class="botao" href="https://amzn.to/3MFc5f5" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/3MFc5f5" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/unico-duplo-800-da-arcada-nostalgica-retro-handheld-da-tela-horizontal-do-console-de-jogos-em-um-console-de-jogos-huoguo/nocnocasiacbt/bhlh02022070195457f01/f6cd27bdaba68c2615caa6db815bd6af.jpeg" alt="Único duplo 800 da arcada nostálgica retro Handheld da tela horizontal do console de jogos em um console de jogos - HUOGUO"></div>
       <h3>Único duplo 800 da arcada nostálgica retro Handheld da tela horizontal do console de jogos em um console de jogos - HUOGUO</h3>
       <p class="descricao">Console portátil retrô com tela de 3,5”, 800 jogos clássicos, bateria recarregável e suporte para jogar na TV, ideal para diversão em qualquer lugar.</p>
-      <p class="preco">215,28</p>
-      <p class="meta">magalu · games consoles</p>
-      <a class="botao" href="https://divulgador.magalu.com/XTd8PJs4" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/XTd8PJs4" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/ghost-of-tsushima-para-ps4-sucker-punch-productions/magazineluiza/225535700/8cb6373861f63b49fec12501b37c83b9.jpg" alt="Ghost of Tsushima para PS4 - Sucker Punch Productions"></div>
       <h3>Ghost of Tsushima para PS4 - Sucker Punch Productions</h3>
       <p class="descricao">Ghost of Tsushima para PS4 é um jogo de ação e aventura em mundo aberto que combina história épica, gráficos incríveis e combates intensos no Japão feudal, ideal para fãs de games imersivos.</p>
-      <p class="preco">180,09</p>
-      <p class="meta">magalu · games consoles</p>
-      <a class="botao" href="https://divulgador.magalu.com/jal-mbTL" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/jal-mbTL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
