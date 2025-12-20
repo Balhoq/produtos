@@ -5,344 +5,408 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71jYmmRJPmL._AC_SL1500_.jpg" alt="KIKO MILANO, 3D Hydra Lipgloss, Gloss Hidratante Para Os Lábios, Com Efeito 3D, Fórmula Com Extrato de Bidens"></div>
       <h3>KIKO MILANO, 3D Hydra Lipgloss, Gloss Hidratante Para Os Lábios, Com Efeito 3D, Fórmula Com Extrato de Bidens</h3>
       <p class="descricao">Gloss hidratante KIKO Milano 3D Hydra com efeito volumizador 3D, brilho intenso, cor radiante e fórmula com extrato de Bidens que deixa os lábios visivelmente mais cheios e macios.</p>
-      <p class="preco">99,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4h3k2G0" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4h3k2G0" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51rTd-hhlGL._AC_SL1500_.jpg" alt="Maybelline NY The Colossal Volum' Express, Máscara de Cílios Lavável, 9x mais Volume por até 24h, Fórmula com Colágeno para Definição Intensa, Não Empelota, Cor Preto, 8ml"></div>
       <h3>Maybelline NY The Colossal Volum' Express, Máscara de Cílios Lavável, 9x mais Volume por até 24h, Fórmula com Colágeno para Definição Intensa, Não Empelota, Cor Preto, 8ml</h3>
       <p class="descricao">Máscara Maybelline The Colossal Volum' Express proporciona até 9x mais volume, cílios definidos, curvados e macios por 24h, com fórmula com colágeno, sem empelotar e fácil de remover.</p>
-      <p class="preco">32,00</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/3ICb9GN" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/3ICb9GN" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41NAEGv0lWL._AC_SL1000_.jpg" alt="NIINA SECRETS BASE HIDRA GLOW COR 05 30ml"></div>
       <h3>NIINA SECRETS BASE HIDRA GLOW COR 05 30ml</h3>
       <p class="descricao">Base Niina Secrets Hidra Glow Cor 05 oferece cobertura natural, hidratação intensa com ácido hialurônico, ação antioxidante, construção de camadas sem craquelar e pele radiante e confortável.</p>
-      <p class="preco">58,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/3WqaxXN" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/3WqaxXN" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51oObJNh8IL._AC_SL1000_.jpg" alt="Océane Esponja De Maquiagem Verde Flat Blend Verde"></div>
       <h3>Océane Esponja De Maquiagem Verde Flat Blend Verde</h3>
       <p class="descricao">Esponja Flat Blend Verde Océane aplica base, corretivo e pó com acabamento natural. Versátil, pode ser usada seca ou molhada e alcança todas as áreas do rosto com precisão e uniformidade.</p>
-      <p class="preco">17,06</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/3WoDGmi" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/3WoDGmi" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51JeJAv9vBL._AC_SL1500_.jpg" alt="Corretivo Líquido Matte PAYOT Alta Cobertura - 2-4g"></div>
       <h3>Corretivo Líquido Matte PAYOT Alta Cobertura - 2-4g</h3>
       <p class="descricao">Corretivo líquido matte Payot de alta cobertura com niacinamida, disfarça olheiras e imperfeições, uniformiza a pele e deixa acabamento natural e aveludado. Hipoalergênico e sem parabenos.</p>
-      <p class="preco">20,52</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/42XRo3e" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/42XRo3e" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51bOtdsXsOL._AC_SL1500_.jpg" alt="Base Matte PAYOT Alta Cobertura 2-30 ml"></div>
       <h3>Base Matte PAYOT Alta Cobertura 2-30 ml</h3>
       <p class="descricao">Base Matte Payot de alta cobertura com niacinamida, acabamento uniforme e resistente à água, disfarça imperfeições e mantém a pele natural, hipoalergênica e sem parabenos.</p>
-      <p class="preco">26,50</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4o9828j" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4o9828j" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51P07YaJ5wL._AC_SL1000_.jpg" alt="Océane Esponja De Maquiagem Azul Flat Blend Azul"></div>
       <h3>Océane Esponja De Maquiagem Azul Flat Blend Azul</h3>
       <p class="descricao">Esponja de Maquiagem Flat Blend Océane Azul, ideal para base, corretivo e pó, acabamento uniforme e natural. Versátil, expande ao molhar, permite alta cobertura ou look natural.</p>
-      <p class="preco">18,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/48Quz5c" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/48Quz5c" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61YUBhHDyHL._AC_SL1500_.jpg" alt="Máscara de cílios I Love Extreme Crazy Volume essence"></div>
       <h3>Máscara de cílios I Love Extreme Crazy Volume essence</h3>
       <p class="descricao">Máscara de cílios Essence I Love Extreme Crazy Volume, preta, oferece mega volume com apenas uma aplicação. Pincel grande e textura cremosa para cílios definidos, pretos e intensos.</p>
-      <p class="preco">22,80</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/46YmfOv" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/46YmfOv" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61IBSaOuBiL._AC_SL1500_.jpg" alt="KIKO MILANO, Creamy Colour Comfort Lip Liner, Lápis de Boca, Cor"></div>
       <h3>KIKO MILANO, Creamy Colour Comfort Lip Liner, Lápis de Boca, Cor</h3>
       <p class="descricao">Lápis labial Kiko Milano 05 Pinkish Brown, textura cremosa e alta pigmentação. Define o contorno dos lábios com precisão e conforto extremo, garantindo traço duradouro.</p>
-      <p class="preco">59,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4nCaap5" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4nCaap5" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71bCyrY3jCL._AC_SL1500_.jpg" alt="Conjunto de pincéis de maquiagem Real Techniques"></div>
       <h3>Conjunto de pincéis de maquiagem Real Techniques</h3>
       <p class="descricao">Kit Real Techniques Everyday Essentials com pincéis RT 200, 300, 400, 402 e Esponja Miracle. Alta qualidade, aplicação precisa, acabamento profissional e 100% cruelty-free.</p>
-      <p class="preco">74,33</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/46XTiSC" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/46XTiSC" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61x4kz8-FZL._AC_SL1500_.jpg" alt="Maybelline NY SuperStay Vinyl Ink Batom Líquido, Longa Duração, Acabamento Vinil Espelhado e Efeito Gloss, Brilho Instantâneo, Conforto para os Lábios, Fórmula Vegana, Cor Cheeky 4,2ml"></div>
       <h3>Maybelline NY SuperStay Vinyl Ink Batom Líquido, Longa Duração, Acabamento Vinil Espelhado e Efeito Gloss, Brilho Instantâneo, Conforto para os Lábios, Fórmula Vegana, Cor Cheeky 4,2ml</h3>
       <p class="descricao">Batom líquido Maybelline SuperStay Vinyl Ink Cheeky, efeito gloss espelhado, alta duração de até 16h, vegano, pigmento intenso, cobertura uniforme e conforto absoluto para lábios radiantes.</p>
-      <p class="preco">82,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/3ITg1HB" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/3ITg1HB" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/516H6LcFldL._AC_SL1500_.jpg" alt="Océane Oceane – Eyeliner Océane - Lapis P/Olhos - Golden Brown./Marrom"></div>
       <h3>Océane Oceane – Eyeliner Océane - Lapis P/Olhos - Golden Brown./Marrom</h3>
       <p class="descricao">Eyeliner Océane Golden Brown, lápis para olhos macio e pigmentado, resistente à água, ideal para delineado e esfumado, garantindo olhos marcantes e sofisticados com facilidade.</p>
-      <p class="preco">29,75</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4o7wfvw" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4o7wfvw" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61e8ZfsHdSL._AC_SL1500_.jpg" alt="Maybelline NY Lash Sensational Sky High Máscara de Cílios Lavável, Escova Flexível, Alongamento Sem Limites com Extrato de Bambu e Fibras, Impacto de Todos os Ângulos, Preto 7,2ml"></div>
       <h3>Maybelline NY Lash Sensational Sky High Máscara de Cílios Lavável, Escova Flexível, Alongamento Sem Limites com Extrato de Bambu e Fibras, Impacto de Todos os Ângulos, Preto 7,2ml</h3>
       <p class="descricao">Máscara de cílios Sky High da Maybelline NY proporciona alongamento e volume extremos, com escova flexível, fórmula com extrato de bambu e fibras, garantindo cílios definidos e impactantes.</p>
-      <p class="preco">58,30</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4h4j10q" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4h4j10q" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71r5UzNR0CL._AC_SX522_.jpg" alt="Océane Paleta de Sombras Nádia Tambasco By Océane - To Go Basic 7,2g"></div>
       <h3>Océane Paleta de Sombras Nádia Tambasco By Océane - To Go Basic 7,2g</h3>
       <p class="descricao">Paleta de sombras To Go Basic da Océane com 9 tons neutros, 3 matte e 6 cintilantes, alta pigmentação e fixação, compacta e versátil, ideal para criar looks marcantes para todos os tons de pele.</p>
-      <p class="preco">40,00</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/48e9u4y" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/48e9u4y" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71LpJySaaWS._AC_SL1500_.jpg" alt="KIKO MILANO, pH Glow Lipstick, Lip Balm"></div>
       <h3>KIKO MILANO, pH Glow Lipstick, Lip Balm</h3>
       <p class="descricao">Batom Kiko Milano pH Glow Lipstick incolor, que reage ao pH dos lábios, realça a cor natural com acabamento glow, hidratação intensa e toque macio, para lábios bonitos e confortáveis.</p>
-      <p class="preco">67,92</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4o3MWIT" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4o3MWIT" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41SXzA7a8RL._AC_SL1500_.jpg" alt="Maybelline NY Instant Age Rewind Corretivo Líquido, Multiuso que Corrige Olheiras e Linhas Finas, Contorna e Ilumina, Alta Cobertura e Fórmula Vegana, Cor 120 Light, 6ml"></div>
       <h3>Maybelline NY Instant Age Rewind Corretivo Líquido, Multiuso que Corrige Olheiras e Linhas Finas, Contorna e Ilumina, Alta Cobertura e Fórmula Vegana, Cor 120 Light, 6ml</h3>
       <p class="descricao">Corretivo Maybelline Instant Age Rewind 120 Light com cobertura média a alta, fórmula vegana com Goji Berry e Haloxyl, que corrige olheiras, linhas finas, ilumina e não acumula. Dura até 12h e tem aplicador com esponjinha.</p>
-      <p class="preco">51,88</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4gXqezb" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4gXqezb" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41I0i8Z3TUL._AC_SL1000_.jpg" alt="Océane - Concealer - Corretivo Líquido./Fair"></div>
       <h3>Océane - Concealer - Corretivo Líquido./Fair</h3>
       <p class="descricao">Corretivo líquido Océane Concealer Fair com alta cobertura, acabamento natural, fórmula vegana com óleos nutritivos e ginseng. Textura leve, fácil de aplicar com pincel anatômico e ideal para todos os tipos de pele.</p>
-      <p class="preco">39,00</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4o8NoVB" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4o8NoVB" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41yS+dCfrZL._AC_SL1000_.jpg" alt="Océane Oceane Cover Me Up Powder - Pó Solto Translúcido"></div>
       <h3>Océane Oceane Cover Me Up Powder - Pó Solto Translúcido</h3>
       <p class="descricao">Pó solto translúcido Océane Cover Me Up, ideal para selar a maquiagem com efeito matte suave, controlar a oleosidade, suavizar linhas finas e prolongar a durabilidade da make, sem adicionar cor.</p>
-      <p class="preco">44,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4mMNz81" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4mMNz81" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41FAQQeeHxL._AC_SL1000_.jpg" alt="Rk By Kiss Ruby Kisses Under Eye Corrector - Corretivo Para A Área Olhos - Cor 20"></div>
       <h3>Rk By Kiss Ruby Kisses Under Eye Corrector - Corretivo Para A Área Olhos - Cor 20</h3>
       <p class="descricao">Corretivo RK By Kiss Under Eye Corrector Cor 20, com textura leve e cremosa, alta cobertura sem craquelar, acabamento natural, resistente à transferência, suor e umidade, ideal para camuflar olheiras e imperfeições.</p>
-      <p class="preco">33,59</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4nDAMGa" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4nDAMGa" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51jycKOFrIL._AC_SL1500_.jpg" alt="Catharine Hill - Camuflagem Alta Cobertura Angel Wings - Cor A1 - Pri Lessa - 8ml"></div>
       <h3>Catharine Hill - Camuflagem Alta Cobertura Angel Wings - Cor A1 - Pri Lessa - 8ml</h3>
       <p class="descricao">Camuflagem Angel Wings Catharine Hill cor A1, alta cobertura com textura cremosa, acabamento natural e matte, longa duração, vegana e enriquecida com ácido hialurônico e vitamina E, ideal para camuflar olheiras, manchas, cicatrizes e imperfeições.</p>
-      <p class="preco">46,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/48YRw6e" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/48YRw6e" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71D3ZPsv0hL._AC_SL1500_.jpg" alt="NIVEA Hidratante Labial Hidra Color Coral 4,8g - Combinação de cor intensa com o cuidado confiável"></div>
       <h3>NIVEA Hidratante Labial Hidra Color Coral 4,8g - Combinação de cor intensa com o cuidado confiável</h3>
       <p class="descricao">NIVEA Hidra Color Coral 4,8g, hidratante labial com cor intensa, textura cremosa, 24h de hidratação, proteção UVA/UVB com FPS 30, fórmula 3 em 1 com manteiga de karité, óleo de amêndoas e vitamina E.</p>
-      <p class="preco">15,49</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4nCegxr" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4nCegxr" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61dGcQfmOuL._AC_SL1500_.jpg" alt="L’Oréal Paris L'Oréal Paris Revitalift Blur Mágico - Primer 27G"></div>
       <h3>L’Oréal Paris L'Oréal Paris Revitalift Blur Mágico - Primer 27G</h3>
       <p class="descricao">L’Oréal Paris Revitalift Blur Mágico é um primer com efeito óptico instantâneo que disfarça poros, rugas e linhas finas, deixa acabamento matte aveludado, uniformiza a pele e prepara perfeitamente para a maquiagem.</p>
-      <p class="preco">45,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4pU6iBn" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4pU6iBn" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/414KXw7OwvL._AC_SL1000_.jpg" alt="MÁSCARA PARA CÍLIOS PEEL OFF MELU RR517 CHALLENGE RUBYROSE"></div>
       <h3>MÁSCARA PARA CÍLIOS PEEL OFF MELU RR517 CHALLENGE RUBYROSE</h3>
       <p class="descricao">A Máscara para Cílios Peel Off Melu Ruby Rose oferece volume e alongamento com fórmula leve e cremosa, permitindo construir camadas sem pesar e removendo facilmente com tecnologia peel off.</p>
-      <p class="preco">18,00</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/432Vas5" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/432Vas5" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61e-rkxuUCL._AC_SL1500_.jpg" alt="KIKO MILANO, New Long Lasting Eyeshadow Stick, Sombra em Bastão, Cor"></div>
       <h3>KIKO MILANO, New Long Lasting Eyeshadow Stick, Sombra em Bastão, Cor</h3>
       <p class="descricao">A Sombra em Bastão KIKO MILANO New Long Lasting Eyeshadow Stick entrega cor intensa e acabamento metálico com textura leve, alta fixação e aplicação prática para olhos luminosos o dia todo.</p>
-      <p class="preco">69,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4ocTip1" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4ocTip1" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61rEJlSpKzL._AC_SL1500_.jpg" alt="NIINA SECRETS MÁSCARA DE CÍLIOS SUPER BOLD 10g"></div>
       <h3>NIINA SECRETS MÁSCARA DE CÍLIOS SUPER BOLD 10g</h3>
       <p class="descricao">A Máscara de Cílios Niina Secrets Super Bold oferece volume extremo desde a primeira aplicação, efeito de cílios postiços, fórmula super preta de longa duração e big aplicador com ponta esférica que define e preenche sem formar grumos.</p>
-      <p class="preco">49,00</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4pU7jcF" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4pU7jcF" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51MGPPE2chL._AC_SX522_.jpg" alt="Océane Esponja de Maquiagem Para Acabamento Rosa - Powder Puff"></div>
       <h3>Océane Esponja de Maquiagem Para Acabamento Rosa - Powder Puff</h3>
       <p class="descricao">A Esponja de Maquiagem Océane Powder Puff é feita em veludo de algodão, possui formato triangular para alcançar cantinhos do rosto, garante acabamento aveludado com pó compacto ou solto, acompanha alça de cetim para maior conforto e não é indicada para produtos líquidos ou cremosos.</p>
-      <p class="preco">11,29</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4nPJuBp" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4nPJuBp" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/4176Lt7WaUL._AC_SL1000_.jpg" alt="MÁSCARA PARA CÍLIOS PEEL OFF MELU RR515 SELFIE RUBYROSE"></div>
       <h3>MÁSCARA PARA CÍLIOS PEEL OFF MELU RR515 SELFIE RUBYROSE</h3>
       <p class="descricao">Máscara para Cílios Peel Off Melu Ruby Rose, fórmula cremosa e leve que proporciona volume, alongamento e definição sem borrar. Camadas construíveis, acabamento impecável e remoção peel off que sai como adesivo ao umedecer. Ideal para um olhar marcante e prático no dia a dia.</p>
-      <p class="preco">14,99</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/4oaK905" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4oaK905" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61iD10vtq9L._AC_SX522_.jpg" alt="Fixador de Maquiagem Real Fix - 150ml - VZ-57 - Vizzela"></div>
       <h3>Fixador de Maquiagem Real Fix - 150ml - VZ-57 - Vizzela</h3>
       <p class="descricao">Fixador Real Fix Vizzela com fórmula vegana e dermatologicamente testada, prolonga a maquiagem, controla o brilho, intensifica pigmentos e hidrata a pele com alecrim, aloe vera, chá verde e d-pantenol.</p>
-      <p class="preco">74,90</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/3VUmF3e" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/3VUmF3e" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/31TzE7SofBL._AC_.jpg" alt="Makelovers Esponja Ep10 Gota Chanfrada Para Maquiagem Macrilan - Rosa Claro Macrilan - Sem Latex"></div>
       <h3>Makelovers Esponja Ep10 Gota Chanfrada Para Maquiagem Macrilan - Rosa Claro Macrilan - Sem Latex</h3>
       <p class="descricao">Esponja Makelovers EP10 gota chanfrada, macia, sem látex e ideal para aplicar base, corretivo e pó com acabamento profissional. Material em PU, formato anatômico e perfeito para alcançar todos os cantos do rosto.</p>
-      <p class="preco">8,99</p>
-      <p class="meta">amazon · maquiagem</p>
-      <a class="botao" href="https://amzn.to/472X9hp" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/472X9hp" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61YTHqyx1EL._AC_SX522_.jpg" alt="Kit com 3 Cremes Pomada de Assadura 120gr Cada - Bepantol"></div>
       <h3>Kit com 3 Cremes Pomada de Assadura 120gr Cada - Bepantol</h3>
       <p class="descricao">Kit com 3 Cremes Bepantol Baby 120g cada. Fórmula com Pró-vitamina B5 e lanolina, livre de fragrâncias e parabenos. Protege, hidrata e previne assaduras com barreira transparente e respirável para uso diário.</p>
-      <p class="preco">123,49</p>
-      <p class="meta">amazon · maternidade Infantil</p>
-      <a class="botao" href="https://amzn.to/4pTyxzk" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4pTyxzk" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71xw4do6QLL._AC_SX569_.jpg" alt="Top Sem Costura PUMA Feminino"></div>
       <h3>Top Sem Costura PUMA Feminino</h3>
       <p class="descricao">Top Feminino PUMA sem costura, com costas em Y, elástico estiloso e conforto total. Leve, flexível e ideal para treinos, caminhadas e looks athleisure. Toque macio, liberdade e estilo em uma peça só.</p>
-      <p class="preco">35,61</p>
-      <p class="meta">amazon · moda esportiva</p>
-      <a class="botao" href="https://amzn.to/3MABy9m" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/3MABy9m" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/718xWbpxwaL._AC_SX679_.jpg" alt="Nutren Suplemento Alimentar Senior 370G"></div>
       <h3>Nutren Suplemento Alimentar Senior 370G</h3>
       <p class="descricao">Nutren Senior é um suplemento alimentar em pó, sem sabor, que complementa a nutrição diária com proteínas, vitaminas e minerais, ideal para apoiar saúde, disposição e bem-estar.</p>
-      <p class="preco">72,98</p>
-      <p class="meta">amazon · suplementos alimentares</p>
-      <a class="botao" href="https://amzn.to/49f54dF" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/49f54dF" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61k+O3Pf6rL._SY342_.jpg" alt="RECEITAS PARA MAMÃES E BEBÊS SATISFEITOS "></div>
       <h3>RECEITAS PARA MAMÃES E BEBÊS SATISFEITOS </h3>
       <p class="descricao">Livro com receitas práticas e nutritivas para a introdução alimentar do bebê, ajudando mamães a oferecer refeições saudáveis, estimular o paladar e envolver toda a família em uma alimentação equilibrada.</p>
-      <p class="preco">59,90</p>
-      <p class="meta">amazon · maternidade Infantil</p>
-      <a class="botao" href="https://amzn.to/4aR6goK" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4aR6goK" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51XyYiRx+qL._AC_SX679_.jpg" alt="Camisa polo masculina manga curta casual abotoada camiseta de golfe slim fit com bolso"></div>
       <h3>Camisa polo masculina manga curta casual abotoada camiseta de golfe slim fit com bolso</h3>
       <p class="descricao">Camisa polo masculina slim fit em poliéster, leve e respirável, com bolso, fechamento em botões e design casual elegante, ideal para uso diário, trabalho leve, lazer e esportes.</p>
-      <p class="preco">85,51</p>
-      <p class="meta">amazon · roupas masculinas</p>
-      <a class="botao" href="https://amzn.to/4j7dPtQ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4j7dPtQ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/31wNk2xU5EL._AC_SX679_.jpg" alt="Barra de Porta Para Exercícios – Sem Furos, Ajustável (63 cm a 96 cm), Até 100 kg – Antiderrapante"></div>
       <h3>Barra de Porta Para Exercícios – Sem Furos, Ajustável (63 cm a 96 cm), Até 100 kg – Antiderrapante</h3>
       <p class="descricao">Barra de porta ajustável para exercícios em casa, sem furos, suporta até 100 kg, com pegada antiderrapante e instalação rápida, ideal para fortalecer braços, costas e abdômen com segurança.</p>
-      <p class="preco">46,00</p>
-      <p class="meta">amazon · equipamentos esportivos</p>
-      <a class="botao" href="https://amzn.to/4aQU9rS" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4aQU9rS" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61VZ7cIuHRL._AC_SX679_.jpg" alt="Colar Coração com Pedras Zircônias – Semi Joia Banhada a Ouro 18k – Design Romântico e Elegante, Ideal para Presentear ou Usar em Ocasiões Especiais, Agregando Charme e Sofisticação ao Visual"></div>
       <h3>Colar Coração com Pedras Zircônias – Semi Joia Banhada a Ouro 18k – Design Romântico e Elegante, Ideal para Presentear ou Usar em Ocasiões Especiais, Agregando Charme e Sofisticação ao Visual</h3>
       <p class="descricao">Colar coração com zircônias banhado a ouro 18k, antialérgico e delicado, perfeito para valorizar looks do dia a dia ou presentear com charme, brilho e sofisticação.</p>
-      <p class="preco">75,66</p>
-      <p class="meta">amazon · acessorios joias</p>
-      <a class="botao" href="https://amzn.to/4aFzLdp" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/4aFzLdp" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
