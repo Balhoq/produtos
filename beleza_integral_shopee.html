@@ -5,443 +5,518 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7qukw-lg2pvm8tolq6ef@resize_w450_nl.webp" alt="Mochila Escolar Resistente Bem Espaçosa Faculdade Trabalho Viagem"></div>
       <h3>Mochila Escolar Resistente Bem Espaçosa Faculdade Trabalho Viagem</h3>
       <p class="descricao">Mochila resistente e espaçosa — 2 compartimentos, bolsos laterais, suporte para notebook e material sintético à prova d’água.</p>
-      <p class="preco">41,49</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/10tjGDZ5Z5" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/10tjGDZ5Z5" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134201-22120-czp7bilwdolve3.webp" alt="Shoulder Bag Bolsa Transversal Hang Loose Moderna Moda Luxo Reforçada"></div>
       <h3>Shoulder Bag Bolsa Transversal Hang Loose Moderna Moda Luxo Reforçada</h3>
       <p class="descricao">Shoulder Bag Hang Loose 1L moderna e reforçada, com alça ajustável e bolsos frontal e traseiro.</p>
-      <p class="preco">113,90</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/30engPhec3" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/30engPhec3" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7rccu-ls2g0yg65ff853.webp" alt="Lovito Bolsa Tote de Ombro Casual Simples com Fechadura para Pickleball para Mulheres LFA18370"></div>
       <h3>Lovito Bolsa Tote de Ombro Casual Simples com Fechadura para Pickleball para Mulheres LFA18370</h3>
       <p class="descricao">Bolsa Tote Lovito casual com zíper, design simples e compartimento principal espaçoso.</p>
-      <p class="preco">31,99</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/2ViX5esiX1" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/2ViX5esiX1" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134201-7qukw-lj2j5itlm911ab.webp" alt="Lovito Casual Bolsa Plana De Alças Ajustáveis Lona Hobo Para Mulheres L46BA004 (Verde Claro/Branco Desbotado/Verde/Preto"></div>
       <h3>Lovito Casual Bolsa Plana De Alças Ajustáveis Lona Hobo Para Mulheres L46BA004 (Verde Claro/Branco Desbotado/Verde/Preto</h3>
       <p class="descricao">Bolsa Lovito de lona com alças ajustáveis, estilo casual e bolso interno com zíper.</p>
-      <p class="preco">46,90</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/9pV7pQ6KUx" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/9pV7pQ6KUx" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-8259p-mfwg8zhiudxrec.webp" alt="Lovito Bolsas de Ombro Pequenas com Botões Simples para Mulheres LNA13015 (Branco/Amarelo/Preto)"></div>
       <h3>Lovito Bolsas de Ombro Pequenas com Botões Simples para Mulheres LNA13015 (Branco/Amarelo/Preto)</h3>
       <p class="descricao">Bolsa Lovito mini de ombro com botão de pressão, design liso e estilo fofo.</p>
-      <p class="preco">27,99</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/9AFR2OdYsS" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/9AFR2OdYsS" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m7v7d40h2kr830.webp" alt="Mochila Masculina Executiva Notebook Reforçada Crosswave"></div>
       <h3>Mochila Masculina Executiva Notebook Reforçada Crosswave</h3>
       <p class="descricao">Mochila executiva masculina Crosswave, reforçada e com compartimento para notebook até 17.</p>
-      <p class="preco">144,00</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/6fY64DKdMj" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/6fY64DKdMj" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mbwftxx7zcfb86.webp" alt="Mochila Esportiva Unissex com Compartimento para Notebook Essential OIWB221806 - Olympikus"></div>
       <h3>Mochila Esportiva Unissex com Compartimento para Notebook Essential OIWB221806 - Olympikus</h3>
       <p class="descricao">Mochila esportiva Olympikus Essential unissex, com compartimento para notebook e capacidade de 15L.</p>
-      <p class="preco">109,90</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/5AjIHnibSb" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/5AjIHnibSb" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7renh-mdum8d702esre6.webp" alt="Bolsa Bag Transversal de Pelúcia Stitch Disney Premium"></div>
       <h3>Bolsa Bag Transversal de Pelúcia Stitch Disney Premium</h3>
       <p class="descricao">Bolsa transversal de pelúcia Stitch Disney Premium, compacta, macia e com zíper personalizado.</p>
-      <p class="preco">131,64</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/8KgK48SQAT" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/8KgK48SQAT" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7rdw1-mbpfaj0q8f9q2c.webp" alt="Shoulder Bag Havaianas"></div>
       <h3>Shoulder Bag Havaianas</h3>
       <p class="descricao">Shoulder Bag Havaianas compacta, versátil e ajustável para usar no ombro ou como pochete.</p>
-      <p class="preco">127,99</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/9AFR3u5e9S" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/9AFR3u5e9S" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/94328751aaa1e741f2d9b06244d8ddec.webp" alt="Shoulder Bag Mini Bolsa Transversal Bag Saída Fone Executiva Crosswave"></div>
       <h3>Shoulder Bag Mini Bolsa Transversal Bag Saída Fone Executiva Crosswave</h3>
       <p class="descricao">Shoulder Bag Crosswave com saída USB, bolsos organizadores e design compacto para o dia a dia.</p>
-      <p class="preco">89,00</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/6fY65RTWzO" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/6fY65RTWzO" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7qukw-lif39n7flmrj3f.webp" alt="Pasta Executiva Couro Maleta Bolsa Masculina Para Trabalho Documentos Livros Faculdade Notebook"></div>
       <h3>Pasta Executiva Couro Maleta Bolsa Masculina Para Trabalho Documentos Livros Faculdade Notebook</h3>
       <p class="descricao">Pasta Executiva KVN em couro sintético, acolchoada, com múltiplos compartimentos e espaço para notebook.</p>
-      <p class="preco">186,15</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/3LJHZsWFkW" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/3LJHZsWFkW" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-23030-cop74fy3q8nv1f.webp" alt="Maleta Targus Business Casual 15.6 - TSS898"></div>
       <h3>Maleta Targus Business Casual 15.6 - TSS898</h3>
       <p class="descricao">Maleta Targus Business Casual 15.6'', leve, resistente e com compartimento acolchoado para notebook.</p>
-      <p class="preco">168,21</p>
-      <p class="meta">shopee · bolsas malas mochilas</p>
-      <a class="botao" href="https://s.shopee.com.br/6AbpUrRhAN" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/6AbpUrRhAN" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134211-7r98o-lor192lx4tp1bd.webp" alt="Massageador Elétrico Alta Frequência Profissional Muscular Massagem"></div>
       <h3>Massageador Elétrico Alta Frequência Profissional Muscular Massagem</h3>
       <p class="descricao">Massageador elétrico profissional de alta frequência, tipo pistola, com 6 velocidades, 4 cabeças de massagem, bateria recarregável e baixo ruído. Ideal para relaxamento muscular profundo e alívio de dores.</p>
-      <p class="preco">28,99</p>
-      <p class="meta">shopee · saude cuidados pessoais</p>
-      <a class="botao" href="https://s.shopee.com.br/4VU4L9RUhY" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/4VU4L9RUhY" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7ra1d-mbg5xsc4yvq4b8.webp" alt="Balança Inteligente com Bioimpedância, App Integrado e Capacidade de até 180kg"></div>
       <h3>Balança Inteligente com Bioimpedância, App Integrado e Capacidade de até 180kg</h3>
       <p class="descricao">Balança Inteligente com bioimpedância, app via Bluetooth e alta precisão para monitorar sua saúde diariamente.</p>
-      <p class="preco">37,59</p>
-      <p class="meta">shopee · saude cuidados pessoais</p>
-      <a class="botao" href="https://s.shopee.com.br/7pkWKpkUQ9" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/7pkWKpkUQ9" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8xamvrcqbk2a0.webp" alt="kit 1/3 Relógios Esporte Led digital à prova d'agua unissex (P9)"></div>
       <h3>kit 1/3 Relógios Esporte Led digital à prova d'agua unissex (P9)</h3>
       <p class="descricao">Relógio Esportivo LED digital unissex à prova d’água, moderno, leve e ideal para qualquer ocasião.</p>
-      <p class="preco">13,96</p>
-      <p class="meta">shopee · acessorios joias</p>
-      <a class="botao" href="https://s.shopee.com.br/2qLqNk9trh" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/2qLqNk9trh" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7rbk1-lnvjkyuwq1fs3e.webp" alt="Sombrinha Guarda Chuva Dupla Face Colorida Liso Proteção contra Raios UV Contra Vento"></div>
       <h3>Sombrinha Guarda Chuva Dupla Face Colorida Liso Proteção contra Raios UV Contra Vento</h3>
       <p class="descricao">Sombrinha dupla-face compacta com proteção UV, resistente ao vento, leve, dobrável e ideal para sol e chuva. Aço inox, 90 cm aberta, 26 cm fechada, enviada em cores masculinas, femininas ou sortidas.</p>
-      <p class="preco">14,94</p>
-      <p class="meta">shopee · equipamentos esportivos</p>
-      <a class="botao" href="https://s.shopee.com.br/8zwTjJtUlb" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/8zwTjJtUlb" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/aa08a2b012f75198d07ce8d7812ebfd0.webp" alt="Mini Prancha De Cabelo Para Bolsa Escova Enrola Chapinha Alisadora Bivolt Elétrica Alisador Portatil Viagem Modelador Pequena"></div>
       <h3>Mini Prancha De Cabelo Para Bolsa Escova Enrola Chapinha Alisadora Bivolt Elétrica Alisador Portatil Viagem Modelador Pequena</h3>
       <p class="descricao">Mini prancha e escova modeladora 2 em 1 bivolt, portátil, leve e ideal para viagem; aquece rápido, possui revestimento cerâmico, proteção dos fios e temperatura constante para alisar ou modelar com praticidade.</p>
-      <p class="preco">47,78</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/9UsCgkBz7Z" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/9UsCgkBz7Z" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-mea4qj6udibnf6.webp" alt="NIVEA Sabonete Líquido Óleo de Banho - 200 ml"></div>
       <h3>NIVEA Sabonete Líquido Óleo de Banho - 200 ml</h3>
       <p class="descricao">Sabonete líquido NIVEA Óleo de Banho 200 ml, com 55% de óleos naturais, espuma cremosa, hidratação intensa, maciez após o banho e fórmula dermatologicamente testada, ideal para uso diário e viagens.</p>
-      <p class="preco">29,83</p>
-      <p class="meta">shopee · cuidados pele</p>
-      <a class="botao" href="https://s.shopee.com.br/1Vq2F6rvrw" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/1Vq2F6rvrw" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lvkgdmzuwga796.webp" alt="Selagem karseell liso imediato organica"></div>
       <h3>Selagem karseell liso imediato organica</h3>
       <p class="descricao">Selagem Karseell Liso Imediato Orgânica 500ml, tratamento profissional sem formaldeído que alinha os fios, reduz frizz e volume, proporciona brilho intenso e maciez, com aplicação prática para resultados de salão em casa.</p>
-      <p class="preco">34,90</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/8KgMOg2TBd" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/8KgMOg2TBd" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/698348cd12c99214d07ecaa10374a36b.webp" alt="Xô Frizz Modelador de Fios Forever Liss 10g"></div>
       <h3>Xô Frizz Modelador de Fios Forever Liss 10g</h3>
       <p class="descricao">Xô Frizz Modelador de Fios Forever Liss 10g reduz o frizz instantaneamente, alinha baby hair e fios rebeldes, oferece brilho, textura leve, efeito duradouro e embalagem prática para uso diário.</p>
-      <p class="preco">39,90</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/2LP9FrKP4U" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/2LP9FrKP4U" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lrjqbofcnbxg4a.webp" alt="Máscara Karseell Collagen Original 500ml"></div>
       <h3>Máscara Karseell Collagen Original 500ml</h3>
       <p class="descricao">Máscara Karseell Collagen 500ml reconstrói cabelos secos e danificados, reduz frizz, hidrata profundamente e protege a cor, ideal para pontas ressecadas e uso seguro em cabelos quimicamente tratados.</p>
-      <p class="preco">21,90</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/7pk5o5ZtKt" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/7pk5o5ZtKt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lsimgcbnyrrhd9.webp" alt="Realinhamento Capilar De Chuveiro Sem formol - Brilho Intenso De Salão"></div>
       <h3>Realinhamento Capilar De Chuveiro Sem formol - Brilho Intenso De Salão</h3>
       <p class="descricao">Realinhamento capilar Brazillian Keratin sem formol proporciona cabelos lisos, brilhantes, com frizz controlado e volume reduzido. Resultado de salão em casa, rápido no chuveiro (10-15 dias) ou profissional (3-4 meses), adequado para todos os tipos de cabelo.</p>
-      <p class="preco">48,90</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/9UsJnGiJlT" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/9UsJnGiJlT" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mcgq9r3ll0jl16.webp" alt="Reconstrutor Sos Antiemborrachamento Forever Liss 300ml"></div>
       <h3>Reconstrutor Sos Antiemborrachamento Forever Liss 300ml</h3>
       <p class="descricao">O Reconstrutor SOS Antiemborrachamento Forever Liss recupera cabelos emborrachados em apenas 5 minutos, devolvendo força, brilho, maciez e saúde aos fios. Indicado para todos os tipos de cabelo, principalmente ressecados, quebradiços ou danificados.</p>
-      <p class="preco">39,90</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/5VMB228GEL" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/5VMB228GEL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8eukrvbx3bl28.webp" alt="Spray Bye Bye Volume e No Frizz Forever Liss 200ml"></div>
       <h3>Spray Bye Bye Volume e No Frizz Forever Liss 200ml</h3>
       <p class="descricao">O Spray Bye Bye Volume e No Frizz Forever Liss 200ml é um finalizador que reduz o volume e o frizz, nutre, hidrata e proporciona brilho intenso aos fios. Com proteção térmica, é ideal para finalizar cabelos lisos, prolongar tratamentos como progressiva, Botox e selagem, sem enxágue.</p>
-      <p class="preco">54,90</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/8AMwD6K7ks" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/8AMwD6K7ks" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7rdy5-m025ng5073dz17.webp" alt="Acidificante Densidade 250g Lola Cosmetics"></div>
       <h3>Acidificante Densidade 250g Lola Cosmetics</h3>
       <p class="descricao">O Acidificante Densidade 250g Lola Cosmetics é um tratamento capilar que restaura a integridade das cutículas, fortalece os fios e proporciona brilho e maciez. Com pH de 3,0 a 4,0, é ideal para uso após shampoo e máscara, garantindo cabelos mais saudáveis e revitalizados.</p>
-      <p class="preco">39,90</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/AUkqzVqPXG" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/AUkqzVqPXG" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lt467ppa4rwvc0.webp" alt="Pro Minoxi Advanced Serum de Crescimento Barba Cabelo e Sobrancelha 120ml"></div>
       <h3>Pro Minoxi Advanced Serum de Crescimento Barba Cabelo e Sobrancelha 120ml</h3>
       <p class="descricao">O Pro Minoxi Advanced Serum 120ml é um sérum capilar e facial que auxilia no crescimento e fortalecimento de cabelo, barba e sobrancelha. Com cafeína, biotina e D’Pantenol, promove preenchimento de falhas, combate à queda, hidratação, reestruturação dos fios e crescimento acelerado. Produto unissex, livre de parabenos e corantes, seguro para uso diário.</p>
-      <p class="preco">49,80</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/4AqnSnHtWZ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/4AqnSnHtWZ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-meegzv3yxqtcb2.webp" alt="NIVEA Sabonete Líquido Íntimo Suave 250ml"></div>
       <h3>NIVEA Sabonete Líquido Íntimo Suave 250ml</h3>
       <p class="descricao">O NIVEA Sabonete Líquido Íntimo Suave 250ml proporciona limpeza e cuidado diário da região íntima. Com extrato de camomila, aloe vera, pantenol e ácido lático, mantém o pH natural, previne irritações e oferece sensação de conforto e frescor. Dermatologicamente e ginecologicamente testado, é indicado para todos os tipos de pele.</p>
-      <p class="preco">19,90</p>
-      <p class="meta">shopee · cuidados pele</p>
-      <a class="botao" href="https://s.shopee.com.br/5VMB3Vb9aQ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/5VMB3Vb9aQ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mbh668om6rg88b.webp" alt="Sérum L'Oréal Paris Elseve Liso dos Sonhos 100ml"></div>
       <h3>Sérum L'Oréal Paris Elseve Liso dos Sonhos 100ml</h3>
       <p class="descricao">Sérum L'Oréal Elseve Liso dos Sonhos 100ml hidrata, reduz frizz, controla o volume e protege os fios do calor, deixando cabelos lisos, macios, sedosos e brilhantes.</p>
-      <p class="preco">48,40</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/1qSshFhOVd" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/1qSshFhOVd" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-8259g-mfuw5pwq639k3f.webp" alt="Kit Completo Definição Natural"></div>
       <h3>Kit Completo Definição Natural</h3>
       <p class="descricao">Kit Definição Natural define cachos e ondas, controla o frizz por 72h, hidrata e proporciona brilho intenso, leveza e maciez para cabelos ondulados, cacheados e crespos.</p>
-      <p class="preco">85,00</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/7pk5qPi3wZ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/7pk5qPi3wZ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-23030-z96vr7qf7yovb7.webp" alt="Kit Duo Sabonete Vitamina C Payot"></div>
       <h3>Kit Duo Sabonete Vitamina C Payot</h3>
       <p class="descricao">Kit Payot Duo Sabonete Vitamina C limpa, hidrata e desintoxica a pele, proporcionando luminosidade, maciez e proteção contra radicais livres e poluição, ideal para rosto e corpo.</p>
-      <p class="preco">74,90</p>
-      <p class="meta">shopee · cuidados pele</p>
-      <a class="botao" href="https://s.shopee.com.br/5VMB4HdlMG" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/5VMB4HdlMG" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lwk8xwrunc0icb.webp" alt="Kit Liso Imediato - Shampoo - Progressiva - Máscara - óleo Karseell"></div>
       <h3>Kit Liso Imediato - Shampoo - Progressiva - Máscara - óleo Karseell</h3>
       <p class="descricao">Kit Liso Imediato Karseell com shampoo, progressiva, máscara e óleo, proporciona cabelo hidratado, anti-frizz, com proteção da cor, fios alinhados e resultado liso imediato e duradouro.</p>
-      <p class="preco">105,00</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/50PuTW2QeP" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/50PuTW2QeP" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lkv7n2x9pr3m3a.webp" alt="Kit Shampoo e Condicionador PhytoErvas - Diversas Opções"></div>
       <h3>Kit Shampoo e Condicionador PhytoErvas - Diversas Opções</h3>
       <p class="descricao">Kit Shampoo e Condicionador PhytoErvas com diversas fórmulas especiais: hidratação, fortalecimento, antiqueda, anticaspa, brilho ou cachos definidos, cuidando de todos os tipos de cabelo.</p>
-      <p class="preco">38,90</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/VxV7K4LDA" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/VxV7K4LDA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m9ho2srz69kye9.webp" alt="Shampoo Jaborandi Bio Extratus 1L Antiqueda e Crescimento"></div>
       <h3>Shampoo Jaborandi Bio Extratus 1L Antiqueda e Crescimento</h3>
       <p class="descricao">Shampoo Jaborandi Bio Extratus 1L combate a queda e estimula o crescimento dos fios, nutrindo e fortalecendo o cabelo desde a raiz para fios mais saudáveis e vigorosos.</p>
-      <p class="preco">73,40</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/AUkr1o7qUI" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/AUkr1o7qUI" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-23020-s5g8owqw82mvae.webp" alt="Tônico Bioplex Nasce Fios Soft Hair"></div>
       <h3>Tônico Bioplex Nasce Fios Soft Hair</h3>
       <p class="descricao">Tônico Bioplex Nasce Fios Soft Hair 60ml estimula o crescimento capilar, fortalece fios, reduz queda e preenche falhas, indicado para todos os tipos de cabelo, homens e mulheres.</p>
-      <p class="preco">26,19</p>
-      <p class="meta">shopee · cuidados cabelos</p>
-      <a class="botao" href="https://s.shopee.com.br/5pz1TRP6Sy" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/5pz1TRP6Sy" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-mdvrjy0qkrur99.webp" alt="KIT NIVEA Sabonete Líquido Óleo de Banho 200ml - 2 unidades"></div>
       <h3>KIT NIVEA Sabonete Líquido Óleo de Banho 200ml - 2 unidades</h3>
       <p class="descricao">Kit NIVEA Sabonete Líquido Óleo de Banho 200ml com 2 unidades oferece hidratação intensa, maciez e cuidado diário, com 55% de óleos naturais e fragrância suave.</p>
-      <p class="preco">54,90</p>
-      <p class="meta">shopee · cuidados pele</p>
-      <a class="botao" href="https://s.shopee.com.br/7pk5rGMJGm" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/7pk5rGMJGm" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfmtgifiz28707.webp" alt="KIT NIVEA Loção Hidratante Milk Pele Seca a Extrasseca 400ml 2 Unidades"></div>
       <h3>KIT NIVEA Loção Hidratante Milk Pele Seca a Extrasseca 400ml 2 Unidades</h3>
       <p class="descricao">Kit NIVEA Loção Hidratante Milk 400ml com 2 unidades oferece hidratação profunda por 48h, com 2x mais óleo de amêndoas, cuidando da pele seca e extrasseca com maciez e nutrição intensa.</p>
-      <p class="preco">37,80</p>
-      <p class="meta">shopee · cuidados pele</p>
-      <a class="botao" href="https://s.shopee.com.br/2B5j6yrqjy" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/2B5j6yrqjy" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-825ax-mgdqfxqvgwlk53.webp" alt="Gloss by Francny Ehke Gloss de Mel Edição Limitada"></div>
       <h3>Gloss by Francny Ehke Gloss de Mel Edição Limitada</h3>
       <p class="descricao">Gloss de Mel Francny Ehke hidrata e protege os lábios com brilho intenso, aroma delicioso de mel, extrato de mel e vitamina E, hipoalergênico e dermatologicamente testado.</p>
-      <p class="preco">26,90</p>
-      <p class="meta">shopee · maquiagem</p>
-      <a class="botao" href="https://s.shopee.com.br/6KvI4kMIw2" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/6KvI4kMIw2" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lwyf4h6ojpa711.webp" alt="Conjunto Macaquinho Feminino com Short SaiaModa Plus Size Macacão Curve"></div>
       <h3>Conjunto Macaquinho Feminino com Short SaiaModa Plus Size Macacão Curve</h3>
       <p class="descricao">Conjunto Macaquinho Feminino Plus Size em crepe de malha, super confortável, com elastano, ótimo caimento e acabamento impecável. Modelo GG/G1 veste do 46 ao 52, disponível em várias cores. Ideal para looks frescos, elegantes e versáteis no verão.</p>
-      <p class="preco">54,17</p>
-      <p class="meta">shopee · roupas femininas</p>
-      <a class="botao" href="https://s.shopee.com.br/AUmOIDEVya" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/AUmOIDEVya" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m14z4ypue2ds28.webp" alt="Maquiagem para Pernas - BAston Bashoes kit 3 unidades (100ml/60g Cada)"></div>
       <h3>Maquiagem para Pernas - BAston Bashoes kit 3 unidades (100ml/60g Cada)</h3>
       <p class="descricao">Kit com 3 maquiagens para pernas Bashoes, com cobertura natural que disfarça manchas e imperfeições, seca rápido, é resistente à água e ao suor e deixa a pele lisa e uniforme em segundos.</p>
-      <p class="preco">73,89</p>
-      <p class="meta">shopee · maquiagem</p>
-      <a class="botao" href="https://s.shopee.com.br/70Bh2ZRLlx" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/70Bh2ZRLlx" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lsga3892598ta0.webp" alt="Short Alfaiataria Feminino Com Zíper Na Lateral"></div>
       <h3>Short Alfaiataria Feminino Com Zíper Na Lateral</h3>
       <p class="descricao">Short alfaiataria feminino com zíper lateral, modelagem elegante, cintura alta e tecido confortável. Ideal para looks modernos e sofisticados, disponível nos tamanhos P ao GG.</p>
-      <p class="preco">28,90</p>
-      <p class="meta">shopee · roupas femininas</p>
-      <a class="botao" href="https://s.shopee.com.br/30gmiqmV6D" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/30gmiqmV6D" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134207-7rd4t-m6ufok8z0wsb1f.webp" alt="[MAEKNOK] Sabonete Natural Suave Para Bebês , Infantil Hipoalergênico Cuidados Com A Pele De Recém-Nascidos | Ingredientes Orgânicos"></div>
       <h3>[MAEKNOK] Sabonete Natural Suave Para Bebês , Infantil Hipoalergênico Cuidados Com A Pele De Recém-Nascidos | Ingredientes Orgânicos</h3>
       <p class="descricao">Sabonete Natural MAEKNOK para bebês, hipoalergênico, orgânico e ideal para peles sensíveis. Limpa sem ressecar, hidrata profundamente e é livre de parabenos, sulfatos e fragrâncias artificiais. Perfeito para recém-nascidos.</p>
-      <p class="preco">60,98</p>
-      <p class="meta">shopee · maternidade Infantil</p>
-      <a class="botao" href="https://s.shopee.com.br/2qNOyAr38D" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/2qNOyAr38D" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/cn-11134207-7ras8-m0iski8m9qdjf0.webp" alt="Masculino apertado roupas esportivas de Fitness de manga curta camiseta terno esportivo Goku 2 peças treinamento Jogging Shorts 2"></div>
       <h3>Masculino apertado roupas esportivas de Fitness de manga curta camiseta terno esportivo Goku 2 peças treinamento Jogging Shorts 2</h3>
       <p class="descricao">Conjunto fitness masculino inspirado no Goku, feito em poliéster com spandex, dry fit, leve e respirável. Ideal para treinos intensos com conforto, estilo e mobilidade total.</p>
-      <p class="preco">81,60</p>
-      <p class="meta">shopee · moda esportiva</p>
-      <a class="botao" href="https://s.shopee.com.br/2qNQ40YfcZ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/2qNQ40YfcZ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134211-7r98o-m9z216s54niad5.webp" alt="Hibisco com Cavalinha 500 mg 60 / 90 / 120 Cápsulas - Suplemento Alimentar Natural - Original Arkad Suplementos"></div>
       <h3>Hibisco com Cavalinha 500 mg 60 / 90 / 120 Cápsulas - Suplemento Alimentar Natural - Original Arkad Suplementos</h3>
       <p class="descricao">Hibisco com Cavalinha Arkad 500mg em cápsulas auxilia no metabolismo, na retenção líquida e no bem-estar geral. Suplemento natural, sem glúten, ideal para a rotina de autocuidado.</p>
-      <p class="preco">20,70</p>
-      <p class="meta">shopee · suplementos alimentares</p>
-      <a class="botao" href="https://s.shopee.com.br/9zqkAlGpJa" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/9zqkAlGpJa" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lz0i5qq5ejkl62.webp" alt="Canguru Banco De Cintura Para Bebê Porta-bebês Porta-bebês Porta-bebês Frente e Traseira Porta-bebês Frente e Traseira"></div>
       <h3>Canguru Banco De Cintura Para Bebê Porta-bebês Porta-bebês Porta-bebês Frente e Traseira Porta-bebês Frente e Traseira</h3>
       <p class="descricao">Canguru porta-bebê confortável e respirável, com assento ergonômico tipo M, uso frontal e traseiro, ideal para bebês de 1 a 3 anos, oferecendo segurança e praticidade no dia a dia.</p>
-      <p class="preco">499,00</p>
-      <p class="meta">shopee · maternidade Infantil</p>
-      <a class="botao" href="https://s.shopee.com.br/9AHdDplMGW" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/9AHdDplMGW" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mb8c6lxsrbw977.webp" alt="blusa de frio masculina jaqueta masculina casaco masculino moletom masculino estiloso promoçao envio imediato"></div>
       <h3>blusa de frio masculina jaqueta masculina casaco masculino moletom masculino estiloso promoçao envio imediato</h3>
       <p class="descricao">Moletom masculino flanelado com capuz e bolso canguru, tecido confortável em algodão e poliéster, acabamento premium, ideal para o inverno, com envio imediato.</p>
-      <p class="preco">142,40</p>
-      <p class="meta">shopee · roupas masculinas</p>
-      <a class="botao" href="https://s.shopee.com.br/9fDuFYgqmy" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/9fDuFYgqmy" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m5uuyde6s1hhde@resize_w450_nl.webp" alt="RASTERINHAS SANDALIAS RASTEIRAS CONFORTE BRANCO PRETO NUDE FEMININA RASTEIRA ROSA 2024"></div>
       <h3>RASTERINHAS SANDALIAS RASTEIRAS CONFORTE BRANCO PRETO NUDE FEMININA RASTEIRA ROSA 2024</h3>
       <p class="descricao">Rasteirinha feminina Fantine 2024 sem salto, com palmilha macia, solado leve e design moderno, ideal para quem busca conforto, beleza e praticidade em looks casuais do dia a dia.</p>
-      <p class="preco">29,94</p>
-      <p class="meta">shopee · calcados tenis</p>
-      <a class="botao" href="https://s.shopee.com.br/8fLNzLJzei" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/8fLNzLJzei" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-mg5rjqsl94hs03.webp" alt="Conjunto Ponto de Luz 18k Feminino Luxo – Colar + Brinco Zircônia Premium"></div>
       <h3>Conjunto Ponto de Luz 18k Feminino Luxo – Colar + Brinco Zircônia Premium</h3>
       <p class="descricao">Conjunto ponto de luz feminino banhado a ouro 18k com colar e brincos em zircônia premium, antialérgico, delicado e perfeito para elevar qualquer look com elegância.</p>
-      <p class="preco">38,96</p>
-      <p class="meta">shopee · acessorios joias</p>
-      <a class="botao" href="https://s.shopee.com.br/8AP7cQneAA" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/8AP7cQneAA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
