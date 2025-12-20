@@ -5,258 +5,227 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:12px;
-    text-align:center;
-    transition:transform .16s;
-    /* NOVO CSS PARA ALINHAMENTO */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
-    min-height: 350px;
-}
+.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-
-
-/* CSS CORRIGIDO PARA AS IMAGENS */
-.produto-card .thumb{
-    height:160px; /* Altura fixa para todos os cards */
-    display:flex; /* Usado para centralizar a imagem */
-    align-items:center;
-    justify-content:center;
-    margin-bottom:8px;
-}
-.produto-card .thumb img{
-    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
-    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
-    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
-    border-radius:8px;
-}
-/* FIM DO CSS CORRIGIDO */
-
+.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
+.meta{font-size:12px;color:#888;margin-bottom:8px}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
+<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71V4lNR2gKL._SY425_.jpg" alt="Pai Rico, pai Pobre: Edição de 20 Anos Atualizada e Ampliada"></div>
       <h3>Pai Rico, pai Pobre: Edição de 20 Anos Atualizada e Ampliada</h3>
       <p class="descricao">Best-seller de Robert Kiyosaki que revela por que a escola não prepara para o mundo financeiro, ensinando a diferença entre ativos e passivos e como assumir o controle do próprio futuro econômico.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4gz1NYW" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">38,67</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/4gz1NYW" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61Q2pK79yWL._SY466_.jpg" alt="O investidor inteligente"></div>
       <h3>O investidor inteligente</h3>
       <p class="descricao">Clássico de Benjamin Graham que ensina o método de investimento em valor, com foco em segurança, estratégia de longo prazo e disciplina, considerado por Warren Buffett o melhor livro de investimentos já escrito.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/47IQzP5" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">44,66</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/47IQzP5" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71rz31-OkFL._SY425_.jpg" alt="A bola de neve: Warren Buffett e o negócio da vida "></div>
       <h3>A bola de neve: Warren Buffett e o negócio da vida </h3>
       <p class="descricao">Biografia definitiva de Warren Buffett, revelando sua trajetória desde a infância até se tornar o maior investidor do mundo, com histórias reais, ensinamentos valiosos e acesso exclusivo concedido à autora Alice Schroeder.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3K5R8bW" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">59,95</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/3K5R8bW" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81s4sDCKBoL._SY425_.jpg" alt="O rei dos dividendos: A saga do filho de imigrantes pobres que se tornou o maior investidor pessoa física da bolsa de valores brasileira"></div>
       <h3>O rei dos dividendos: A saga do filho de imigrantes pobres que se tornou o maior investidor pessoa física da bolsa de valores brasileira</h3>
       <p class="descricao">A inspiradora autobiografia de Luiz Barsi Filho, o maior investidor pessoa física da bolsa brasileira. Da infância pobre em um cortiço ao ápice como bilionário, Barsi revela seu método focado em dividendos, sua filosofia disciplinada e sua visão sobre investimentos sólidos. Um livro motivador para quem busca riqueza, superação e aprendizado real sobre o mercado.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/46G6Gf7" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">37,00</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/46G6Gf7" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71LtnrB9XOL._SY466_.jpg" alt="Trabalhe 4 horas por semana"></div>
       <h3>Trabalhe 4 horas por semana</h3>
       <p class="descricao">Um guia revolucionário de Timothy Ferriss que mostra como trabalhar menos, viver mais e criar um estilo de vida livre. Baseado em produtividade extrema, miniaposentadorias e tecnologia, o livro ensina como reduzir drasticamente o trabalho, aumentar a renda e construir uma vida com propósito e liberdade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3VTocGF" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">59,09</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/3VTocGF" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81r5VTxaBiL._SY466_.jpg" alt="Do mil ao milhão: sem cortar o cafezinho – O best-seller de Thiago Nigro, autor de "O homem que comprou o tempo""></div>
       <h3>Do mil ao milhão: sem cortar o cafezinho – O best-seller de Thiago Nigro, autor de "O homem que comprou o tempo"</h3>
       <p class="descricao">O best-seller de Thiago Nigro que ensina os três pilares da independência financeira — gastar bem, investir melhor e ganhar mais — mostrando de forma simples e prática como qualquer pessoa pode construir patrimônio e fazer o dinheiro trabalhar a seu favor.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nbRNXY" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">17,56</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/4nbRNXY" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/712GQgcwxGL._SY466_.jpg" alt="Os segredos da mente milionária – Edição especial: Aprenda a enriquecer mudando seus conceitos sobre o dinheiro e adotando os hábitos das pessoas bem-sucedidas"></div>
       <h3>Os segredos da mente milionária – Edição especial: Aprenda a enriquecer mudando seus conceitos sobre o dinheiro e adotando os hábitos das pessoas bem-sucedidas</h3>
       <p class="descricao">Mude sua mentalidade financeira com T. Harv Eker e descubra como os ricos pensam e agem. Aprenda a controlar o dinheiro, aumentar seu patrimônio e transformar sua vida com hábitos de prosperidade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/47Os1nN" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">34,77</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/47Os1nN" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81ehX6Quw2L._SY466_.jpg" alt="O homem mais rico da Babilônia"></div>
       <h3>O homem mais rico da Babilônia</h3>
       <p class="descricao">Aprenda os princípios eternos de riqueza dos antigos babilônios e descubra como cultivar habilidades, evitar dívidas, investir com sabedoria e construir prosperidade duradoura segundo George S. Clason.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/46veijD" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">12,46</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/46veijD" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/815Qjqoe8aL._SY425_.jpg" alt="Investindo em Ações no Longo Prazo: O Guia Indispensável do Investidor do Mercado Financeiro "></div>
       <h3>Investindo em Ações no Longo Prazo: O Guia Indispensável do Investidor do Mercado Financeiro </h3>
       <p class="descricao">Guia essencial de Jeremy Siegel que revela por que ações superam outros ativos no longo prazo, traz análises de crises recentes e ensina a construir uma carteira segura, lucrativa e resistente à inflação.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nHNfIR" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">130,90</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/4nHNfIR" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61x4XUF8zvL._SY466_.jpg" alt="Quem pensa enriquece - o legado: o legado"></div>
       <h3>Quem pensa enriquece - o legado: o legado</h3>
       <p class="descricao">Edição atualizada do clássico de Napoleon Hill, com anotações modernas e exemplos reais, mostrando como pensamentos, fé e persistência moldam o sucesso. Um guia eterno para transformar mente, hábitos e resultados.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nF0GsY" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">29,92</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/4nF0GsY" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71vZp6yONLL._SY466_.jpg" alt="A psicologia financeira: lições atemporais sobre fortuna, ganância e felicidade"></div>
       <h3>A psicologia financeira: lições atemporais sobre fortuna, ganância e felicidade</h3>
       <p class="descricao">Aprenda a lidar com dinheiro e comportamento financeiro com Morgan Housel, entendendo que sucesso não é só matemática, mas decisões, emoções e hábitos que geram riqueza e felicidade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3ITzCaG" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">23,99</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/3ITzCaG" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81Htd43L3KL._SY425_.jpg" alt="Investimentos inteligentes - Edição revista e atualizada: Estratégias para multiplicar seu patrimônio com segurança e eficiência "></div>
       <h3>Investimentos inteligentes - Edição revista e atualizada: Estratégias para multiplicar seu patrimônio com segurança e eficiência </h3>
       <p class="descricao">Aprenda com Gustavo Cerbasi estratégias seguras e eficientes para multiplicar seu patrimônio, investir melhor e aproveitar oportunidades em renda fixa, ações, imóveis e criptomoedas.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4mYsure" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">41,53</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/4mYsure" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61Lv4zppPKL._SL1500_.jpg" alt="O Paradoxo da Escolha"></div>
       <h3>O Paradoxo da Escolha</h3>
       <p class="descricao">Barry Schwartz revela como o excesso de opções pode gerar ansiedade, indecisão e insatisfação, mostrando por que mais escolhas nem sempre significam mais liberdade ou felicidade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3KSB3Xn" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">0,00</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/3KSB3Xn" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71UODYLKWbL._SY466_.jpg" alt="Me Poupe! (Edição atualizada): 10 passos para nunca mais faltar dinheiro no seu bolso"></div>
       <h3>Me Poupe! (Edição atualizada): 10 passos para nunca mais faltar dinheiro no seu bolso</h3>
       <p class="descricao">Guia prático de Nathalia Arcuri com 10 passos para organizar as finanças, evitar armadilhas, criar renda extra e investir com segurança, mostrando que qualquer pessoa pode sair do buraco e realizar sonhos com planejamento.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4q5VtfJ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">24,95</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/4q5VtfJ" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71SUUt0vp+L._SY425_.jpg" alt="O Milionário Mora ao Lado: os Surpreendentes Segredos dos Ricos"></div>
       <h3>O Milionário Mora ao Lado: os Surpreendentes Segredos dos Ricos</h3>
       <p class="descricao">Clássico sobre finanças pessoais que revela os verdadeiros hábitos dos milionários, mostrando como riqueza é construída com disciplina, poupança e vida simples — e não com luxo e ostentação.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3KDGkCe" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">67,50</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/3KDGkCe" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71HuZRl-XeL._SY466_.jpg" alt="Essencialismo: A disciplinada busca por menos"></div>
       <h3>Essencialismo: A disciplinada busca por menos</h3>
       <p class="descricao">Guia prático para eliminar excessos, focar no que realmente importa e produzir mais fazendo menos, com clareza, propósito e disciplina.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nIcPgZ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">42,11</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/4nIcPgZ" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71YL9YiqeuL._SY466_.jpg" alt="A startup enxuta: Como usar a inovação contínua para criar negócios radicalmente bem-sucedidos "></div>
       <h3>A startup enxuta: Como usar a inovação contínua para criar negócios radicalmente bem-sucedidos </h3>
       <p class="descricao">A Startup Enxuta mostra como inovar com menos desperdício, testar rápido, aprender com dados reais e criar negócios sustentáveis, usando o método de Eric Ries adotado por empresas no mundo todo.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3W0RF1G" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">32,95</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/3W0RF1G" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61-V0hg1AVL._SY425_.jpg" alt="Dinheiro: Os segredos de quem tem: Como conquistar e manter sua independência financeira "></div>
       <h3>Dinheiro: Os segredos de quem tem: Como conquistar e manter sua independência financeira </h3>
       <p class="descricao">Cerbasi revela como trabalho, disciplina e boas escolhas constroem independência financeira, ensinando a organizar contas, evitar armadilhas, investir melhor e fazer o dinheiro trabalhar por você.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/48mb9Fh" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">24,95</p>
+      <p class="meta">amazon · livros de financas negocios</p>
+      <a class="botao" href="https://amzn.to/48mb9Fh" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/A1jEhQF97pL._SX342_.jpg" alt="Marketing 6.0: O futuro é imersivo: Eliminando as fronteiras entre os mundos físico e digital Audible Logo Audiolivro – Versão integral"></div>
       <h3>Marketing 6.0: O futuro é imersivo: Eliminando as fronteiras entre os mundos físico e digital Audible Logo Audiolivro – Versão integral</h3>
       <p class="descricao">Audiolivro que explica como IA, metaverso e experiências imersivas estão transformando o marketing e criando novas oportunidades de lucro. Aprenda com Kotler como usar tecnologia para gerar renda extra e se destacar no digital.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4auQobq" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">34,99</p>
+      <p class="meta">amazon · audiolivros</p>
+      <a class="botao" href="https://amzn.to/4auQobq" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81UVk+GEJOL._SY522_.jpg" alt="Revista Você S/A [ed.317] - 11/2025"></div>
       <h3>Revista Você S/A [ed.317] - 11/2025</h3>
       <p class="descricao">Edição 317 da Revista Você S/A em eBook Kindle, com insights de carreira, mercado, oportunidades de renda, empreendedorismo e finanças. Ideal para quem busca crescer profissionalmente e melhorar seus resultados financeiros.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4a9fEUA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">4,90</p>
+      <p class="meta">amazon · revistas periodicos</p>
+      <a class="botao" href="https://amzn.to/4a9fEUA" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71LLUM9RiYL._SY466_.jpg" alt="A arte de gastar dinheiro: Escolhas simples para uma vida equilibrada – Do mesmo autor de "A psicologia financeira""></div>
       <h3>A arte de gastar dinheiro: Escolhas simples para uma vida equilibrada – Do mesmo autor de "A psicologia financeira"</h3>
       <p class="descricao">O e-book A Arte de Gastar Dinheiro, de Morgan Housel, autor do best-seller A Psicologia Financeira, apresenta uma abordagem prática sobre como usar o dinheiro de maneira inteligente para aumentar a felicidade e evitar armadilhas emocionais e sociais relacionadas aos gastos, explorando temas como inveja, aspirações, identidade e insegurança e oferecendo ferramentas psicológicas para melhorar decisões financeiras, investir com mais clareza e viver uma vida equilibrada, satisfatória e significativa, sendo publicado pela Editora Harper Business, escrito em português, com 246 páginas, formato Kindle, arquivo de 2.1 MB, lançado em 6 de outubro de 2025, compatível com leitor de tela e configurável em fontes, tornando-se leitura essencial para quem busca evolução pessoal, saúde financeira e uma relação mais consciente e poderosa com o dinheiro.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/48zgSao" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">33,16</p>
+      <p class="meta">amazon · ebooks livros digitais</p>
+      <a class="botao" href="https://amzn.to/48zgSao" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/71NSPSXQMZL._SX342_.jpg" alt="Economia: modo de usar: Um guia básico dos principais conceitos econômicos"></div>
+      <h3>Economia: modo de usar: Um guia básico dos principais conceitos econômicos</h3>
+      <p class="descricao">Audiolivro completo que explica os principais conceitos de economia de forma simples e prática, ajudando você a entender o mundo financeiro, tomar melhores decisões e organizar sua renda.</p>
+      <p class="preco">44,99</p>
+      <p class="meta">amazon · audiolivros</p>
+      <a class="botao" href="https://amzn.to/4qct1YP" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/712NIgdVX0L._SY466_.jpg" alt="Finanças para iniciantes (Sua carreira em 20 minutos - HBR)"></div>
+      <h3>Finanças para iniciantes (Sua carreira em 20 minutos - HBR)</h3>
+      <p class="descricao">Finanças para Iniciantes é um eBook prático da HBR que ensina fundamentos financeiros, leitura de demonstrativos e tomada de decisões inteligentes para quem quer ganhar mais e evitar erros.</p>
+      <p class="preco">9,49</p>
+      <p class="meta">amazon · ebooks livros digitais</p>
+      <a class="botao" href="https://amzn.to/4q7iG04" target="_blank" rel="noopener">Ver produto</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
