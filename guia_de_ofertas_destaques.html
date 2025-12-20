@@ -5,92 +5,128 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/torradeira-electrolux-granite-gray-2-fatias-8-nivei-2-fatias-8-niveis-de-tostagem/magazineluiza/231236300/3ea1bb77554be12ebd508c0e8caaabf7.jpg" alt="Torradeira Electrolux Granite Gray 2 Fatias 8 Nívei - 2 Fatias 8 Níveis de Tostagem"></div>
       <h3>Torradeira Electrolux Granite Gray 2 Fatias 8 Nívei - 2 Fatias 8 Níveis de Tostagem</h3>
       <p class="descricao">Torradeira Electrolux ETS10 Granite Gray com 8 níveis de tostagem, funções descongelar, reaquecer e cancelar, aberturas extra largas e bandeja coletora de migalhas. Moderna e prática.</p>
-      <p class="preco">151,91</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/T9IS6HOt" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/T9IS6HOt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81rYpjuTwdL._AC_SX679_.jpg" alt="Cartucho de tinta HP 667 Preto Original (3YM79AB) Para Impressora Deskjet 2376, 2776, 6476, 5076, 5276"></div>
       <h3>Cartucho de tinta HP 667 Preto Original (3YM79AB) Para Impressora Deskjet 2376, 2776, 6476, 5076, 5276</h3>
       <p class="descricao">Cartucho HP 667 Preto Original com rendimento de até 120 páginas, tinta de alta qualidade, tecnologia antifraude e compatibilidade com impressoras DeskJet Ink Advantage das séries 1200, 2300, 2700, 4100, 6000 e 6400.</p>
-      <p class="preco">51,92</p>
-      <p class="meta">amazon · Informatica acessorios</p>
-      <a class="botao" href="https://amzn.to/49VNLPt" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/49VNLPt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81hJD-odFeL._AC_SX679_.jpg" alt="WAP Parafusadeira e Furadeira à Bateria 12V BPF-12K3, Kit de 13 Acessórios e Maleta, Empunhadura Emborrachada, Bivolt"></div>
       <h3>WAP Parafusadeira e Furadeira à Bateria 12V BPF-12K3, Kit de 13 Acessórios e Maleta, Empunhadura Emborrachada, Bivolt</h3>
       <p class="descricao">Parafusadeira e furadeira WAP BPF-12K3 12V com 18 níveis de torque, luz LED, controle de velocidade, bateria Li-Íon, maleta com 13 acessórios e design ergonômico. Ideal para reparos e uso doméstico.</p>
-      <p class="preco">129,99</p>
-      <p class="meta">amazon · ferramentas</p>
-      <a class="botao" href="https://amzn.to/48eqt5g" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/48eqt5g" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/caixa-de-som-jbl-partybox-encore-essential-bluetooth-led-100w-rms-ipx4-preto-58035033/kabum/551566/1d342dd90078476bc3260262fa632e6e.jpeg" alt="Caixa de Som JBL Partybox Encore Essential, Bluetooth, LED, 100W RMS, IPX4, Preto - 58035033"></div>
       <h3>Caixa de Som JBL Partybox Encore Essential, Bluetooth, LED, 100W RMS, IPX4, Preto - 58035033</h3>
       <p class="descricao">A JBL Partybox Encore Essential entrega 100W RMS de potência com graves profundos, luzes LED dinâmicas e até 6 horas de música. Possui Bluetooth, proteção IPX4 contra respingos, entrada para microfone, USB e auxiliar, além de design portátil com alça para levar a festa a qualquer lugar.</p>
-      <p class="preco">1.599,00</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/P0t-PtJ2" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/P0t-PtJ2" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_930291-MLA96125677821_102025-F.webp" alt="Impressora Multifuncional HP DeskJet Ink Advantage 2874"></div>
       <h3>Impressora Multifuncional HP DeskJet Ink Advantage 2874</h3>
       <p class="descricao">A HP DeskJet Ink Advantage 2874 é uma multifuncional eficiente com impressão colorida a jato de tinta, Wi-Fi, entrada USB e funções de copiar, digitalizar e imprimir. Suporta até 60 folhas, imprime frente e verso manualmente e é ideal para uso pessoal ou profissional com economia e praticidade.</p>
-      <p class="preco">395,00</p>
-      <p class="meta">mercadolivre · Informatica acessorios</p>
-      <a class="botao" href="https://mercadolivre.com/sec/1neQ2rz" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/1neQ2rz" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-luox93nvwt4087.webp" alt="Capa Capinha Space Acrílico Transparente Anti Impacto iPhone 7 8 Plus SE XR 11 12 13 14 15 Pro Max"></div>
       <h3>Capa Capinha Space Acrílico Transparente Anti Impacto iPhone 7 8 Plus SE XR 11 12 13 14 15 Pro Max</h3>
       <p class="descricao">Capinha Space/Acrílica Transparente Anti Impacto com certificação militar, proteção 360º, botões galvanizados, compatível com diversos modelos de iPhone. Ultra fina, não amarela, permite carregamento wireless e mantém o visual elegante do aparelho.</p>
-      <p class="preco">5,99</p>
-      <p class="meta">shopee · smartphones tablets</p>
-      <a class="botao" href="https://s.shopee.com.br/5VNhzhHbRr" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/5VNhzhHbRr" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/517N5X5p4NL._AC_SX679_.jpg" alt="Electrolux, Pote Hermetico, 12 unidades, A23122901, cinza"></div>
       <h3>Electrolux, Pote Hermetico, 12 unidades, A23122901, cinza</h3>
       <p class="descricao">Kit Electrolux com 12 potes herméticos em polipropileno, livres de BPA, com vedação em silicone, registro de data e tamanhos empilháveis. Compatíveis com micro-ondas e lava-louças, perfeitos para organização e conservação de alimentos.</p>
-      <p class="preco">75,99</p>
-      <p class="meta">amazon · casa construcao</p>
-      <a class="botao" href="https://amzn.to/49z5Z9B" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/49z5Z9B" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/garrafa-termica-r-evolution-1l-inox-termolar/uaiexpress1/111577/ee787c9707bb79f2b3c4fe2d6f84639b.jpeg" alt="Garrafa Térmica R-Evolution 1L Inox - TERMOLAR"></div>
       <h3>Garrafa Térmica R-Evolution 1L Inox - TERMOLAR</h3>
       <p class="descricao">Garrafa Térmica Termolar R-Evolution 1L em inox 304, isolamento a vácuo, conserva bebidas por até 20h quente e 36h frio, sem ampola de vidro, com tampa rolha dupla e garantia de 5 anos.</p>
-      <p class="preco">151,72</p>
-      <p class="meta">magalu · casa construcao</p>
-      <a class="botao" href="https://divulgador.magalu.com/2E8ATT09" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/2E8ATT09" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
