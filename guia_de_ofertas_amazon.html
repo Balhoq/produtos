@@ -5,368 +5,389 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:12px;
-    text-align:center;
-    transition:transform .16s;
-    /* NOVO CSS PARA ALINHAMENTO */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
-    min-height: 350px;
-}
+.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-
-
-/* CSS CORRIGIDO PARA AS IMAGENS */
-.produto-card .thumb{
-    height:160px; /* Altura fixa para todos os cards */
-    display:flex; /* Usado para centralizar a imagem */
-    align-items:center;
-    justify-content:center;
-    margin-bottom:8px;
-}
-.produto-card .thumb img{
-    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
-    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
-    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
-    border-radius:8px;
-}
-/* FIM DO CSS CORRIGIDO */
-
+.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
+.meta{font-size:12px;color:#888;margin-bottom:8px}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
+<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51UxR8FHe-L._AC_SL1000_.jpg" alt="Sanduicheira Elétrica Cadence Click - 220V"></div>
       <h3>Sanduicheira Elétrica Cadence Click - 220V</h3>
       <p class="descricao">Sanduicheira Cadence Click 220V, chapas antiaderentes profundas e 750W de potência.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nyfKJ9" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">91,99</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4nyfKJ9" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51yYe4QlyQL._AC_SX679_.jpg" alt="Mixer Vertical Turbo Chef Elgin 3 em 1 200W Preto 220v"></div>
       <h3>Mixer Vertical Turbo Chef Elgin 3 em 1 200W Preto 220v</h3>
       <p class="descricao">Mixer Elgin Turbo Chef 3 em 1, 200W, com miniprocessador e copo dosador.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3KrIDYJ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">135,90</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/3KrIDYJ" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61K7fAOac9L._AC_SL1500_.jpg" alt="Fire TV Stick HD (Geração mais recente) | Com controle remoto por voz com Alexa (inclui comandos de TV), controles de casa inteligente e streaming em HD"></div>
       <h3>Fire TV Stick HD (Geração mais recente) | Com controle remoto por voz com Alexa (inclui comandos de TV), controles de casa inteligente e streaming em HD</h3>
       <p class="descricao">Fire TV Stick HD com Alexa para controle por voz, streaming rápido em Full HD e acesso a milhares de apps como Prime Video, Netflix e YouTube. Portátil, fácil de instalar e compatível com casa inteligente.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nSMA7n" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">234,65</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/4nSMA7n" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/718jJRdvDsL._AC_SL1500_.jpg" alt="Kindle 16 GB (Geração mais recente) - Leve e compacto, com tela antirreflexo, trocas de página mais rápidas, luz frontal ajustável e bateria de longa duração - Cor Preta"></div>
       <h3>Kindle 16 GB (Geração mais recente) - Leve e compacto, com tela antirreflexo, trocas de página mais rápidas, luz frontal ajustável e bateria de longa duração - Cor Preta</h3>
       <p class="descricao">O Kindle 16GB (nova geração) é o e-reader mais leve e compacto da Amazon, com tela antirreflexo de 6”, luz frontal mais brilhante, páginas que viram mais rápido e bateria que dura até 6 semanas. Ideal para ler em qualquer lugar, sem distrações e com capacidade para milhares de livros.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/48AG2Ws" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">493,05</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/48AG2Ws" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/8120tVg3AcL._AC_SL1500_.jpg" alt="Echo Pop (Geração mais recente) | Smart speaker compacto com som envolvente e Alexa | Cor Preta"></div>
       <h3>Echo Pop (Geração mais recente) | Smart speaker compacto com som envolvente e Alexa | Cor Preta</h3>
       <p class="descricao">O Echo Pop é o smart speaker compacto da Amazon com som envolvente e Alexa integrada. Ideal para quartos e pequenos ambientes, permite tocar músicas por voz, controlar dispositivos inteligentes, criar rotinas e facilitar seu dia a dia — tudo isso com design moderno e foco em privacidade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3Wavjus" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">246,05</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/3Wavjus" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61M+bgGo7VL._AC_SL1000_.jpg" alt="Echo Dot (Geração mais recente) | O Echo Dot com o melhor som já lançado | Cor Preta"></div>
       <h3>Echo Dot (Geração mais recente) | O Echo Dot com o melhor som já lançado | Cor Preta</h3>
       <p class="descricao">O Echo Dot mais potente já lançado traz som aprimorado com graves mais fortes, vocais nítidos e Alexa para facilitar sua rotina. Ideal para qualquer ambiente, ele reproduz músicas, controla dispositivos inteligentes, cria rotinas e oferece comandos por voz com rapidez e precisão.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/48xYJtR" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">303,05</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/48xYJtR" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61TgtQaluAL._AC_SX679_.jpg" alt="BLACK+DECKER Mixer, Misturador Multiuso e Portátil com Haste em Inox, Modelo M150"></div>
       <h3>BLACK+DECKER Mixer, Misturador Multiuso e Portátil com Haste em Inox, Modelo M150</h3>
       <p class="descricao">Leve, portátil e multiuso, o Mixer BLACK+DECKER M150 é ideal para preparar vitaminas, molhos, cappuccinos, chocolates e espumar leite com rapidez. Compacto, resistente e com haste em inox, funciona com pilhas e é perfeito para uso diário ou para levar a qualquer lugar.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/48AH052" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">44,00</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/48AH052" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71mpLyEfFUL._AC_SL1500_.jpg" alt="MONDIAL Liquidificador Turbo Power 550W, 110V, Preto, 1,6L - L-99 FB"></div>
       <h3>MONDIAL Liquidificador Turbo Power 550W, 110V, Preto, 1,6L - L-99 FB</h3>
       <p class="descricao">O Liquidificador Mondial Turbo Power L-99 FB oferece 550W de potência, jarra resistente de 2,2L, lâminas em inox, 3 velocidades + pulsar, filtro em inox e função autolimpeza — ideal para sucos, vitaminas, molhos e receitas variadas com rapidez e praticidade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nKjM0G" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">94,90</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4nKjM0G" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51jf-jmkW5L._AC_SX679_.jpg" alt="Echo Show 5 (Geração mais recente) | Smart display com Alexa, graves 2x mais potentes e som mais nítido | Cor Preta"></div>
       <h3>Echo Show 5 (Geração mais recente) | Smart display com Alexa, graves 2x mais potentes e som mais nítido | Cor Preta</h3>
       <p class="descricao">Echo Show 5 (3ª geração) com Alexa, som 2x mais potente, display de 5,5”, câmera de 2 MP com tampa, ideal para música, vídeos, chamadas e controle de casa inteligente. Compacto, moderno e com foco em privacidade e sustentabilidade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3Km6Vn4" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">512,05</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/3Km6Vn4" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/31IGbz8xc9L._AC_.jpg" alt="Adaptador de energia"></div>
       <h3>Adaptador de energia</h3>
       <p class="descricao">Carregador original Amazon de 9W para Kindle, garantindo recarga rápida e segura para todos os modelos compatíveis.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/48AltcE" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">99,00</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/48AltcE" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/718KFI+hBOL._AC_SX679_.jpg" alt="Echo Spot com Alexa (Geração mais recente) | Despertador inteligente com som vibrante | Cor Preta"></div>
       <h3>Echo Spot com Alexa (Geração mais recente) | Despertador inteligente com som vibrante | Cor Preta</h3>
       <p class="descricao">Despertador inteligente Echo Spot com Alexa, som vibrante, display personalizável e controle de casa inteligente, ideal para acordar, relaxar e facilitar sua rotina.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nojE7e" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">445,55</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/4nojE7e" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71ieRFU+gzL._AC_SL1500_.jpg" alt="Apresentamos o Kindle Colorsoft Signature Edition (32 GB) - Com tela colorida, luz frontal autoadaptável, carregamento sem fio e bateria que dura semanas - Cor Preta Metálica"></div>
       <h3>Apresentamos o Kindle Colorsoft Signature Edition (32 GB) - Com tela colorida, luz frontal autoadaptável, carregamento sem fio e bateria que dura semanas - Cor Preta Metálica</h3>
       <p class="descricao">Kindle Colorsoft Signature Edition com tela colorida de 7”, luz frontal autoadaptável, 32GB, carregamento sem fio e bateria de até 8 semanas, ideal para leituras imersivas em cores e confortáveis em qualquer ambiente.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nPPxp4" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">1.329,05</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/4nPPxp4" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51NFGyGQN8L._SL1000_.jpg" alt="Purificador de Água Gelada Fria e Natural Elétrico Compacto Eletronico placa Electrolux Filtro refil 6 meses ou 3000l Painel Touch Bivolt Grafite PE12G"></div>
       <h3>Purificador de Água Gelada Fria e Natural Elétrico Compacto Eletronico placa Electrolux Filtro refil 6 meses ou 3000l Painel Touch Bivolt Grafite PE12G</h3>
       <p class="descricao">Purificador Electrolux PE12G com 3 temperaturas, painel touch, filtro Acqua Pure, enchimento 4x mais rápido e design compacto ideal para qualquer ambiente.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/42RPYXT" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">541,40</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/42RPYXT" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51G4AxVAJxL._AC_SX679_.jpg" alt="MONDIAL Fritadeira Air Fryer Forno Oven 12L, Preto/Inox, 2000W, 110V - AFON-12L-BI"></div>
       <h3>MONDIAL Fritadeira Air Fryer Forno Oven 12L, Preto/Inox, 2000W, 110V - AFON-12L-BI</h3>
       <p class="descricao">Air Fryer Mondial Oven 12L 2 em 1 (Fritadeira + Forno), 2000W, painel digital com 10 funções, cesto de 5L, 3 assadeiras antiaderentes Duraflon, visor iluminado e preparo rápido e sem óleo.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nokQYg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">481,00</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4nokQYg" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81dbQUG-j3L._AC_SX679_.jpg" alt="Kindle Paperwhite Signature Edition 32 GB (Geração mais recente) - O Kindle mais rápido já lançado, com luz frontal autoadaptável, carregamento sem fio e bateria que dura semanas - Cor Preta Metálica"></div>
       <h3>Kindle Paperwhite Signature Edition 32 GB (Geração mais recente) - O Kindle mais rápido já lançado, com luz frontal autoadaptável, carregamento sem fio e bateria que dura semanas - Cor Preta Metálica</h3>
       <p class="descricao">Kindle Paperwhite Signature Edition 32GB, o Kindle mais rápido já lançado, com tela Paperwhite 7”, luz autoadaptável, carregamento sem fio, bateria de até 12 semanas, design à prova d'água e ideal para leitura sem distrações.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/46GF6xa" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">854,05</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/46GF6xa" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71PkuriMcqL._AC_SX679_.jpg" alt="Echo Show 8 (3ª geração) | Smart display com áudio espacial, hub de casa inteligente e Alexa | Cor Preta"></div>
       <h3>Echo Show 8 (3ª geração) | Smart display com áudio espacial, hub de casa inteligente e Alexa | Cor Preta</h3>
       <p class="descricao">Echo Show 8 (3ª geração) com áudio espacial, tela HD de 8”, hub de casa inteligente integrado e Alexa. Chamadas de vídeo nítidas, som imersivo e controle completo da sua casa por voz ou toque.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4gIFwYo" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">949,05</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/4gIFwYo" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71lORNHYWLL._AC_SY450_.jpg" alt="Apresentamos o Kindle Colorsoft (16 GB) - Com tela colorida e temperatura de luz ajustável - Cor Preta"></div>
       <h3>Apresentamos o Kindle Colorsoft (16 GB) - Com tela colorida e temperatura de luz ajustável - Cor Preta</h3>
       <p class="descricao">Kindle Colorsoft (16 GB) com tela colorida de 7”, luz ajustável, bateria de até 8 semanas e proteção IPX8. Leitura confortável em cores, sem distrações, com design leve e ideal para viagens.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nUjBjv" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">1.063,05</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/4nUjBjv" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51CmxAPMOML._AC_SX679_.jpg" alt="Agratto 784 - Chaleira Eletrica Inox, 220v, 1,8 Litro, Preto/inox"></div>
       <h3>Agratto 784 - Chaleira Eletrica Inox, 220v, 1,8 Litro, Preto/inox</h3>
       <p class="descricao">Chaleira elétrica Agratto 784 em inox e plástico, 220V, 1,8 L, com desligamento automático, base separada e luz indicadora LED. Prática, segura e fácil de limpar.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4mC7g2n" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">55,86</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4mC7g2n" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41XTKM4Cg4L._AC_SX679_.jpg" alt="Micro-ondas Philco 20l Branco Pmo23bb 110v 110v"></div>
       <h3>Micro-ondas Philco 20l Branco Pmo23bb 110v 110v</h3>
       <p class="descricao">Micro-ondas Philco PMO23BB Branco 20L, 110V, com 1100W de potência, funções pré-programadas, descongelamento por tempo ou peso e pintura Limpa Fácil para praticidade na limpeza.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3KukuRn" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">459,00</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/3KukuRn" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41kh2TI9f0L._AC_SX522_.jpg" alt="Forno Micro-ondas 20L Preto Midea 220V MRAS22"></div>
       <h3>Forno Micro-ondas 20L Preto Midea 220V MRAS22</h3>
       <p class="descricao">Micro-ondas Midea MRAS22 Preto 20L, 220V, com receitas pré-programadas, função Tira Odor, Menu Preferido e trava de segurança eletrônica para praticidade e segurança na cozinha.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4pIVWUM" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">464,42</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4pIVWUM" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71nbduvZ4qL._AC_SX450_.jpg" alt="Fonte de energia bivolt de 15W - compatível com o Echo Dot (3ª, 4ª e 5ª gerações), Echo Dot com Relógio (3ª, 4ª e 5ª gerações), Echo Spot (2024) e Echo Show 5 (2ª geração)"></div>
       <h3>Fonte de energia bivolt de 15W - compatível com o Echo Dot (3ª, 4ª e 5ª gerações), Echo Dot com Relógio (3ª, 4ª e 5ª gerações), Echo Spot (2024) e Echo Show 5 (2ª geração)</h3>
       <p class="descricao">Fonte de energia oficial Amazon 15W bivolt, com cabo de 1,5 m, compatível com Echo Dot (3ª, 4ª e 5ª gerações), Echo Dot com Relógio (3ª, 4ª e 5ª gerações), Echo Spot (2024) e Echo Show 5 (2ª geração).</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4mDuqW2" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">119,00</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/4mDuqW2" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61PfiwAXUBL._AC_SX679_.jpg" alt="Echo Studio (1ª geração) | O som mais extraordinário com Alexa - com Dolby Atmos e tecnologia de processamento de áudio espacial | Cor preta"></div>
       <h3>Echo Studio (1ª geração) | O som mais extraordinário com Alexa - com Dolby Atmos e tecnologia de processamento de áudio espacial | Cor preta</h3>
       <p class="descricao">Echo Studio 1ª geração em preto com som imersivo, Dolby Atmos e áudio espacial. Controle por voz com Alexa, hub de casa inteligente integrado (Zigbee/Matter) e compatível com Fire TV e multiambiente.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3Wb7DWO" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">1.471,55</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/3Wb7DWO" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81rYpjuTwdL._AC_SX679_.jpg" alt="Cartucho de tinta HP 667 Preto Original (3YM79AB) Para Impressora Deskjet 2376, 2776, 6476, 5076, 5276"></div>
       <h3>Cartucho de tinta HP 667 Preto Original (3YM79AB) Para Impressora Deskjet 2376, 2776, 6476, 5076, 5276</h3>
       <p class="descricao">Cartucho HP 667 Preto Original com rendimento de até 120 páginas, tinta de alta qualidade, tecnologia antifraude e compatibilidade com impressoras DeskJet Ink Advantage das séries 1200, 2300, 2700, 4100, 6000 e 6400.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/49VNLPt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">51,92</p>
+      <p class="meta">amazon · Informatica acessorios</p>
+      <a class="botao" href="https://amzn.to/49VNLPt" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81hJD-odFeL._AC_SX679_.jpg" alt="WAP Parafusadeira e Furadeira à Bateria 12V BPF-12K3, Kit de 13 Acessórios e Maleta, Empunhadura Emborrachada, Bivolt"></div>
       <h3>WAP Parafusadeira e Furadeira à Bateria 12V BPF-12K3, Kit de 13 Acessórios e Maleta, Empunhadura Emborrachada, Bivolt</h3>
       <p class="descricao">Parafusadeira e furadeira WAP BPF-12K3 12V com 18 níveis de torque, luz LED, controle de velocidade, bateria Li-Íon, maleta com 13 acessórios e design ergonômico. Ideal para reparos e uso doméstico.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/48eqt5g" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">129,99</p>
+      <p class="meta">amazon · ferramentas</p>
+      <a class="botao" href="https://amzn.to/48eqt5g" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/517N5X5p4NL._AC_SX679_.jpg" alt="Electrolux, Pote Hermetico, 12 unidades, A23122901, cinza"></div>
       <h3>Electrolux, Pote Hermetico, 12 unidades, A23122901, cinza</h3>
       <p class="descricao">Kit Electrolux com 12 potes herméticos em polipropileno, livres de BPA, com vedação em silicone, registro de data e tamanhos empilháveis. Compatíveis com micro-ondas e lava-louças, perfeitos para organização e conservação de alimentos.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/49z5Z9B" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">75,99</p>
+      <p class="meta">amazon · casa construcao</p>
+      <a class="botao" href="https://amzn.to/49z5Z9B" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51D9OoRSlgL._AC_SL1000_.jpg" alt="Carregador Veicular Turbo 60W Para Automóvel Carregador de Carro Duas Entradas com Carregamento Super Rápido + Cabo USB-C Premium Compatível Com Dispositivos IOS e Android"></div>
       <h3>Carregador Veicular Turbo 60W Para Automóvel Carregador de Carro Duas Entradas com Carregamento Super Rápido + Cabo USB-C Premium Compatível Com Dispositivos IOS e Android</h3>
       <p class="descricao">Carregador Veicular Turbo 60W com duas entradas, carregamento super rápido, cabo USB-C premium, tecnologia Power Delivery, proteção completa e certificação ANATEL. Ideal para carregar dois dispositivos no carro com segurança.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4rwUxBI" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">37,89</p>
+      <p class="meta">amazon · smartphones tablets</p>
+      <a class="botao" href="https://amzn.to/4rwUxBI" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/617vl0hohyL._AC_SX679_.jpg" alt="Cozedor de Ovos Elétrico 220V de Cozinha a Vapor (Branco)"></div>
       <h3>Cozedor de Ovos Elétrico 220V de Cozinha a Vapor (Branco)</h3>
       <p class="descricao">Cozedor de ovos elétrico para até 7 ovos, com controle do ponto pela água, desligamento automático e cestinha em inox para várias receitas. Compacto, rápido e perfeito para quem busca praticidade na cozinha.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4oRKDs4" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">30,56</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4oRKDs4" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/81fKcstBvkL._AC_SX679_.jpg" alt="Hogwarts Legacy - PlayStation 5"></div>
       <h3>Hogwarts Legacy - PlayStation 5</h3>
       <p class="descricao">Hogwarts Legacy para PS5 é um RPG de ação em mundo aberto ambientado no universo de Harry Potter, com exploração, magia, criaturas fantásticas e uma história inédita nos anos 1800. Ideal para fãs do mundo bruxo.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4rJBX9P" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">149,90</p>
+      <p class="meta">amazon · games consoles</p>
+      <a class="botao" href="https://amzn.to/4rJBX9P" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41my1ycj8gL._AC_SX522_.jpg" alt="CAMERA IP IM1 FULL HD WIFI 3.6MM IR 10M 2MP INTELBRAS"></div>
       <h3>CAMERA IP IM1 FULL HD WIFI 3.6MM IR 10M 2MP INTELBRAS</h3>
       <p class="descricao">Câmera Intelbras iM1 Full HD com visão noturna, sensor de movimento, Wi-Fi, acesso pelo app Mibo e instalação fácil. Ideal para segurança residencial com imagens nítidas e controle totalmente remoto.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4pCDrBg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">194,35</p>
+      <p class="meta">amazon · seguranca</p>
+      <a class="botao" href="https://amzn.to/4pCDrBg" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71YSI1xysDL._AC_SX522_.jpg" alt="kit 4 Tampinha Tampas Da Válvula Do Pneu Universal Capa Automotiva Bico De Carro De Metal Alumínio Caminhão Carro Biquinho Moto Bicicleta Bike Premium DAFALUI (Preta)"></div>
       <h3>kit 4 Tampinha Tampas Da Válvula Do Pneu Universal Capa Automotiva Bico De Carro De Metal Alumínio Caminhão Carro Biquinho Moto Bicicleta Bike Premium DAFALUI (Preta)</h3>
       <p class="descricao">Kit com 4 tampas de válvula DAFALUI em alumínio preto, compatíveis com carro, moto, bike e caminhão. Protegem contra sujeira e danos, têm visual premium, encaixe universal e são duráveis e fáceis de instalar.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/48ungjg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">21,70</p>
+      <p class="meta">amazon · pneus rodas</p>
+      <a class="botao" href="https://amzn.to/48ungjg" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51hcIrSwk+L._AC_SX679_.jpg" alt="Safety 1st, Cadeirinha Multifix, 0 a 36kg, com Isofix, Black Urban"></div>
       <h3>Safety 1st, Cadeirinha Multifix, 0 a 36kg, com Isofix, Black Urban</h3>
       <p class="descricao">Cadeirinha Safety 1st Multifix 0 a 36kg com ISOFIX, proteção lateral Air Protect, 4 posições de inclinação e instalação universal. Acompanha todas as fases do bebê até cerca de 10 anos, oferecendo segurança e conforto.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4pUZdjk" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">719,91</p>
+      <p class="meta">amazon · bebe maternidade</p>
+      <a class="botao" href="https://amzn.to/4pUZdjk" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61wJxH8y1DL._AC_SX679_.jpg" alt="Chamex - Papel Sulfite, A4, 75g, 500 folhas"></div>
       <h3>Chamex - Papel Sulfite, A4, 75g, 500 folhas</h3>
       <p class="descricao">Papel Sulfite Chamex A4 75g com 500 folhas, corte preciso, alta brancura, resistência e 99% de não atolamento. Ideal para impressões rápidas e uso escolar ou profissional, feito com eucalipto 100% renovável.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3KUS5V9" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">32,90</p>
+      <p class="meta">amazon · papelaria escritorio</p>
+      <a class="botao" href="https://amzn.to/3KUS5V9" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/51W1GgQs40L._AC_SX679_.jpg" alt="Game Retro Mini Super Nintendo + 150 mil Jogos + 2 Controles + Pack com todos os Jogos de Snes (Controles SNES)"></div>
+      <h3>Game Retro Mini Super Nintendo + 150 mil Jogos + 2 Controles + Pack com todos os Jogos de Snes (Controles SNES)</h3>
+      <p class="descricao">Game Retro Mini Super Nintendo com mais de 150 mil jogos, dois controles USB estilo SNES, menu em português, emulação fluida e compatibilidade do Atari ao PS1. É só conectar na TV e jogar.</p>
+      <p class="preco">327,75</p>
+      <p class="meta">amazon · games consoles</p>
+      <a class="botao" href="https://amzn.to/3MFc5f5" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/71VSLmF9MbL._AC_SX679_.jpg" alt="Kit 3 Toalhas de Rosto Karsten Fio Penteado – 48x80 cm - Bragança Marrom"></div>
+      <h3>Kit 3 Toalhas de Rosto Karsten Fio Penteado – 48x80 cm - Bragança Marrom</h3>
+      <p class="descricao">Kit com 3 toalhas de rosto Karsten em algodão fio penteado, supermacias, com alta absorção e acabamento premium, ideais para uso diário e para manter o banheiro sempre bonito e funcional.</p>
+      <p class="preco">115,89</p>
+      <p class="meta">amazon · cama mesa banho</p>
+      <a class="botao" href="https://amzn.to/4qd6evT" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/71wKltbVMlL._AC_SX679_.jpg" alt="Organizador, Suporte, Aparador, Porta Livros, Bibliocanto Toni, grafite - GEGUTON"></div>
+      <h3>Organizador, Suporte, Aparador, Porta Livros, Bibliocanto Toni, grafite - GEGUTON</h3>
+      <p class="descricao">Porta livros moderno e divertido em aço carbono com pintura epóxi, ideal para organizar estantes e decorar ambientes com estilo, praticidade e design criativo.</p>
+      <p class="preco">32,00</p>
+      <p class="meta">amazon · decoracao utensilios</p>
+      <a class="botao" href="https://amzn.to/48HnnIm" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/518yvWT0opL._AC_SX679_.jpg" alt="Câmera Segurança Lâmpada Ip Wifi 360° Full HD Yoosee Inteligente Prova D'água Giratória Visão Noturna Infravermelho Detecção de Movimentos 1080P HD Bivolt Premium"></div>
+      <h3>Câmera Segurança Lâmpada Ip Wifi 360° Full HD Yoosee Inteligente Prova D'água Giratória Visão Noturna Infravermelho Detecção de Movimentos 1080P HD Bivolt Premium</h3>
+      <p class="descricao">Câmera de segurança em formato de lâmpada com visão 360°, Full HD, controle pelo celular, detecção de movimento e visão noturna, fácil de instalar em bocal comum.</p>
+      <p class="preco">54,90</p>
+      <p class="meta">amazon · seguranca</p>
+      <a class="botao" href="https://amzn.to/45dgE6A" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/41PnbCD1M2L._AC_SX522_.jpg" alt="Pretinho de Pneus longa duração Pneu Fosco 500ml Autoamerica"></div>
+      <h3>Pretinho de Pneus longa duração Pneu Fosco 500ml Autoamerica</h3>
+      <p class="descricao">Pretinho de pneus fosco de longa duração que protege contra ressecamento, realça o visual e mantém aparência limpa e renovada por mais tempo, fácil de aplicar e ideal para cuidados automotivos.</p>
+      <p class="preco">28,20</p>
+      <p class="meta">amazon · pneus rodas</p>
+      <a class="botao" href="https://amzn.to/3YwKuzh" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/71Ey+hv171L._AC_SX522_.jpg" alt="Mochila Bolsa Maternidade Que Vira Berço 2 em 1 Reforçada ROSA/U"></div>
+      <h3>Mochila Bolsa Maternidade Que Vira Berço 2 em 1 Reforçada ROSA/U</h3>
+      <p class="descricao">Mochila maternidade 2 em 1 que vira berço portátil, impermeável, espaçosa, com bolsos térmicos e ideal para passeios, viagens e trocas de fralda com mais praticidade.</p>
+      <p class="preco">117,00</p>
+      <p class="meta">amazon · bebe maternidade</p>
+      <a class="botao" href="https://amzn.to/4pTJPEb" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/71kLV13qLJL._AC_SL1500_.jpg" alt="Xarope Monin Grenadine 700 Ml Monin Grenadine Sabor"></div>
+      <h3>Xarope Monin Grenadine 700 Ml Monin Grenadine Sabor</h3>
+      <p class="descricao">Xarope Monin Grenadine 700ml, ideal para drinks e bebidas, com sabor delicioso e versátil. Perfeito para transformar momentos especiais, proibido para menores de 18 anos.</p>
+      <p class="preco">64,90</p>
+      <p class="meta">amazon · alimentos bebidas</p>
+      <a class="botao" href="https://amzn.to/3KCDD4f" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/91+1SUO3vUL._SY425_.jpg" alt="A Guerra dos Tronos : As Crônicas de Gelo e Fogo, volume 1"></div>
+      <h3>A Guerra dos Tronos : As Crônicas de Gelo e Fogo, volume 1</h3>
+      <p class="descricao">A Guerra dos Tronos é o primeiro livro de As Crônicas de Gelo e Fogo, saga que inspirou Game of Thrones, com intrigas políticas, batalhas épicas e um universo rico que conquista leitores.</p>
+      <p class="preco">79,90</p>
+      <p class="meta">amazon · midia fisica outros</p>
+      <a class="botao" href="https://amzn.to/3MKMT6W" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/716ioeXPcZL._AC_SX679_.jpg" alt="Ypê Pack Detergente Coco 500ml (6 unidades)"></div>
+      <h3>Ypê Pack Detergente Coco 500ml (6 unidades)</h3>
+      <p class="descricao">Pack Detergente Ypê Coco 500ml com 6 unidades oferece alto poder desengordurante, limpeza eficiente, fragrância agradável e economia, ideal para louças e utensílios de cozinha.</p>
+      <p class="preco">19,65</p>
+      <p class="meta">amazon · outros</p>
+      <a class="botao" href="https://amzn.to/3Y5kdYH" target="_blank" rel="noopener">Ver produto</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
