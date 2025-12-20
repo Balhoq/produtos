@@ -5,138 +5,101 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:12px;
-    text-align:center;
-    transition:transform .16s;
-    /* NOVO CSS PARA ALINHAMENTO */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
-    min-height: 350px;
-}
+.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-
-
-/* CSS CORRIGIDO PARA AS IMAGENS */
-.produto-card .thumb{
-    height:160px; /* Altura fixa para todos os cards */
-    display:flex; /* Usado para centralizar a imagem */
-    align-items:center;
-    justify-content:center;
-    margin-bottom:8px;
-}
-.produto-card .thumb img{
-    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
-    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
-    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
-    border-radius:8px;
-}
-/* FIM DO CSS CORRIGIDO */
-
+.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
+.meta{font-size:12px;color:#888;margin-bottom:8px}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
+<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/barbeador-eletrico-philips-1000-series-seco-e-molhado-1-velocidade/syashop/9f907706842211f0b6bd42010a480899/1a887f7b9b8ed3336529a55c22c8ee77.jpeg" alt="Barbeador Elétrico Philips 1000 Series Seco e Molhado 1 Velocidade"></div>
       <h3>Barbeador Elétrico Philips 1000 Series Seco e Molhado 1 Velocidade</h3>
       <p class="descricao">O Barbeador Philips Shaver 1000 Series oferece barbear seco ou molhado com 27 lâminas autoafiadoras ComfortCut, uso sem fio por até 40 minutos, resistência à água, limpeza fácil e carregamento via USB. Ideal para rotina prática e confortável.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/2VpKIP5X" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">310,65</p>
+      <p class="meta">magalu · cuidados pele</p>
+      <a class="botao" href="https://divulgador.magalu.com/2VpKIP5X" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/escova-secadora-britania-bec02pr-1300w-2-velocidades-ceramica/herivastore/9b97d7ba844b11f0a8da42010a480899/8e4770b2d7d68191a20b57dd3cfd40aa.jpeg" alt="Escova Secadora Britânia BEC02PR 1300W - 2 Velocidades Cerâmica"></div>
       <h3>Escova Secadora Britânia BEC02PR 1300W - 2 Velocidades Cerâmica</h3>
       <p class="descricao">A Escova Secadora Britânia BEC02PR 1300W é 4 em 1: seca, alisa, modela e dá volume com 2 velocidades, 3 temperaturas, revestimento cerâmico e cerdas mistas. Bivolt, prática e eficiente para resultados rápidos e com conforto.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/Izmo0hSX" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">147,11</p>
+      <p class="meta">magalu · cuidados cabelos</p>
+      <a class="botao" href="https://divulgador.magalu.com/Izmo0hSX" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/cetaphil-kit-com-dois-cremes-hidratantes-pele-extremamente-seca-e-sensivel/epocacosmeticos-integra/70769/befc7f5d4fe4b55d67cd5a9445c8428c.jpeg" alt="Cetaphil Kit com Dois Cremes Hidratantes Pele Extremamente Seca e Sensível"></div>
       <h3>Cetaphil Kit com Dois Cremes Hidratantes Pele Extremamente Seca e Sensível</h3>
       <p class="descricao">O Kit Cetaphil Hidratante traz dois cremes desenvolvidos para pele extremamente seca e sensível, com fórmula de textura leve, sem fragrância e tecnologia moisture lock que hidrata por até 48h, deixando a pele macia, saudável e protegida.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/25OAPRuw" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">198,90</p>
+      <p class="meta">magalu · cuidados pele</p>
+      <a class="botao" href="https://divulgador.magalu.com/25OAPRuw" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/depilador-feminino-laser-eletrico-sem-fio-110v-220v-removedor-recarregavel-corporal/oliststore/mglon8fi0p4k7fwi/1e9b2d4f508052423769c9cf1f4d89d9.jpeg" alt="Depilador Feminino Laser Eletríco Sem Fio 110V/220V - Removedor Recarregável Corporal"></div>
       <h3>Depilador Feminino Laser Eletríco Sem Fio 110V/220V - Removedor Recarregável Corporal</h3>
       <p class="descricao">O Depilador Feminino Laser Elétrico Sem Fio é recarregável, portátil e indicado para remover pelos do corpo todo com segurança e sem dor. Possui 5 intensidades, sensor que ativa somente ao toque na pele, bateria de íon de lítio, uso bivolt e design compacto. Acompanha cabeça depilatória, cabeça microfólio para esfoliação, cabo USB e acessórios.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/vlNcjrPL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">50,04</p>
+      <p class="meta">magalu · cuidados pele</p>
+      <a class="botao" href="https://divulgador.magalu.com/vlNcjrPL" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51MGPPE2chL._AC_SX522_.jpg" alt="Océane Esponja de Maquiagem Para Acabamento Rosa - Powder Puff"></div>
       <h3>Océane Esponja de Maquiagem Para Acabamento Rosa - Powder Puff</h3>
       <p class="descricao">A Esponja de Maquiagem Océane Powder Puff é feita em veludo de algodão, possui formato triangular para alcançar cantinhos do rosto, garante acabamento aveludado com pó compacto ou solto, acompanha alça de cetim para maior conforto e não é indicada para produtos líquidos ou cremosos.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nPJuBp" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">11,29</p>
+      <p class="meta">amazon · maquiagem</p>
+      <a class="botao" href="https://amzn.to/4nPJuBp" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/balanca-digital-de-controle-corporal-ate-150kg-mondial-ellegance-bl-03/magazineluiza/236545700/ed1578ffd1c59c16c3f008cb04189622.jpg" alt="Balança Digital de Controle Corporal até 150kg - Mondial Ellegance BL-03"></div>
       <h3>Balança Digital de Controle Corporal até 150kg - Mondial Ellegance BL-03</h3>
       <p class="descricao">A Balança Digital Mondial Ellegance BL-03 suporta até 150kg, possui vidro temperado resistente, visor LCD, acionamento automático, pés antiderrapantes e indicador de bateria fraca, oferecendo praticidade, segurança e design moderno para o controle corporal diário.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/rBOtTFd_" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">76,63</p>
+      <p class="meta">magalu · saude cuidados pessoais</p>
+      <a class="botao" href="https://divulgador.magalu.com/rBOtTFd_" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_765079-MLB87929969346_072025-F-polo-masculina-lacoste-slim-fit-original.webp" alt="Polo Masculina Lacoste Slim Fit - Original"></div>
       <h3>Polo Masculina Lacoste Slim Fit - Original</h3>
       <p class="descricao">A Polo Masculina Lacoste Slim Fit combina estilo e conforto com seu tradicional tecido petit piqué 100% algodão, corte ajustado, gola e punhos canelados e o icônico crocodilo bordado, entregando elegância e versatilidade para qualquer ocasião.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://mercadolivre.com/sec/25x9Wb4" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">229,99</p>
+      <p class="meta">mercadolivre · roupas masculinas</p>
+      <a class="botao" href="https://mercadolivre.com/sec/25x9Wb4" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lwyf4h6ojpa711.webp" alt="Conjunto Macaquinho Feminino com Short SaiaModa Plus Size Macacão Curve"></div>
       <h3>Conjunto Macaquinho Feminino com Short SaiaModa Plus Size Macacão Curve</h3>
       <p class="descricao">Conjunto Macaquinho Feminino Plus Size em crepe de malha, super confortável, com elastano, ótimo caimento e acabamento impecável. Modelo GG/G1 veste do 46 ao 52, disponível em várias cores. Ideal para looks frescos, elegantes e versáteis no verão.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/AUmOIDEVya" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">54,17</p>
+      <p class="meta">shopee · roupas femininas</p>
+      <a class="botao" href="https://s.shopee.com.br/AUmOIDEVya" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/4176Lt7WaUL._AC_SL1000_.jpg" alt="MÁSCARA PARA CÍLIOS PEEL OFF MELU RR515 SELFIE RUBYROSE"></div>
       <h3>MÁSCARA PARA CÍLIOS PEEL OFF MELU RR515 SELFIE RUBYROSE</h3>
       <p class="descricao">Máscara para Cílios Peel Off Melu Ruby Rose, fórmula cremosa e leve que proporciona volume, alongamento e definição sem borrar. Camadas construíveis, acabamento impecável e remoção peel off que sai como adesivo ao umedecer. Ideal para um olhar marcante e prático no dia a dia.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4oaK905" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">14,99</p>
+      <p class="meta">amazon · maquiagem</p>
+      <a class="botao" href="https://amzn.to/4oaK905" target="_blank" rel="noopener">Ver produto</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
