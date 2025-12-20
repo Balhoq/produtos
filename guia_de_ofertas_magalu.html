@@ -5,398 +5,468 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/fone-de-ouvido-bluetooth-sem-fio-jbl-wave-buds-2-branco/lojasmastercell/27940055p/2094da194c927ae9ee68dc3cac31ab75.jpeg" alt="Fone de Ouvido JBL Wave Buds 2, Cancelamento de Ruído, Bateria Até 40 Horas, Bluetooth 5.3, Conexão Multipontos, IP54, Branco - JBLWBUDS2WHT"></div>
       <h3>Fone de Ouvido JBL Wave Buds 2, Cancelamento de Ruído, Bateria Até 40 Horas, Bluetooth 5.3, Conexão Multipontos, IP54, Branco - JBLWBUDS2WHT</h3>
       <p class="descricao">JBL Wave Buds 2 — som Pure Bass, cancelamento de ruído, até 40h de bateria, Bluetooth 5.3 e conexão multipontos. Resistência IP54, microfones nítidos e carregamento rápido. Compactos, confortáveis e prontos para qualquer rotina.</p>
-      <p class="preco">278,10</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/cO=4j0cl" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/cO=4j0cl" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/fone-de-ouvido-jbl-in-ear-intra-auricular-tune-110-preto-jblt110blk/planetprime/jblfne001pto/ca6a1b95ddc9b0b06424557dc7bcb773.jpeg" alt="Fone de Ouvido JBL In Ear Intra-Auricular Tune 110 - Preto JBLT110BLK"></div>
       <h3>Fone de Ouvido JBL In Ear Intra-Auricular Tune 110 - Preto JBLT110BLK</h3>
       <p class="descricao">JBL Tune 110 — fone intra-auricular com fio, som Pure Bass, drivers de 9 mm, cabo flat anti-nós e botão com microfone para músicas e chamadas. Leve, confortável e perfeito para o dia a dia.</p>
-      <p class="preco">92,07</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/HLfyT9P-" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/HLfyT9P-" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/fone-de-ouvido-jbl-tune-310c-usb-c-in-ear-azul-lt310c/fastshop2/jblt310cazl/5abe133ab6e9dc75d67ef05c7e785060.jpeg" alt="Fone de Ouvido JBL Tune 310C USB-C In Ear Azul - LT310C"></div>
       <h3>Fone de Ouvido JBL Tune 310C USB-C In Ear Azul - LT310C</h3>
       <p class="descricao">JBL Tune 310C USB-C — fone in-ear com áudio Hi-Res, cabo flat anti-nós, equalização com presets e som nítido. Leve, confortável e compatível com qualquer dispositivo USB-C.</p>
-      <p class="preco">74,18</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/-4jeJM9f" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/-4jeJM9f" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/fone-de-ouvido-bluetooth-sem-fio-jbl-wave-beam-2-com-microfone-preto/lojasmastercell/27940067p/0c05db39f266fd38355278eaaf942180.jpeg" alt="Fone De Ouvido Bluetooth Sem Fio JBL Wave Beam 2 Com Microfone - Preto"></div>
       <h3>Fone De Ouvido Bluetooth Sem Fio JBL Wave Beam 2 Com Microfone - Preto</h3>
       <p class="descricao">JBL Wave Beam 2 — som Pure Bass, cancelamento de ruído, até 40h de bateria, Bluetooth 5.3, 4 microfones e conexão multipontos. Resistência IP54 e carregamento rápido. Leve, moderno e pronto para qualquer rotina.</p>
-      <p class="preco">278,10</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/P0pYsLOL" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/P0pYsLOL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/fone-de-ouvido-bluetooth-jbl-junior-320-rosa/harmandobrasil/28913834/56777bb01e41fac840b9c9d5ace2b792.jpeg" alt="Fone de Ouvido Bluetooth JBL Júnior 320 Rosa"></div>
       <h3>Fone de Ouvido Bluetooth JBL Júnior 320 Rosa</h3>
       <p class="descricao">JBL Júnior 320 — fone on-ear infantil com limite de volume seguro (85 dB), Bluetooth 5.3, até 50h de bateria e microfone. Confortável, resistente e com adesivos para personalização.</p>
-      <p class="preco">260,10</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/pq3aW0_x" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/pq3aW0_x" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/headset-gamer-sem-fio-jbl-quantum-610-wireless-driver-50mm-preto-28913608/kabum/369991/35dcb0f81de3688da3957e24ca22a406.jpeg" alt="Headset Gamer Sem Fio JBL Quantum 610, Wireless, Driver 50mm, Preto - 28913608"></div>
       <h3>Headset Gamer Sem Fio JBL Quantum 610, Wireless, Driver 50mm, Preto - 28913608</h3>
       <p class="descricao">JBL Quantum 610 — headset gamer sem fio com som imersivo QuantumSURROUND, drivers de 50mm, até 40h de bateria, iluminação RGB e microfone boom flip-up. Compatível com PC, PS5/PS4, Switch e Xbox.</p>
-      <p class="preco">549,99</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/yYJX993A" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/yYJX993A" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/fone-de-ouvido-sem-fio-tune-flex-2-preto-ate-48-horas-de-bateria-ip54-jbl/fastshop2/jbltflex2bpto/26dd667231cda760473f8f5b74266796.jpeg" alt="Fone de Ouvido sem Fio Tune Flex 2 Preto Até 48 horas de Bateria, IP54 - JBL"></div>
       <h3>Fone de Ouvido sem Fio Tune Flex 2 Preto Até 48 horas de Bateria, IP54 - JBL</h3>
       <p class="descricao">JBL Tune Flex 2 — fone sem fio com cancelamento adaptativo, até 48h de bateria, som Pure Bass, modo ambiente, IP54 e Bluetooth 5.3. Acompanha ponteiras e estojo.</p>
-      <p class="preco">453,86</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/TMeWV_dr" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/TMeWV_dr" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/jbl-fone-t510-bt-pure-bass/acessoriosetecnologia/8392960865ba11eda2984201ac185019/0dea7bff9b51df3f47fb029e6d0b7f72.jpeg" alt="JBL Fone T510 BT PURE BASS"></div>
       <h3>JBL Fone T510 BT PURE BASS</h3>
       <p class="descricao">JBL T510BT — fone Bluetooth com Pure Bass, até 16h de bateria, drivers de 32 mm e conexão rápida entre dispositivos. Leve, dobrável e confortável.</p>
-      <p class="preco">437,00</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/R3lrgHcC" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/R3lrgHcC" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/fone-de-ouvido-jbl-endurance-race-2-roxo-jblendura2/fastshop2/jblendura2rxo/507dfe756fa519bbf3f0bdeeb445f3a1.jpeg" alt="Fone de Ouvido JBL Endurance Race 2 Roxo - JBLENDURA2"></div>
       <h3>Fone de Ouvido JBL Endurance Race 2 Roxo - JBLENDURA2</h3>
       <p class="descricao">JBL Endurance Race 2 — fone esportivo TWS com ANC, IP68, até 48h de bateria e encaixe seguro Twistlock. Som JBL Pure Bass e 4 microfones.</p>
-      <p class="preco">376,71</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/rFYbIVHb" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/rFYbIVHb" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/fone-de-ouvido-bluetooth-jbl-live-beam-3-preto/harmandobrasil/28913776/a34500d25dff47f9135ce104d256839c.jpeg" alt="Fone de Ouvido Bluetooth JBL Live Beam 3 Preto"></div>
       <h3>Fone de Ouvido Bluetooth JBL Live Beam 3 Preto</h3>
       <p class="descricao">JBL Live Beam 3 — TWS com ANC adaptativo, som hi-res, até 48h de bateria, 6 microfones beamforming e estojo Smart Case.</p>
-      <p class="preco">719,10</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/DwzjMpZe" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/DwzjMpZe" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/ferro-de-passar-roupa-a-seco-mondial-fsn-55-w-branco/magazineluiza/227604200/4f2975a1d668825c0b3f87855b1499ba.jpg" alt="Ferro de Passar Roupa a Seco Mondial FSN-55-W - Branco"></div>
       <h3>Ferro de Passar Roupa a Seco Mondial FSN-55-W - Branco</h3>
       <p class="descricao">Ferro a seco Mondial FSN-55-W com base de alumínio polido, 6 níveis de temperatura, salva-botões e design leve. Aquece rápido, desliza fácil e garante excelente desempenho no dia a dia.</p>
-      <p class="preco">62,61</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/iw_5CxYt" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/iw_5CxYt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/liquidificador-mondial-turbo-power-l-99-fb-preto-com-filtro-3-velocidades-550w/magazineluiza/021756600/02caa133bda5fa19e21129542c937547.jpg" alt="Liquidificador Mondial Turbo Power L-99 FB - Preto com Filtro 3 Velocidades 550W"></div>
       <h3>Liquidificador Mondial Turbo Power L-99 FB - Preto com Filtro 3 Velocidades 550W</h3>
       <p class="descricao">Liquidificador Mondial Turbo Power L-99 FB 550W com jarra de 2,2L, 3 velocidades, função Pulsar, filtro integrado e lâmina em inox. Potente, resistente e ideal para sucos, vitaminas e misturas variadas.</p>
-      <p class="preco">94,91</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/rFkgVS8d" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/rFkgVS8d" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/aspirador-de-po-e-agua-electrolux-1400w-acqua-power-preto-e-amarelo-aqp20/magazineluiza/085865500/1ffe32386b60199f66164339e2612c46.jpg" alt="Aspirador de Pó e Água Electrolux 1400W Acqua Power Preto e Amarelo AQP20"></div>
       <h3>Aspirador de Pó e Água Electrolux 1400W Acqua Power Preto e Amarelo AQP20</h3>
       <p class="descricao">Aspirador Electrolux Acqua Power AQP20 1400W, aspira pó e água, com reservatório de 18L, função sopro, acessórios para cantos e pisos, cabo de 3,5m e sucção potente para limpeza rápida e eficiente.</p>
-      <p class="preco">265,05</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/PSJuvktA" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/PSJuvktA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/420x420/aspirador-de-po-vertical-wap-silent-speed-max-1350w-220v/123comprou/m-11606/a87c95fc6390d0188750ea564f5fbba9.jpeg" alt="Aspirador de Pó Vertical WAP Silent Speed Max 1350W 220V"></div>
       <h3>Aspirador de Pó Vertical WAP Silent Speed Max 1350W 220V</h3>
       <p class="descricao">Aspirador WAP Silent Speed Max 1350W 3 em 1, com filtro HEPA, tecnologia cyclone, cabo de 5m, bico múltiplo 360°, design leve e silencioso para limpeza eficiente até em locais de difícil acesso.</p>
-      <p class="preco">179,90</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/V9dyMV3V" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/V9dyMV3V" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/sanduicheira-grill-britania-press-bgr27i-2-em-1-prata-850w-antiaderente/magazineluiza/235076300/6fc9be1478adf77492bdb290ad6ecce4.jpg" alt="Sanduicheira/Grill Britânia Press BGR27I 2 em 1 Prata 850W - Antiaderente"></div>
       <h3>Sanduicheira/Grill Britânia Press BGR27I 2 em 1 Prata 850W - Antiaderente</h3>
       <p class="descricao">Sanduicheira/Grill Britânia BGR27I 2 em 1 com 850W, chapas antiaderentes, ajuste de espessura e trava de segurança. Ideal para grelhar sanduíches, peixes e vegetais com rapidez e sem óleo.</p>
-      <p class="preco">122,55</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/Gzf6Cbxz" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/Gzf6Cbxz" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/cafeteira-expresso-arno-nescafe-dolce-gusto-genio-s-basic-dgs5-grafite/magazineluiza/240002000/d6b04baaab5cb2724769d4559a9f2d3e.jpg" alt="Cafeteira Expresso Arno Nescafé Dolce Gusto Genio S Basic DGS5 Grafite"></div>
       <h3>Cafeteira Expresso Arno Nescafé Dolce Gusto Genio S Basic DGS5 Grafite</h3>
       <p class="descricao">Cafeteira Arno Dolce Gusto Genio S Basic DGS5 com 15 bar, prepara bebidas quentes e frias, reservatório de 800ml e alerta automático de limpeza. Prática, compacta e ideal para cápsulas Nescafé.</p>
-      <p class="preco">474,05</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/Ir4JoWEO" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/Ir4JoWEO" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/cafeteira-eletrica-arno-perfectta-inox-06l-cfpi/magazineluiza/023570100/8ef5761e1e3e309df335d0d717bf13e6.jpg" alt="Cafeteira Elétrica Arno Perfectta Inox 0,6L CFPI"></div>
       <h3>Cafeteira Elétrica Arno Perfectta Inox 0,6L CFPI</h3>
       <p class="descricao">Cafeteira Arno Perfectta 0,6L com 650W, jarra de vidro graduada, filtro permanente e sistema corta-pingos. Compacta, moderna e ideal para preparar até 15 xícaras com praticidade.</p>
-      <p class="preco">113,05</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/X1dmcjsJ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/X1dmcjsJ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/air-fryer-mondial-forno-oven-afon-12l-bi-preto-e-inox-12l/magazineluiza/237219400/a3445e6e8b6f4199b925f2c6a2040e0b.jpg" alt="Air Fryer Mondial Forno Oven AFON-12L-BI Preto e Inox 12L"></div>
       <h3>Air Fryer Mondial Forno Oven AFON-12L-BI Preto e Inox 12L</h3>
       <p class="descricao">Air Fryer Mondial Forno Oven 12L, 2 em 1 com cesto de 5L, 3 assadeiras, antiaderente Duraflon, painel digital com 10 funções e tecnologia de ar quente. Assa, frita e cozinha sem óleo com visor e iluminação interna.</p>
-      <p class="preco">519,00</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/6dgp-0UR" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/6dgp-0UR" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/sanduicheira-grill-cadence-preta-750w-antiaderente-click/magazineluiza/238024900/d4f787c2227d2d632f07565e33c28848.jpg" alt="Sanduicheira Grill Cadence Preta 750W Antiaderente Click"></div>
       <h3>Sanduicheira Grill Cadence Preta 750W Antiaderente Click</h3>
       <p class="descricao">Sanduicheira Cadence Click 750W com chapas antiaderentes profundas, grill superior e base lisa, capacidade para 2 sanduíches, botão Liga/Desliga com LEDs, pés antiderrapantes e preparo sem óleo.</p>
-      <p class="preco">109,90</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/65hb25Ue" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/65hb25Ue" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/ferro-de-passar-roupa-a-vapor-e-a-seco-mondial-f-32-azul-e-branco/magazineluiza/236675700/38d9dbd2b1a7bf29342ac800d265992b.jpg" alt="Ferro de Passar Roupa a Vapor e a Seco Mondial F-32 Azul e Branco"></div>
       <h3>Ferro de Passar Roupa a Vapor e a Seco Mondial F-32 Azul e Branco</h3>
       <p class="descricao">Ferro Mondial F-32 a vapor e a seco com base antiaderente, 6 níveis de temperatura, vapor vertical, spray, reservatório de 125ml, cabo giratório 360° e 1200W para roupas impecáveis com mais facilidade.</p>
-      <p class="preco">85,41</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/l2QdfxZL" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/l2QdfxZL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/batedeira-planetaria-mondial-premium-12-velocidades-700w-preto-inox-127v-bp-01p-b/arede/2347-01/428e2a4d57654a10fb2ed8daf19c5474.jpeg" alt="Batedeira Planetária Mondial Premium 12 Velocidades 700W Preto/Inox 127V - BP-01P-B"></div>
       <h3>Batedeira Planetária Mondial Premium 12 Velocidades 700W Preto/Inox 127V - BP-01P-B</h3>
       <p class="descricao">Batedeira Planetária Mondial Premium 700W com 12 velocidades, 3 batedores, 2 tigelas de 4,5L, movimento planetário e design preto/inox. Potente, versátil e ideal para qualquer receita.</p>
-      <p class="preco">489,90</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/YHAON7Yx" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/YHAON7Yx" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/batedeira-planetaria-mondial-premium-12-velocidades-700w-preto-inox-220v-bp-01p-b/arede/2347-02/428e2a4d57654a10fb2ed8daf19c5474.jpeg" alt="Batedeira Planetária Mondial Premium 12 Velocidades 700W Preto/Inox 220V - BP-01P-B"></div>
       <h3>Batedeira Planetária Mondial Premium 12 Velocidades 700W Preto/Inox 220V - BP-01P-B</h3>
       <p class="descricao">Batedeira Planetária Mondial Premium 700W com 12 velocidades, 3 batedores e 2 tigelas de 4,5L. Modelo 220V em preto/inox, potente e ideal para massas leves, médias e pesadas.</p>
-      <p class="preco">479,90</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/2hmpod1H" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/2hmpod1H" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/pipoqueira-eletrica-mondial-popflix-pp-04-1200w/magazineluiza/236682700/0bcdc992776ea55c391a45d24683c107.jpg" alt="Pipoqueira Elétrica Mondial Popflix PP-04 - 1200W"></div>
       <h3>Pipoqueira Elétrica Mondial Popflix PP-04 - 1200W</h3>
       <p class="descricao">Pipoqueira Elétrica Mondial Popflix PP-04, 1200W, prepara pipoca em até 3 minutos sem óleo, com bocal direcionador e colher dosadora. Compacta, prática e mais saudável.</p>
-      <p class="preco">161,41</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/OI0spr0P" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/OI0spr0P" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/torradeira-electrolux-granite-gray-2-fatias-8-nivei-2-fatias-8-niveis-de-tostagem/magazineluiza/231236300/3ea1bb77554be12ebd508c0e8caaabf7.jpg" alt="Torradeira Electrolux Granite Gray 2 Fatias 8 Nívei - 2 Fatias 8 Níveis de Tostagem"></div>
       <h3>Torradeira Electrolux Granite Gray 2 Fatias 8 Nívei - 2 Fatias 8 Níveis de Tostagem</h3>
       <p class="descricao">Torradeira Electrolux ETS10 Granite Gray com 8 níveis de tostagem, funções descongelar, reaquecer e cancelar, aberturas extra largas e bandeja coletora de migalhas. Moderna e prática.</p>
-      <p class="preco">151,91</p>
-      <p class="meta">magalu · eletroportateis</p>
-      <a class="botao" href="https://divulgador.magalu.com/T9IS6HOt" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/T9IS6HOt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/caixa-de-som-jbl-partybox-encore-essential-bluetooth-led-100w-rms-ipx4-preto-58035033/kabum/551566/1d342dd90078476bc3260262fa632e6e.jpeg" alt="Caixa de Som JBL Partybox Encore Essential, Bluetooth, LED, 100W RMS, IPX4, Preto - 58035033"></div>
       <h3>Caixa de Som JBL Partybox Encore Essential, Bluetooth, LED, 100W RMS, IPX4, Preto - 58035033</h3>
       <p class="descricao">A JBL Partybox Encore Essential entrega 100W RMS de potência com graves profundos, luzes LED dinâmicas e até 6 horas de música. Possui Bluetooth, proteção IPX4 contra respingos, entrada para microfone, USB e auxiliar, além de design portátil com alça para levar a festa a qualquer lugar.</p>
-      <p class="preco">1.599,00</p>
-      <p class="meta">magalu · tv audio</p>
-      <a class="botao" href="https://divulgador.magalu.com/P0t-PtJ2" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/P0t-PtJ2" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/garrafa-termica-r-evolution-1l-inox-termolar/uaiexpress1/111577/ee787c9707bb79f2b3c4fe2d6f84639b.jpeg" alt="Garrafa Térmica R-Evolution 1L Inox - TERMOLAR"></div>
       <h3>Garrafa Térmica R-Evolution 1L Inox - TERMOLAR</h3>
       <p class="descricao">Garrafa Térmica Termolar R-Evolution 1L em inox 304, isolamento a vácuo, conserva bebidas por até 20h quente e 36h frio, sem ampola de vidro, com tampa rolha dupla e garantia de 5 anos.</p>
-      <p class="preco">151,72</p>
-      <p class="meta">magalu · casa construcao</p>
-      <a class="botao" href="https://divulgador.magalu.com/2E8ATT09" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/2E8ATT09" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/bandeja-de-madeira-retangular-tramontina-teca-50x28cm/magazineluiza/226938800/a2cbb6e2db0c88d7258cb23d8892ccbb.jpg" alt="Bandeja de Madeira Retangular Tramontina - Teca 50x28cm"></div>
       <h3>Bandeja de Madeira Retangular Tramontina - Teca 50x28cm</h3>
       <p class="descricao">Bandeja Tramontina Teca 50x28cm feita em madeira com pés dobráveis, resistente, elegante e ideal para servir cafés, lanches e receber visitas com estilo. Perfeita para uso diário e momentos especiais.</p>
-      <p class="preco">155,19</p>
-      <p class="meta">magalu · decoracao utensilios</p>
-      <a class="botao" href="https://divulgador.magalu.com/WJlhxzFo" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/WJlhxzFo" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/ventilador-de-teto-ventisol-fenix-branco-3-velocidades-premium/techshop/venven00010/0943f334d50a5eeb94c0858e997db5d4.jpeg" alt="Ventilador de Teto Ventisol Fenix Branco 3 Velocidades Premium"></div>
       <h3>Ventilador de Teto Ventisol Fenix Branco 3 Velocidades Premium</h3>
       <p class="descricao">Ventilador de Teto Ventisol Fênix 110V com 3 velocidades, 3 pás, luminária para duas lâmpadas, função exaustor e modo reverso. Potente, silencioso e ideal para refrescar ambientes com economia e conforto.</p>
-      <p class="preco">199,00</p>
-      <p class="meta">magalu · eletrodomesticos</p>
-      <a class="botao" href="https://divulgador.magalu.com/NBVvgqoQ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/NBVvgqoQ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/controle-sony-dualsense-ps5-sem-fio-branco-3005767/kabum/115801/3a3dea44dad1f4a6a1ceb60279113575.jpeg" alt="Controle Sony DualSense PS5, Sem Fio, Branco - 3005767"></div>
       <h3>Controle Sony DualSense PS5, Sem Fio, Branco - 3005767</h3>
       <p class="descricao">O Controle Sony DualSense PS5 oferece resposta tátil, gatilhos adaptáveis, microfone embutido, Bluetooth e design icônico para uma jogabilidade ultrarrealista no PS5 e PC, elevando a imersão a outro nível.</p>
-      <p class="preco">389,67</p>
-      <p class="meta">magalu · games consoles</p>
-      <a class="botao" href="https://divulgador.magalu.com/PSmP5eLu" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/PSmP5eLu" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/sensor-infravermelho-passivo-sem-fio-intelbras-ivp-2000-sf-intelbras/dgssegurancaeletronica/f023af0a866f11eabace4201ac18501e/f8f94d160b8cc28e688197a0d6965e6f.jpeg" alt="Sensor Infravermelho Passivo Sem Fio Intelbras Ivp 2000 Sf - Intelbrás"></div>
       <h3>Sensor Infravermelho Passivo Sem Fio Intelbras Ivp 2000 Sf - Intelbrás</h3>
       <p class="descricao">Sensor IVP 2000 SF Intelbras, sem fio, com alcance de 100m, ângulo de 115°, tecnologia digital, alta precisão e instalação fácil. Ideal para segurança residencial ou comercial com ótimo custo-benefício.</p>
-      <p class="preco">100,98</p>
-      <p class="meta">magalu · seguranca</p>
-      <a class="botao" href="https://divulgador.magalu.com/j=oiutQz" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/j=oiutQz" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/pneu-milever-mp270-185-60r15-aro-15-88v/clubedaborracha/126420/48a4d9c3f034898a755ed02da39b5910.jpeg" alt="Pneu Milever MP270 185/60R15 Aro 15 88V"></div>
       <h3>Pneu Milever MP270 185/60R15 Aro 15 88V</h3>
       <p class="descricao">Pneu Milever MP270 185/60R15 com excelente estabilidade, tração confiável e índice de velocidade V para até 240 km/h. Ideal para carros e caminhonetes, garantindo segurança e ótimo custo-benefício.</p>
-      <p class="preco">214,17</p>
-      <p class="meta">magalu · pneus rodas</p>
-      <a class="botao" href="https://divulgador.magalu.com/20146uTR" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/20146uTR" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/40-capsulas-cafe-expresso-e-bebida-cafeteira-tres-coracoes-tres-coracoes/olistplus/opmle3q3j71ejnqo/b83893f17850de1d41bdc55618e7d18f.jpeg" alt="40 Cápsulas Café Expresso E Bebida Cafeteira Três Corações - Três Corações"></div>
       <h3>40 Cápsulas Café Expresso E Bebida Cafeteira Três Corações - Três Corações</h3>
       <p class="descricao">Kit com 40 cápsulas Três Corações, incluindo Espresso Supremo, Vibrante, Cappuccino e Chocolatto. Sabores intensos e cremosos para sua cafeteira Três, unindo praticidade, aroma e alta qualidade.</p>
-      <p class="preco">79,55</p>
-      <p class="meta">magalu · alimentos bebidas</p>
-      <a class="botao" href="https://divulgador.magalu.com/aKz5x=DG" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/aKz5x=DG" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/caneta-esferografica-ponta-media-1-0mm-azul-caixa-com-50-unidades-bic/salenas/8a9d7d988c1e11ed906a4201ac185019/835e719d25a5f44d8c3ad29cbc8116a2.jpeg" alt="Caneta Esferográfica Ponta Média 1.0mm Azul caixa com 50 Unidades - Bic"></div>
       <h3>Caneta Esferográfica Ponta Média 1.0mm Azul caixa com 50 Unidades - Bic</h3>
       <p class="descricao">Caixa com 50 canetas Bic Cristal Azul ponta média 1.0 mm, escrita macia, tinta de secagem rápida e durabilidade de até 2 km por caneta. Perfeita para estudos, escritório e uso diário, com excelente custo-benefício.</p>
-      <p class="preco">39,56</p>
-      <p class="meta">magalu · papelaria escritorio</p>
-      <a class="botao" href="https://divulgador.magalu.com/JkhAnkU8" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/JkhAnkU8" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/unico-duplo-800-da-arcada-nostalgica-retro-handheld-da-tela-horizontal-do-console-de-jogos-em-um-console-de-jogos-huoguo/nocnocasiacbt/bhlh02022070195457f01/f6cd27bdaba68c2615caa6db815bd6af.jpeg" alt="Único duplo 800 da arcada nostálgica retro Handheld da tela horizontal do console de jogos em um console de jogos - HUOGUO"></div>
       <h3>Único duplo 800 da arcada nostálgica retro Handheld da tela horizontal do console de jogos em um console de jogos - HUOGUO</h3>
       <p class="descricao">Console portátil retrô com tela de 3,5”, 800 jogos clássicos, bateria recarregável e suporte para jogar na TV, ideal para diversão em qualquer lugar.</p>
-      <p class="preco">215,28</p>
-      <p class="meta">magalu · games consoles</p>
-      <a class="botao" href="https://divulgador.magalu.com/XTd8PJs4" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/XTd8PJs4" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/kit-lencol-casal-200-fios-algodao-3-pecas-jogo-forro-de-cama-box-extra-macio-donna-maria-confeccoes/confeccoesdonamaria/mf-percal-1455-verde-bebe/f627706260655f646f9bec08946779ad.jpeg" alt="Kit Lençol Casal 200 Fios Algodão 3 Peças Jogo Forro de Cama Box Extra Macio - DONNA MARIA CONFECÇÕES"></div>
       <h3>Kit Lençol Casal 200 Fios Algodão 3 Peças Jogo Forro de Cama Box Extra Macio - DONNA MARIA CONFECÇÕES</h3>
       <p class="descricao">Kit lençol casal 200 fios em algodão percal com 3 peças, extra macio, não desfia, não faz bolinhas e possui elástico em toda a volta, ideal para quem busca conforto e qualidade no dia a dia.</p>
-      <p class="preco">64,07</p>
-      <p class="meta">magalu · cama mesa banho</p>
-      <a class="botao" href="https://divulgador.magalu.com/JkA7_VR6" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/JkA7_VR6" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/kit-jogo-de-chaves-fenda-e-philips-isolada-imantada-13-pecas-bomber/jjfitstore/kt-1059/53c1f6962ebb2dfd1fbde89e22c5da38.jpeg" alt="Kit Jogo De Chaves Fenda E Philips Isolada Imantada 13 Peças - Bomber"></div>
       <h3>Kit Jogo De Chaves Fenda E Philips Isolada Imantada 13 Peças - Bomber</h3>
       <p class="descricao">Kit de chaves fenda e Philips com 13 peças isoladas e imantadas, acompanha chave teste, ideal para manutenção, elétrica e reparos do dia a dia com praticidade e segurança.</p>
-      <p class="preco">55,20</p>
-      <p class="meta">magalu · ferramentas</p>
-      <a class="botao" href="https://divulgador.magalu.com/5PxXoPeN" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/5PxXoPeN" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/blend-spray-cera-liquida-carnauba-vitrificador-cristalizadora-vonixx/loja-yamase/blendspray-pano-40x40/2f78689fa0a09c48103e2376787f2c72.jpeg" alt="Blend Spray Cera Liquida Carnauba Vitrificador Cristalizadora Vonixx"></div>
       <h3>Blend Spray Cera Liquida Carnauba Vitrificador Cristalizadora Vonixx</h3>
       <p class="descricao">Cera líquida spray Vonixx Blend com carnaúba e sílica, promove brilho intenso, efeito vitrificado, toque liso e proteção da pintura por até 4 meses, pronta para uso.</p>
-      <p class="preco">54,72</p>
-      <p class="meta">magalu · acessorios automotivos</p>
-      <a class="botao" href="https://divulgador.magalu.com/Fl7ncJBb" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/Fl7ncJBb" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/miniatura-formula-1-ferrari-oracle-red-bull-racing-rb201-max-2024-1-43-burago-38097-bburago/limahobbies/66327/8364eaa2a078939ab2ded3839de161fb.jpeg" alt="Miniatura Fórmula 1 Ferrari Oracle Red Bull Racing RB201 Max 2024 1/43 Burago 38097 - Bburago"></div>
       <h3>Miniatura Fórmula 1 Ferrari Oracle Red Bull Racing RB201 Max 2024 1/43 Burago 38097 - Bburago</h3>
       <p class="descricao">Miniatura oficial do RB20 da Red Bull Racing 2024 pilotado por Max Verstappen, escala 1:43, produzida em metal com pneus emborrachados, ideal para colecionadores e fãs de Fórmula 1.</p>
-      <p class="preco">129,99</p>
-      <p class="meta">magalu · brinquedos hobbies</p>
-      <a class="botao" href="https://divulgador.magalu.com/3QeIo33y" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/3QeIo33y" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/90x90/cama-toca-tipo-iglu-caes-pequenos-e-gatos-2-em-1-pet-lover-okiitech/okiitechshop/camap-preta/79520d1ebe222ae5c407da2d5f82c0db.jpeg" alt="Cama Toca tipo Iglu cães pequenos e gatos - 2 em 1 pet lover - Okiitech"></div>
       <h3>Cama Toca tipo Iglu cães pequenos e gatos - 2 em 1 pet lover - Okiitech</h3>
       <p class="descricao">Cama pet 2 em 1 tipo iglu para cães pequenos e gatos, confortável, versátil e ideal para dias quentes ou frios, garantindo aconchego e descanso em todas as estações.</p>
-      <p class="preco">55,71</p>
-      <p class="meta">magalu · pet shop</p>
-      <a class="botao" href="https://divulgador.magalu.com/1E1EqEog" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/1E1EqEog" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/nescafe-dolce-gusto-nescau-10-capsulas/nescafedolcegustooficial/ad95985e84b5df293d7b94ba1076b909/88c9edf9dda9f77d90509bec146f048f.jpeg" alt="NESCAFÉ DOLCE GUSTO Nescau 10 cápsulas"></div>
       <h3>NESCAFÉ DOLCE GUSTO Nescau 10 cápsulas</h3>
       <p class="descricao">NESCAFÉ Dolce Gusto Nescau 10 cápsulas, sabor cremoso e nutritivo, ideal para chocolate quente rápido e prático no café da manhã ou lanche, compatível com máquinas Dolce Gusto.</p>
-      <p class="preco">21,90</p>
-      <p class="meta">magalu · alimentos bebidas</p>
-      <a class="botao" href="https://divulgador.magalu.com/rao-V47d" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/rao-V47d" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/livro-duna-com-sobrecapa-edicao-limitada/webplus/25843p/d4fa384feaf2090236cfee513f3fdf9e.jpeg" alt="Livro - Duna com sobrecapa (Edição limitada)"></div>
       <h3>Livro - Duna com sobrecapa (Edição limitada)</h3>
       <p class="descricao">Duna em edição limitada com sobrecapa traz a obra completa de Frank Herbert em capa dura, com conteúdos extras e acabamento premium, ideal para fãs de ficção científica e colecionadores.</p>
-      <p class="preco">78,99</p>
-      <p class="meta">magalu · midia fisica outros</p>
-      <a class="botao" href="https://divulgador.magalu.com/M6FBIDnF" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/M6FBIDnF" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/ghost-of-tsushima-para-ps4-sucker-punch-productions/magazineluiza/225535700/8cb6373861f63b49fec12501b37c83b9.jpg" alt="Ghost of Tsushima para PS4 - Sucker Punch Productions"></div>
       <h3>Ghost of Tsushima para PS4 - Sucker Punch Productions</h3>
       <p class="descricao">Ghost of Tsushima para PS4 é um jogo de ação e aventura em mundo aberto que combina história épica, gráficos incríveis e combates intensos no Japão feudal, ideal para fãs de games imersivos.</p>
-      <p class="preco">180,09</p>
-      <p class="meta">magalu · games consoles</p>
-      <a class="botao" href="https://divulgador.magalu.com/jal-mbTL" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/jal-mbTL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
