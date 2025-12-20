@@ -5,56 +5,88 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_966568-MLB88807112998_082025-F-4-brinquedo-pet-corda-resistente-interativo-cachorro-forte.webp" alt="4 Brinquedo Pet Corda Resistente Interativo Cachorro Forte"></div>
       <h3>4 Brinquedo Pet Corda Resistente Interativo Cachorro Forte</h3>
       <p class="descricao">Kit com 4 brinquedos resistentes para cães, ideal para diversão, alívio do estresse e gasto de energia. Inclui cordas e mordedores para cabo de guerra, perfeito para filhotes e adultos de todas as raças.</p>
-      <p class="preco">39,96</p>
-      <p class="meta">mercadolivre · pet shop</p>
-      <a class="botao" href="https://mercadolivre.com/sec/1Q9xLbg" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/1Q9xLbg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/90x90/cama-toca-tipo-iglu-caes-pequenos-e-gatos-2-em-1-pet-lover-okiitech/okiitechshop/camap-preta/79520d1ebe222ae5c407da2d5f82c0db.jpeg" alt="Cama Toca tipo Iglu cães pequenos e gatos - 2 em 1 pet lover - Okiitech"></div>
       <h3>Cama Toca tipo Iglu cães pequenos e gatos - 2 em 1 pet lover - Okiitech</h3>
       <p class="descricao">Cama pet 2 em 1 tipo iglu para cães pequenos e gatos, confortável, versátil e ideal para dias quentes ou frios, garantindo aconchego e descanso em todas as estações.</p>
-      <p class="preco">55,71</p>
-      <p class="meta">magalu · pet shop</p>
-      <a class="botao" href="https://divulgador.magalu.com/1E1EqEog" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/1E1EqEog" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_942852-MLA95966775523_102025-F.webp" alt="Tapete Gelado Refrescante Para Cães 60x45cm De Tamanho Jambo Pet"></div>
       <h3>Tapete Gelado Refrescante Para Cães 60x45cm De Tamanho Jambo Pet</h3>
       <p class="descricao">Tapete gelado Jambo Pet 60x45cm que mantém o pet sempre mais fresco que o ambiente, sem água ou energia, ideal para cães, gatos e outros pets nos dias quentes.</p>
-      <p class="preco">52,07</p>
-      <p class="meta">mercadolivre · pet shop</p>
-      <a class="botao" href="https://mercadolivre.com/sec/2kXefix" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/2kXefix" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-me8mngk5k3k326.webp" alt="Shampoo Paris Todos os Pelos Para Cachorro E Gato Pet Shop - 500ml -Linha Pet- shampoo Pet shop"></div>
       <h3>Shampoo Paris Todos os Pelos Para Cachorro E Gato Pet Shop - 500ml -Linha Pet- shampoo Pet shop</h3>
       <p class="descricao">Shampoo Paris Genial Pet 500ml para cães e gatos, fórmula suave e neutra que limpa, controla odores e deixa os pelos macios, fáceis de pentear e com perfume agradável.</p>
-      <p class="preco">16,90</p>
-      <p class="meta">shopee · pet shop</p>
-      <a class="botao" href="https://s.shopee.com.br/6ptkQxRRDk" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/6ptkQxRRDk" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
