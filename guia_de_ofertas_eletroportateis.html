@@ -5,308 +5,254 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:12px;
-    text-align:center;
-    transition:transform .16s;
-    /* NOVO CSS PARA ALINHAMENTO */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
-    min-height: 350px;
-}
+.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-
-
-/* CSS CORRIGIDO PARA AS IMAGENS */
-.produto-card .thumb{
-    height:160px; /* Altura fixa para todos os cards */
-    display:flex; /* Usado para centralizar a imagem */
-    align-items:center;
-    justify-content:center;
-    margin-bottom:8px;
-}
-.produto-card .thumb img{
-    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
-    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
-    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
-    border-radius:8px;
-}
-/* FIM DO CSS CORRIGIDO */
-
+.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
+.meta{font-size:12px;color:#888;margin-bottom:8px}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
+<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51UxR8FHe-L._AC_SL1000_.jpg" alt="Sanduicheira Elétrica Cadence Click - 220V"></div>
       <h3>Sanduicheira Elétrica Cadence Click - 220V</h3>
       <p class="descricao">Sanduicheira Cadence Click 220V, chapas antiaderentes profundas e 750W de potência.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nyfKJ9" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">91,99</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4nyfKJ9" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51yYe4QlyQL._AC_SX679_.jpg" alt="Mixer Vertical Turbo Chef Elgin 3 em 1 200W Preto 220v"></div>
       <h3>Mixer Vertical Turbo Chef Elgin 3 em 1 200W Preto 220v</h3>
       <p class="descricao">Mixer Elgin Turbo Chef 3 em 1, 200W, com miniprocessador e copo dosador.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3KrIDYJ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">135,90</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/3KrIDYJ" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/61TgtQaluAL._AC_SX679_.jpg" alt="BLACK+DECKER Mixer, Misturador Multiuso e Portátil com Haste em Inox, Modelo M150"></div>
       <h3>BLACK+DECKER Mixer, Misturador Multiuso e Portátil com Haste em Inox, Modelo M150</h3>
       <p class="descricao">Leve, portátil e multiuso, o Mixer BLACK+DECKER M150 é ideal para preparar vitaminas, molhos, cappuccinos, chocolates e espumar leite com rapidez. Compacto, resistente e com haste em inox, funciona com pilhas e é perfeito para uso diário ou para levar a qualquer lugar.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/48AH052" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">44,00</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/48AH052" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71mpLyEfFUL._AC_SL1500_.jpg" alt="MONDIAL Liquidificador Turbo Power 550W, 110V, Preto, 1,6L - L-99 FB"></div>
       <h3>MONDIAL Liquidificador Turbo Power 550W, 110V, Preto, 1,6L - L-99 FB</h3>
       <p class="descricao">O Liquidificador Mondial Turbo Power L-99 FB oferece 550W de potência, jarra resistente de 2,2L, lâminas em inox, 3 velocidades + pulsar, filtro em inox e função autolimpeza — ideal para sucos, vitaminas, molhos e receitas variadas com rapidez e praticidade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nKjM0G" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">94,90</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4nKjM0G" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51NFGyGQN8L._SL1000_.jpg" alt="Purificador de Água Gelada Fria e Natural Elétrico Compacto Eletronico placa Electrolux Filtro refil 6 meses ou 3000l Painel Touch Bivolt Grafite PE12G"></div>
       <h3>Purificador de Água Gelada Fria e Natural Elétrico Compacto Eletronico placa Electrolux Filtro refil 6 meses ou 3000l Painel Touch Bivolt Grafite PE12G</h3>
       <p class="descricao">Purificador Electrolux PE12G com 3 temperaturas, painel touch, filtro Acqua Pure, enchimento 4x mais rápido e design compacto ideal para qualquer ambiente.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/42RPYXT" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">541,40</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/42RPYXT" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51G4AxVAJxL._AC_SX679_.jpg" alt="MONDIAL Fritadeira Air Fryer Forno Oven 12L, Preto/Inox, 2000W, 110V - AFON-12L-BI"></div>
       <h3>MONDIAL Fritadeira Air Fryer Forno Oven 12L, Preto/Inox, 2000W, 110V - AFON-12L-BI</h3>
       <p class="descricao">Air Fryer Mondial Oven 12L 2 em 1 (Fritadeira + Forno), 2000W, painel digital com 10 funções, cesto de 5L, 3 assadeiras antiaderentes Duraflon, visor iluminado e preparo rápido e sem óleo.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4nokQYg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">481,00</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4nokQYg" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51CmxAPMOML._AC_SX679_.jpg" alt="Agratto 784 - Chaleira Eletrica Inox, 220v, 1,8 Litro, Preto/inox"></div>
       <h3>Agratto 784 - Chaleira Eletrica Inox, 220v, 1,8 Litro, Preto/inox</h3>
       <p class="descricao">Chaleira elétrica Agratto 784 em inox e plástico, 220V, 1,8 L, com desligamento automático, base separada e luz indicadora LED. Prática, segura e fácil de limpar.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4mC7g2n" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">55,86</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4mC7g2n" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41XTKM4Cg4L._AC_SX679_.jpg" alt="Micro-ondas Philco 20l Branco Pmo23bb 110v 110v"></div>
       <h3>Micro-ondas Philco 20l Branco Pmo23bb 110v 110v</h3>
       <p class="descricao">Micro-ondas Philco PMO23BB Branco 20L, 110V, com 1100W de potência, funções pré-programadas, descongelamento por tempo ou peso e pintura Limpa Fácil para praticidade na limpeza.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/3KukuRn" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">459,00</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/3KukuRn" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/41kh2TI9f0L._AC_SX522_.jpg" alt="Forno Micro-ondas 20L Preto Midea 220V MRAS22"></div>
       <h3>Forno Micro-ondas 20L Preto Midea 220V MRAS22</h3>
       <p class="descricao">Micro-ondas Midea MRAS22 Preto 20L, 220V, com receitas pré-programadas, função Tira Odor, Menu Preferido e trava de segurança eletrônica para praticidade e segurança na cozinha.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4pIVWUM" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">464,42</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4pIVWUM" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7rd48-lupf3z3a40mxf1.webp" alt="Batedor Misturador Mixer Elétrico para Bebidas Leite Café Clara de Ovo 2 em 1"></div>
       <h3>Batedor Misturador Mixer Elétrico para Bebidas Leite Café Clara de Ovo 2 em 1</h3>
       <p class="descricao">Mixer Elétrico 2 em 1 com batedor tipo fouet, recarregável via USB, ideal para leite cremoso, café, cappuccino, omeletes e bebidas diversas. Portátil, silencioso, resistente e fácil de limpar. Acompanha cabeças removíveis e corpo em aço.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/9fCAWKebrr" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">19,00</p>
+      <p class="meta">shopee · eletroportateis</p>
+      <a class="botao" href="https://s.shopee.com.br/9fCAWKebrr" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lqy7j7hfu7foe4.webp" alt="Espremedor Elétrico Laranja Limão Frutas Fazer Sucos Recarregável usb"></div>
       <h3>Espremedor Elétrico Laranja Limão Frutas Fazer Sucos Recarregável usb</h3>
       <p class="descricao">Espremedor elétrico USB para laranja, limão e outras frutas. Compacto, fácil de usar, com extração rápida e eficiente. Feito em alumínio de alta durabilidade e ideal para preparar sucos frescos em segundos.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/1BDcOmI9Ve" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">67,80</p>
+      <p class="meta">shopee · eletroportateis</p>
+      <a class="botao" href="https://s.shopee.com.br/1BDcOmI9Ve" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/ferro-de-passar-roupa-a-seco-mondial-fsn-55-w-branco/magazineluiza/227604200/4f2975a1d668825c0b3f87855b1499ba.jpg" alt="Ferro de Passar Roupa a Seco Mondial FSN-55-W - Branco"></div>
       <h3>Ferro de Passar Roupa a Seco Mondial FSN-55-W - Branco</h3>
       <p class="descricao">Ferro a seco Mondial FSN-55-W com base de alumínio polido, 6 níveis de temperatura, salva-botões e design leve. Aquece rápido, desliza fácil e garante excelente desempenho no dia a dia.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/iw_5CxYt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">62,61</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/iw_5CxYt" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/liquidificador-mondial-turbo-power-l-99-fb-preto-com-filtro-3-velocidades-550w/magazineluiza/021756600/02caa133bda5fa19e21129542c937547.jpg" alt="Liquidificador Mondial Turbo Power L-99 FB - Preto com Filtro 3 Velocidades 550W"></div>
       <h3>Liquidificador Mondial Turbo Power L-99 FB - Preto com Filtro 3 Velocidades 550W</h3>
       <p class="descricao">Liquidificador Mondial Turbo Power L-99 FB 550W com jarra de 2,2L, 3 velocidades, função Pulsar, filtro integrado e lâmina em inox. Potente, resistente e ideal para sucos, vitaminas e misturas variadas.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/rFkgVS8d" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">94,91</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/rFkgVS8d" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/aspirador-de-po-e-agua-electrolux-1400w-acqua-power-preto-e-amarelo-aqp20/magazineluiza/085865500/1ffe32386b60199f66164339e2612c46.jpg" alt="Aspirador de Pó e Água Electrolux 1400W Acqua Power Preto e Amarelo AQP20"></div>
       <h3>Aspirador de Pó e Água Electrolux 1400W Acqua Power Preto e Amarelo AQP20</h3>
       <p class="descricao">Aspirador Electrolux Acqua Power AQP20 1400W, aspira pó e água, com reservatório de 18L, função sopro, acessórios para cantos e pisos, cabo de 3,5m e sucção potente para limpeza rápida e eficiente.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/PSJuvktA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">265,05</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/PSJuvktA" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/420x420/aspirador-de-po-vertical-wap-silent-speed-max-1350w-220v/123comprou/m-11606/a87c95fc6390d0188750ea564f5fbba9.jpeg" alt="Aspirador de Pó Vertical WAP Silent Speed Max 1350W 220V"></div>
       <h3>Aspirador de Pó Vertical WAP Silent Speed Max 1350W 220V</h3>
       <p class="descricao">Aspirador WAP Silent Speed Max 1350W 3 em 1, com filtro HEPA, tecnologia cyclone, cabo de 5m, bico múltiplo 360°, design leve e silencioso para limpeza eficiente até em locais de difícil acesso.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/V9dyMV3V" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">179,90</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/V9dyMV3V" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/sanduicheira-grill-britania-press-bgr27i-2-em-1-prata-850w-antiaderente/magazineluiza/235076300/6fc9be1478adf77492bdb290ad6ecce4.jpg" alt="Sanduicheira/Grill Britânia Press BGR27I 2 em 1 Prata 850W - Antiaderente"></div>
       <h3>Sanduicheira/Grill Britânia Press BGR27I 2 em 1 Prata 850W - Antiaderente</h3>
       <p class="descricao">Sanduicheira/Grill Britânia BGR27I 2 em 1 com 850W, chapas antiaderentes, ajuste de espessura e trava de segurança. Ideal para grelhar sanduíches, peixes e vegetais com rapidez e sem óleo.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/Gzf6Cbxz" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">122,55</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/Gzf6Cbxz" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/cafeteira-expresso-arno-nescafe-dolce-gusto-genio-s-basic-dgs5-grafite/magazineluiza/240002000/d6b04baaab5cb2724769d4559a9f2d3e.jpg" alt="Cafeteira Expresso Arno Nescafé Dolce Gusto Genio S Basic DGS5 Grafite"></div>
       <h3>Cafeteira Expresso Arno Nescafé Dolce Gusto Genio S Basic DGS5 Grafite</h3>
       <p class="descricao">Cafeteira Arno Dolce Gusto Genio S Basic DGS5 com 15 bar, prepara bebidas quentes e frias, reservatório de 800ml e alerta automático de limpeza. Prática, compacta e ideal para cápsulas Nescafé.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/Ir4JoWEO" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">474,05</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/Ir4JoWEO" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/cafeteira-eletrica-arno-perfectta-inox-06l-cfpi/magazineluiza/023570100/8ef5761e1e3e309df335d0d717bf13e6.jpg" alt="Cafeteira Elétrica Arno Perfectta Inox 0,6L CFPI"></div>
       <h3>Cafeteira Elétrica Arno Perfectta Inox 0,6L CFPI</h3>
       <p class="descricao">Cafeteira Arno Perfectta 0,6L com 650W, jarra de vidro graduada, filtro permanente e sistema corta-pingos. Compacta, moderna e ideal para preparar até 15 xícaras com praticidade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/X1dmcjsJ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">113,05</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/X1dmcjsJ" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/air-fryer-mondial-forno-oven-afon-12l-bi-preto-e-inox-12l/magazineluiza/237219400/a3445e6e8b6f4199b925f2c6a2040e0b.jpg" alt="Air Fryer Mondial Forno Oven AFON-12L-BI Preto e Inox 12L"></div>
       <h3>Air Fryer Mondial Forno Oven AFON-12L-BI Preto e Inox 12L</h3>
       <p class="descricao">Air Fryer Mondial Forno Oven 12L, 2 em 1 com cesto de 5L, 3 assadeiras, antiaderente Duraflon, painel digital com 10 funções e tecnologia de ar quente. Assa, frita e cozinha sem óleo com visor e iluminação interna.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/6dgp-0UR" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">519,00</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/6dgp-0UR" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/sanduicheira-grill-cadence-preta-750w-antiaderente-click/magazineluiza/238024900/d4f787c2227d2d632f07565e33c28848.jpg" alt="Sanduicheira Grill Cadence Preta 750W Antiaderente Click"></div>
       <h3>Sanduicheira Grill Cadence Preta 750W Antiaderente Click</h3>
       <p class="descricao">Sanduicheira Cadence Click 750W com chapas antiaderentes profundas, grill superior e base lisa, capacidade para 2 sanduíches, botão Liga/Desliga com LEDs, pés antiderrapantes e preparo sem óleo.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/65hb25Ue" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">109,90</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/65hb25Ue" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/ferro-de-passar-roupa-a-vapor-e-a-seco-mondial-f-32-azul-e-branco/magazineluiza/236675700/38d9dbd2b1a7bf29342ac800d265992b.jpg" alt="Ferro de Passar Roupa a Vapor e a Seco Mondial F-32 Azul e Branco"></div>
       <h3>Ferro de Passar Roupa a Vapor e a Seco Mondial F-32 Azul e Branco</h3>
       <p class="descricao">Ferro Mondial F-32 a vapor e a seco com base antiaderente, 6 níveis de temperatura, vapor vertical, spray, reservatório de 125ml, cabo giratório 360° e 1200W para roupas impecáveis com mais facilidade.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/l2QdfxZL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">85,41</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/l2QdfxZL" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/batedeira-planetaria-mondial-premium-12-velocidades-700w-preto-inox-127v-bp-01p-b/arede/2347-01/428e2a4d57654a10fb2ed8daf19c5474.jpeg" alt="Batedeira Planetária Mondial Premium 12 Velocidades 700W Preto/Inox 127V - BP-01P-B"></div>
       <h3>Batedeira Planetária Mondial Premium 12 Velocidades 700W Preto/Inox 127V - BP-01P-B</h3>
       <p class="descricao">Batedeira Planetária Mondial Premium 700W com 12 velocidades, 3 batedores, 2 tigelas de 4,5L, movimento planetário e design preto/inox. Potente, versátil e ideal para qualquer receita.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/YHAON7Yx" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">489,90</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/YHAON7Yx" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/batedeira-planetaria-mondial-premium-12-velocidades-700w-preto-inox-220v-bp-01p-b/arede/2347-02/428e2a4d57654a10fb2ed8daf19c5474.jpeg" alt="Batedeira Planetária Mondial Premium 12 Velocidades 700W Preto/Inox 220V - BP-01P-B"></div>
       <h3>Batedeira Planetária Mondial Premium 12 Velocidades 700W Preto/Inox 220V - BP-01P-B</h3>
       <p class="descricao">Batedeira Planetária Mondial Premium 700W com 12 velocidades, 3 batedores e 2 tigelas de 4,5L. Modelo 220V em preto/inox, potente e ideal para massas leves, médias e pesadas.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/2hmpod1H" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">479,90</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/2hmpod1H" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/pipoqueira-eletrica-mondial-popflix-pp-04-1200w/magazineluiza/236682700/0bcdc992776ea55c391a45d24683c107.jpg" alt="Pipoqueira Elétrica Mondial Popflix PP-04 - 1200W"></div>
       <h3>Pipoqueira Elétrica Mondial Popflix PP-04 - 1200W</h3>
       <p class="descricao">Pipoqueira Elétrica Mondial Popflix PP-04, 1200W, prepara pipoca em até 3 minutos sem óleo, com bocal direcionador e colher dosadora. Compacta, prática e mais saudável.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/OI0spr0P" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">161,41</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/OI0spr0P" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/torradeira-electrolux-granite-gray-2-fatias-8-nivei-2-fatias-8-niveis-de-tostagem/magazineluiza/231236300/3ea1bb77554be12ebd508c0e8caaabf7.jpg" alt="Torradeira Electrolux Granite Gray 2 Fatias 8 Nívei - 2 Fatias 8 Níveis de Tostagem"></div>
       <h3>Torradeira Electrolux Granite Gray 2 Fatias 8 Nívei - 2 Fatias 8 Níveis de Tostagem</h3>
       <p class="descricao">Torradeira Electrolux ETS10 Granite Gray com 8 níveis de tostagem, funções descongelar, reaquecer e cancelar, aberturas extra largas e bandeja coletora de migalhas. Moderna e prática.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/T9IS6HOt" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">151,91</p>
+      <p class="meta">magalu · eletroportateis</p>
+      <a class="botao" href="https://divulgador.magalu.com/T9IS6HOt" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/617vl0hohyL._AC_SX679_.jpg" alt="Cozedor de Ovos Elétrico 220V de Cozinha a Vapor (Branco)"></div>
       <h3>Cozedor de Ovos Elétrico 220V de Cozinha a Vapor (Branco)</h3>
       <p class="descricao">Cozedor de ovos elétrico para até 7 ovos, com controle do ponto pela água, desligamento automático e cestinha em inox para várias receitas. Compacto, rápido e perfeito para quem busca praticidade na cozinha.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4oRKDs4" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">30,56</p>
+      <p class="meta">amazon · eletroportateis</p>
+      <a class="botao" href="https://amzn.to/4oRKDs4" target="_blank" rel="noopener">Ver produto</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
