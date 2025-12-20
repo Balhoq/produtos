@@ -5,58 +5,56 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:12px;
-    text-align:center;
-    transition:transform .16s;
-    /* NOVO CSS PARA ALINHAMENTO */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
-    min-height: 350px;
-}
+.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-
-
-/* CSS CORRIGIDO PARA AS IMAGENS */
-.produto-card .thumb{
-    height:160px; /* Altura fixa para todos os cards */
-    display:flex; /* Usado para centralizar a imagem */
-    align-items:center;
-    justify-content:center;
-    margin-bottom:8px;
-}
-.produto-card .thumb img{
-    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
-    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
-    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
-    border-radius:8px;
-}
-/* FIM DO CSS CORRIGIDO */
-
+.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
+.meta{font-size:12px;color:#888;margin-bottom:8px}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
+<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/bandeja-de-madeira-retangular-tramontina-teca-50x28cm/magazineluiza/226938800/a2cbb6e2db0c88d7258cb23d8892ccbb.jpg" alt="Bandeja de Madeira Retangular Tramontina - Teca 50x28cm"></div>
       <h3>Bandeja de Madeira Retangular Tramontina - Teca 50x28cm</h3>
       <p class="descricao">Bandeja Tramontina Teca 50x28cm feita em madeira com pés dobráveis, resistente, elegante e ideal para servir cafés, lanches e receber visitas com estilo. Perfeita para uso diário e momentos especiais.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/WJlhxzFo" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">155,19</p>
+      <p class="meta">magalu · decoracao utensilios</p>
+      <a class="botao" href="https://divulgador.magalu.com/WJlhxzFo" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_947454-MLA100966841400_122025-F.webp" alt="Jogo Tapete Cozinha Kit Passadeira Capacho 2 Peças Multiuso Antiderrapante Emborrachado Tear Artesanal Fibra Natural Sem Pelo Decoração Clean Minimalista Funcional Lavável Durável"></div>
+      <h3>Jogo Tapete Cozinha Kit Passadeira Capacho 2 Peças Multiuso Antiderrapante Emborrachado Tear Artesanal Fibra Natural Sem Pelo Decoração Clean Minimalista Funcional Lavável Durável</h3>
+      <p class="descricao">Kit tapete cozinha com 2 peças em algodão artesanal, sem pelos, antiderrapante e lavável na máquina, ideal para cozinha, corredor, lavanderia ou entrada, unindo praticidade, segurança e estilo clean.</p>
+      <p class="preco">59,00</p>
+      <p class="meta">mercadolivre · decoracao utensilios</p>
+      <a class="botao" href="https://mercadolivre.com/sec/1emYb4A" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m94jkovzvtaa2f.webp" alt="Placa Decorativa HOME Preto ou Branco 12cm Para Mesa Estante Decoração Casa Enfeite Moderno"></div>
+      <h3>Placa Decorativa HOME Preto ou Branco 12cm Para Mesa Estante Decoração Casa Enfeite Moderno</h3>
+      <p class="descricao">Placa decorativa HOME de 12 cm, disponível nas cores preto ou branco, ideal para mesas, estantes e prateleiras, trazendo um toque moderno, acolhedor e elegante para a decoração da sua casa.</p>
+      <p class="preco">15,65</p>
+      <p class="meta">shopee · decoracao utensilios</p>
+      <a class="botao" href="https://s.shopee.com.br/LgGFtVfCT" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/71wKltbVMlL._AC_SX679_.jpg" alt="Organizador, Suporte, Aparador, Porta Livros, Bibliocanto Toni, grafite - GEGUTON"></div>
+      <h3>Organizador, Suporte, Aparador, Porta Livros, Bibliocanto Toni, grafite - GEGUTON</h3>
+      <p class="descricao">Porta livros moderno e divertido em aço carbono com pintura epóxi, ideal para organizar estantes e decorar ambientes com estilo, praticidade e design criativo.</p>
+      <p class="preco">32,00</p>
+      <p class="meta">amazon · decoracao utensilios</p>
+      <a class="botao" href="https://amzn.to/48HnnIm" target="_blank" rel="noopener">Ver produto</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
