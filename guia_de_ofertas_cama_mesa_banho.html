@@ -5,68 +5,65 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:12px;
-    text-align:center;
-    transition:transform .16s;
-    /* NOVO CSS PARA ALINHAMENTO */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
-    min-height: 350px;
-}
+.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-
-
-/* CSS CORRIGIDO PARA AS IMAGENS */
-.produto-card .thumb{
-    height:160px; /* Altura fixa para todos os cards */
-    display:flex; /* Usado para centralizar a imagem */
-    align-items:center;
-    justify-content:center;
-    margin-bottom:8px;
-}
-.produto-card .thumb img{
-    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
-    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
-    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
-    border-radius:8px;
-}
-/* FIM DO CSS CORRIGIDO */
-
+.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
+.meta{font-size:12px;color:#888;margin-bottom:8px}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
+<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_792791-MLA95549756401_102025-F.webp" alt="Jogo De Toalhas Banhão Gigante 5 Karsten Fio Penteado Lumina"></div>
       <h3>Jogo De Toalhas Banhão Gigante 5 Karsten Fio Penteado Lumina</h3>
       <p class="descricao">Kit de Toalhas Karsten Lumina com fio penteado, toque macio, alta absorção e acabamento premium. Inclui 5 peças: 2 banhões, 2 rosto e 1 piso. Conforto, elegância e durabilidade para seu banheiro.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://mercadolivre.com/sec/1TN5GiV" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">236,50</p>
+      <p class="meta">mercadolivre · cama mesa banho</p>
+      <a class="botao" href="https://mercadolivre.com/sec/1TN5GiV" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-mf662er4xgxw4f.webp" alt="Kit Panos de Prato Estampados 100% Algodão com Bainha – Atacado e Varejo Econômico"></div>
       <h3>Kit Panos de Prato Estampados 100% Algodão com Bainha – Atacado e Varejo Econômico</h3>
       <p class="descricao">Kit de Panos de Prato 100% algodão com bainha, alta absorção, estampas variadas e tamanhos 60x35 cm. Ideal para cozinha, uso doméstico ou revenda. Disponível em kits de várias quantidades.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/2LR8KAi2nA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">19,07</p>
+      <p class="meta">shopee · cama mesa banho</p>
+      <a class="botao" href="https://s.shopee.com.br/2LR8KAi2nA" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/71VSLmF9MbL._AC_SX679_.jpg" alt="Kit 3 Toalhas de Rosto Karsten Fio Penteado – 48x80 cm - Bragança Marrom"></div>
+      <h3>Kit 3 Toalhas de Rosto Karsten Fio Penteado – 48x80 cm - Bragança Marrom</h3>
+      <p class="descricao">Kit com 3 toalhas de rosto Karsten em algodão fio penteado, supermacias, com alta absorção e acabamento premium, ideais para uso diário e para manter o banheiro sempre bonito e funcional.</p>
+      <p class="preco">115,89</p>
+      <p class="meta">amazon · cama mesa banho</p>
+      <a class="botao" href="https://amzn.to/4qd6evT" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/kit-lencol-casal-200-fios-algodao-3-pecas-jogo-forro-de-cama-box-extra-macio-donna-maria-confeccoes/confeccoesdonamaria/mf-percal-1455-verde-bebe/f627706260655f646f9bec08946779ad.jpeg" alt="Kit Lençol Casal 200 Fios Algodão 3 Peças Jogo Forro de Cama Box Extra Macio - DONNA MARIA CONFECÇÕES"></div>
+      <h3>Kit Lençol Casal 200 Fios Algodão 3 Peças Jogo Forro de Cama Box Extra Macio - DONNA MARIA CONFECÇÕES</h3>
+      <p class="descricao">Kit lençol casal 200 fios em algodão percal com 3 peças, extra macio, não desfia, não faz bolinhas e possui elástico em toda a volta, ideal para quem busca conforto e qualidade no dia a dia.</p>
+      <p class="preco">64,07</p>
+      <p class="meta">magalu · cama mesa banho</p>
+      <a class="botao" href="https://divulgador.magalu.com/JkA7_VR6" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-mh9fnvpuu4g060.webp" alt="Toalha de Mesa Transparente PVC Premium 0,10mm| Antiderrapante | Anti Mancha | Protege Madeira | Várias Medidas"></div>
+      <h3>Toalha de Mesa Transparente PVC Premium 0,10mm| Antiderrapante | Anti Mancha | Protege Madeira | Várias Medidas</h3>
+      <p class="descricao">Toalha de Mesa Transparente PVC Premium 0,10mm antiderrapante, impermeável e anti mancha, ideal para proteger mesas de madeira, vidro ou mármore sem esconder a decoração.</p>
+      <p class="preco">10,68</p>
+      <p class="meta">shopee · cama mesa banho</p>
+      <a class="botao" href="https://s.shopee.com.br/BMtLWfeqx" target="_blank" rel="noopener">Ver produto</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
