@@ -5,74 +5,108 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_991829-MLU72892504320_112023-F.webp" alt="Livro Ponto de inflexão, de Silva, Flávio Augusto Da. Editora BUZZ EDITORA, capa mole (2019)"></div>
       <h3>Livro Ponto de inflexão, de Silva, Flávio Augusto Da. Editora BUZZ EDITORA, capa mole (2019)</h3>
       <p class="descricao">Flávio Augusto mostra como decisões especiais moldam o rumo da vida, apresentando o conceito de Ponto de Inflexão e ensinando como escolher caminhos que transformam resultados pessoais e profissionais.</p>
-      <p class="preco">33,10</p>
-      <p class="meta">mercadolivre · livros de financas negocios</p>
-      <a class="botao" href="https://mercadolivre.com/sec/1Fesahf" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/1Fesahf" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_796574-MLB76746579822_062024-F-curso-completo-de-analise-grafica-para-mercado-financeiro.webp" alt="Curso Completo De Análise Gráfica Para Mercado Financeiro"></div>
       <h3>Curso Completo De Análise Gráfica Para Mercado Financeiro</h3>
       <p class="descricao">Curso completo para dominar análise gráfica e identificar oportunidades reais no mercado financeiro. Aprenda padrões, tendências e estratégias práticas para operar com mais segurança e buscar renda extra com inteligência.</p>
-      <p class="preco">189,00</p>
-      <p class="meta">mercadolivre · livros de financas negocios</p>
-      <a class="botao" href="https://mercadolivre.com/sec/16Ze7xv" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/16Ze7xv" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_804988-MLU50457194611_062022-F.webp" alt="Pai rico em quadrinhos: como educar seus filhos para se tornarem ricos - Editora Alta Books"></div>
       <h3>Pai rico em quadrinhos: como educar seus filhos para se tornarem ricos - Editora Alta Books</h3>
       <p class="descricao">Livro em quadrinhos que ensina crianças a criar mentalidade financeira, construir ativos e entender como o dinheiro trabalha a seu favor. Leve, divertido e ideal para iniciar seus filhos no mundo das finanças.</p>
-      <p class="preco">41,90</p>
-      <p class="meta">mercadolivre · revistas periodicos</p>
-      <a class="botao" href="https://mercadolivre.com/sec/1vngv13" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/1vngv13" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_789725-MLB100656893635_122025-F.webp" alt="E-book Mais Esperto Que O Diabo - Napoleon Hill"></div>
       <h3>E-book Mais Esperto Que O Diabo - Napoleon Hill</h3>
       <p class="descricao">O e-book Mais Esperto que o Diabo, de Napoleon Hill, revela como superar medos e limitações que bloqueiam seu crescimento financeiro e pessoal. Com 240 páginas em PDF, é leitura essencial para quem busca prosperidade.</p>
-      <p class="preco">13,99</p>
-      <p class="meta">mercadolivre · ebooks livros digitais</p>
-      <a class="botao" href="https://mercadolivre.com/sec/2uqt55y" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/2uqt55y" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_809109-MLB100965547009_122025-F-1000-ideias-de-produtos-digital-para-vender-online-ebook.webp" alt="1000 Ideias De Produtos Digital Para Vender Online - Ebook"></div>
       <h3>1000 Ideias De Produtos Digital Para Vender Online - Ebook</h3>
       <p class="descricao">Ebook digital com 1000 ideias de produtos digitais validadas para vender online em diversos nichos, ideal para quem busca renda extra, começar no digital ou escalar um negócio sem estoque.</p>
-      <p class="preco">19,90</p>
-      <p class="meta">mercadolivre · ebooks livros digitais</p>
-      <a class="botao" href="https://mercadolivre.com/sec/111dY6W" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/111dY6W" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_678666-MLA83799607941_042025-F.webp" alt="Comece pelo mais difícil: 21 ótimas maneiras de superar a preguiça e se tornar altamente eficiente e produtivo, de Tracy, Brian. Editorial GMT Editores Ltda.,Editora Sextante,Editora Sextante, capa mole em português, 2017"></div>
       <h3>Comece pelo mais difícil: 21 ótimas maneiras de superar a preguiça e se tornar altamente eficiente e produtivo, de Tracy, Brian. Editorial GMT Editores Ltda.,Editora Sextante,Editora Sextante, capa mole em português, 2017</h3>
       <p class="descricao">Livro Comece pelo Mais Difícil ensina 21 estratégias práticas para vencer a procrastinação, aumentar a produtividade e focar no que realmente gera resultados financeiros e renda extra.</p>
-      <p class="preco">34,02</p>
-      <p class="meta">mercadolivre · livros de produtividade</p>
-      <a class="botao" href="https://mercadolivre.com/sec/2iVhVTF" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/2iVhVTF" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
