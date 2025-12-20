@@ -5,68 +5,56 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:12px;
-    text-align:center;
-    transition:transform .16s;
-    /* NOVO CSS PARA ALINHAMENTO */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
-    min-height: 350px;
-}
+.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-
-
-/* CSS CORRIGIDO PARA AS IMAGENS */
-.produto-card .thumb{
-    height:160px; /* Altura fixa para todos os cards */
-    display:flex; /* Usado para centralizar a imagem */
-    align-items:center;
-    justify-content:center;
-    margin-bottom:8px;
-}
-.produto-card .thumb img{
-    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
-    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
-    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
-    border-radius:8px;
-}
-/* FIM DO CSS CORRIGIDO */
-
+.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
+.meta{font-size:12px;color:#888;margin-bottom:8px}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
+<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7qukw-lhhul6ez3di57c.webp" alt="HQ BR Edibar - As Tiras Mais Engraçadas do Boêmio Mais Escroto dos Botecos Editora HQM Lucio Oliveira ( Novo e Lacrado )"></div>
       <h3>HQ BR Edibar - As Tiras Mais Engraçadas do Boêmio Mais Escroto dos Botecos Editora HQM Lucio Oliveira ( Novo e Lacrado )</h3>
       <p class="descricao">HQ Edibar, edição especial capa dura com 100 páginas de humor ácido e situações hilárias do boêmio mais maluco dos botecos. Produto novo, lacrado e oficial da editora HQM.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/6fa8pY1nZg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">12,90</p>
+      <p class="meta">shopee · quadrinhos revistas humor</p>
+      <a class="botao" href="https://s.shopee.com.br/6fa8pY1nZg" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/livro-a-balada-para-passear/livrosnainternet/320769/2669e253ffd6883768058034e185e9ce.png" alt="Livro - A Balada Para Passear"></div>
       <h3>Livro - A Balada Para Passear</h3>
       <p class="descricao">Quadrinho divertido onde Ágata, uma jovem da cidade grande, tem sua rotina virada do avesso ao cruzar com dois criminosos atrapalhados. Humor, caos e reflexão em uma história leve e envolvente.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://divulgador.magalu.com/FoYpMeG4" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">53,29</p>
+      <p class="meta">magalu · quadrinhos revistas humor</p>
+      <a class="botao" href="https://divulgador.magalu.com/FoYpMeG4" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7rd4f-lv4onhh2bb8726.webp" alt="Quantoon: Coletânea de humor"></div>
+      <h3>Quantoon: Coletânea de humor</h3>
+      <p class="descricao">Coletânea de tiras de humor criativas e inteligentes que misturam risadas rápidas com reflexões inesperadas, ideal para quem gosta de HQs diferentes e cheias de personalidade.</p>
+      <p class="preco">42,40</p>
+      <p class="meta">shopee · quadrinhos revistas humor</p>
+      <a class="botao" href="https://s.shopee.com.br/8KiXKcbdA9" target="_blank" rel="noopener">Ver produto</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/71q1S9ZCAlL._SY342_.jpg" alt="O Livro do Jorge - Tirinhas de Humor"></div>
+      <h3>O Livro do Jorge - Tirinhas de Humor</h3>
+      <p class="descricao">O Livro do Jorge é uma coletânea de tirinhas de humor brasileiro que retrata situações simples do cotidiano com leveza, ironia e muita identificação, garantindo boas risadas em poucas páginas.</p>
+      <p class="preco">38,00</p>
+      <p class="meta">amazon · quadrinhos revistas humor</p>
+      <a class="botao" href="https://amzn.to/3YwCxKm" target="_blank" rel="noopener">Ver produto</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
