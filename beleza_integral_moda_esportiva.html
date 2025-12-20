@@ -5,56 +5,88 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/cn-11134207-7ras8-m0iski8m9qdjf0.webp" alt="Masculino apertado roupas esportivas de Fitness de manga curta camiseta terno esportivo Goku 2 peças treinamento Jogging Shorts 2"></div>
       <h3>Masculino apertado roupas esportivas de Fitness de manga curta camiseta terno esportivo Goku 2 peças treinamento Jogging Shorts 2</h3>
       <p class="descricao">Conjunto fitness masculino inspirado no Goku, feito em poliéster com spandex, dry fit, leve e respirável. Ideal para treinos intensos com conforto, estilo e mobilidade total.</p>
-      <p class="preco">81,60</p>
-      <p class="meta">shopee · moda esportiva</p>
-      <a class="botao" href="https://s.shopee.com.br/2qNQ40YfcZ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/2qNQ40YfcZ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/71xw4do6QLL._AC_SX569_.jpg" alt="Top Sem Costura PUMA Feminino"></div>
       <h3>Top Sem Costura PUMA Feminino</h3>
       <p class="descricao">Top Feminino PUMA sem costura, com costas em Y, elástico estiloso e conforto total. Leve, flexível e ideal para treinos, caminhadas e looks athleisure. Toque macio, liberdade e estilo em uma peça só.</p>
-      <p class="preco">35,61</p>
-      <p class="meta">amazon · moda esportiva</p>
-      <a class="botao" href="https://amzn.to/3MABy9m" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://amzn.to/3MABy9m" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/1500x1500/conjunto-feminino-academia-esportivo-camisa-e-short-confortavel-zero-transparencia-moda-fitness-treino-look-esportivo-mais-vendido-keitemodaebeleza/keitefariasmodaebelezaltda/bloguerinha-preto-branco/69ad579c4db66aa0ad38d68a94b1f222.jpeg" alt="Conjunto feminino academia esportivo camisa e short confortavel zero transparencia moda fitness treino look esportivo mais vendido - KEITEMODAEBELEZA"></div>
       <h3>Conjunto feminino academia esportivo camisa e short confortavel zero transparencia moda fitness treino look esportivo mais vendido - KEITEMODAEBELEZA</h3>
       <p class="descricao">Conjunto feminino fitness com camiseta e short, confortável, zero transparência e tecido que estica bem, ideal para academia, treino, corrida ou uso casual com estilo e liberdade de movimento.</p>
-      <p class="preco">65,10</p>
-      <p class="meta">magalu · moda esportiva</p>
-      <a class="botao" href="https://divulgador.magalu.com/X0Jg2xO2" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/X0Jg2xO2" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_808493-MLB99405492133_112025-F-kit-6-pares-meia-puma-cano-curto-academia-esportiva-feminina.webp" alt="Kit 6 Pares Meia Puma Cano Curto Academia Esportiva Feminina"></div>
       <h3>Kit 6 Pares Meia Puma Cano Curto Academia Esportiva Feminina</h3>
       <p class="descricao">Kit com 6 pares de meias Puma femininas cano curto em algodão macio, respirável e confortável, ideal para academia, caminhadas e uso diário com ajuste perfeito e estilo esportivo.</p>
-      <p class="preco">69,99</p>
-      <p class="meta">mercadolivre · moda esportiva</p>
-      <a class="botao" href="https://mercadolivre.com/sec/2RwhHmF" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://mercadolivre.com/sec/2RwhHmF" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
