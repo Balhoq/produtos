@@ -5,108 +5,74 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:12px;
-    text-align:center;
-    transition:transform .16s;
-    /* NOVO CSS PARA ALINHAMENTO */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
-    min-height: 350px;
-}
+.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-
-
-/* CSS CORRIGIDO PARA AS IMAGENS */
-.produto-card .thumb{
-    height:160px; /* Altura fixa para todos os cards */
-    display:flex; /* Usado para centralizar a imagem */
-    align-items:center;
-    justify-content:center;
-    margin-bottom:8px;
-}
-.produto-card .thumb img{
-    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
-    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
-    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
-    border-radius:8px;
-}
-/* FIM DO CSS CORRIGIDO */
-
+.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
+.meta{font-size:12px;color:#888;margin-bottom:8px}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
+<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m0fwkxo84znle4.webp" alt="Bastão Pau de selfie Tripé Retrátil Com Luz LED Controle Bluetooth Celular"></div>
       <h3>Bastão Pau de selfie Tripé Retrátil Com Luz LED Controle Bluetooth Celular</h3>
       <p class="descricao">Bastão de selfie retrátil com tripé, luz LED de 3 intensidades e controle Bluetooth destacável — perfeito para fotos e vídeos até no escuro.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/7pkWJkBxUA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">18,81</p>
+      <p class="meta">shopee · smartphones tablets</p>
+      <a class="botao" href="https://s.shopee.com.br/7pkWJkBxUA" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mcg1d1524kpsce.webp" alt="BETTDOW Samsung Tab S9/S9 FE Lite 11 polegadas Teclado Bluetooth + Capa com Slot para Caneta (Tablet Não Incluso)"></div>
       <h3>BETTDOW Samsung Tab S9/S9 FE Lite 11 polegadas Teclado Bluetooth + Capa com Slot para Caneta (Tablet Não Incluso)</h3>
       <p class="descricao">Capa com teclado Bluetooth destacável para Samsung Tab S9/S9 FE 11", com suporte para S Pen, múltiplos ângulos de visualização e função Sleep/Wake.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/7KoFjA0yko" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">125,00</p>
+      <p class="meta">shopee · smartphones tablets</p>
+      <a class="botao" href="https://s.shopee.com.br/7KoFjA0yko" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lodufix44wx550.webp" alt="2025 Nova T800 Ultra 2 Série 8 Relógio Ultra Smart Watch Esportivo Sem Fio À Prova D'água"></div>
       <h3>2025 Nova T800 Ultra 2 Série 8 Relógio Ultra Smart Watch Esportivo Sem Fio À Prova D'água</h3>
       <p class="descricao">Smartwatch T800 Ultra 2 – Tela grande, Bluetooth, carregamento sem fio, à prova d’água e cheio de funções de saúde e esportes.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/6KviXwSxsA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">39,90</p>
+      <p class="meta">shopee · smartphones tablets</p>
+      <a class="botao" href="https://s.shopee.com.br/6KviXwSxsA" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7renf-m8yylazrggxsa6.webp" alt="Smartwatch D20 Pró/ Coloca Foto na Tela Esportivo Bluetooth"></div>
       <h3>Smartwatch D20 Pró/ Coloca Foto na Tela Esportivo Bluetooth</h3>
       <p class="descricao">Smartwatch D20 Pro com tela 1.3", Bluetooth, monitor cardíaco, contador de passos, modos esportivos e notificações. Compatível com Android/iOS e permite colocar foto na tela. Modelo Y-68, recarregamento via USB.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/5fg1l9yC4G" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">19,99</p>
+      <p class="meta">shopee · smartphones tablets</p>
+      <a class="botao" href="https://s.shopee.com.br/5fg1l9yC4G" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-luox93nvwt4087.webp" alt="Capa Capinha Space Acrílico Transparente Anti Impacto iPhone 7 8 Plus SE XR 11 12 13 14 15 Pro Max"></div>
       <h3>Capa Capinha Space Acrílico Transparente Anti Impacto iPhone 7 8 Plus SE XR 11 12 13 14 15 Pro Max</h3>
       <p class="descricao">Capinha Space/Acrílica Transparente Anti Impacto com certificação militar, proteção 360º, botões galvanizados, compatível com diversos modelos de iPhone. Ultra fina, não amarela, permite carregamento wireless e mantém o visual elegante do aparelho.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://s.shopee.com.br/5VNhzhHbRr" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">5,99</p>
+      <p class="meta">shopee · smartphones tablets</p>
+      <a class="botao" href="https://s.shopee.com.br/5VNhzhHbRr" target="_blank" rel="noopener">Ver produto</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.media-amazon.com/images/I/51D9OoRSlgL._AC_SL1000_.jpg" alt="Carregador Veicular Turbo 60W Para Automóvel Carregador de Carro Duas Entradas com Carregamento Super Rápido + Cabo USB-C Premium Compatível Com Dispositivos IOS e Android"></div>
       <h3>Carregador Veicular Turbo 60W Para Automóvel Carregador de Carro Duas Entradas com Carregamento Super Rápido + Cabo USB-C Premium Compatível Com Dispositivos IOS e Android</h3>
       <p class="descricao">Carregador Veicular Turbo 60W com duas entradas, carregamento super rápido, cabo USB-C premium, tecnologia Power Delivery, proteção completa e certificação ANATEL. Ideal para carregar dois dispositivos no carro com segurança.</p>
-      <p class="preco-sugestao">
-        💰 Ver Ofertas e Preço Atualizado
-      </p>
-      <a class="botao" href="https://amzn.to/4rwUxBI" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+      <p class="preco">37,89</p>
+      <p class="meta">amazon · smartphones tablets</p>
+      <a class="botao" href="https://amzn.to/4rwUxBI" target="_blank" rel="noopener">Ver produto</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
