@@ -5,173 +5,218 @@
 <title></title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
-header{text-align:center;margin-bottom:12px}h1{margin:0;color:#222}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
 .produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.produto-card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;transition:transform .16s}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
 .produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.produto-card .thumb img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
 .produto-card h3{font-size:15px;margin:6px 0;color:#111}
 .descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
-.preco{font-weight:700;color:#0a8f08;margin-bottom:8px}
-.meta{font-size:12px;color:#888;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
 .botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
 .botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
 </style>
 </head>
 <body>
-<header><h1></h1></header>
 <main><div class="produtos">
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/chapinha-prancha-taiff-200oc-red-ion/magazineluiza/235355000/2deb0764334ba955248355133d212e83.jpg" alt="Chapinha/Prancha Taiff 200ºC Red Íon"></div>
       <h3>Chapinha/Prancha Taiff 200ºC Red Íon</h3>
       <p class="descricao">A chapinha Taiff Red Íon atinge 200ºC, é leve, ergonômica, possui íons negativos para brilho e maciez, perfil de cerâmica que protege os fios e tecnologia que mantém a temperatura estável. Bivolt automática, cabo de 1,8 m e ideal para alisar ou modelar com segurança.</p>
-      <p class="preco">170,05</p>
-      <p class="meta">magalu · cuidados cabelos</p>
-      <a class="botao" href="https://divulgador.magalu.com/tQ=ZWWMy" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/tQ=ZWWMy" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/secador-de-cabelo-philco-bivolt-2200w-original-lancamento/sulamericaatacado/081/b745986df496b8874ce302462c45092e.jpeg" alt="Secador De Cabelo Philco Bivolt 2200w Original Lançamento"></div>
       <h3>Secador De Cabelo Philco Bivolt 2200w Original Lançamento</h3>
       <p class="descricao">O Secador Philco Pink Tourmaline PH3700 oferece 2200W de potência, tecnologia Tourmaline Ion, 2 velocidades, 3 temperaturas com jato frio e acompanha difusor e bocal concentrador. Ideal para secagem rápida, brilho intenso e redução de frizz.</p>
-      <p class="preco">195,21</p>
-      <p class="meta">magalu · cuidados cabelos</p>
-      <a class="botao" href="https://divulgador.magalu.com/V0OchEj0" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/V0OchEj0" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/barbeador-eletrico-philips-1000-series-seco-e-molhado-1-velocidade/syashop/9f907706842211f0b6bd42010a480899/1a887f7b9b8ed3336529a55c22c8ee77.jpeg" alt="Barbeador Elétrico Philips 1000 Series Seco e Molhado 1 Velocidade"></div>
       <h3>Barbeador Elétrico Philips 1000 Series Seco e Molhado 1 Velocidade</h3>
       <p class="descricao">O Barbeador Philips Shaver 1000 Series oferece barbear seco ou molhado com 27 lâminas autoafiadoras ComfortCut, uso sem fio por até 40 minutos, resistência à água, limpeza fácil e carregamento via USB. Ideal para rotina prática e confortável.</p>
-      <p class="preco">310,65</p>
-      <p class="meta">magalu · cuidados pele</p>
-      <a class="botao" href="https://divulgador.magalu.com/2VpKIP5X" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/2VpKIP5X" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/escova-secadora-britania-bec02pr-1300w-2-velocidades-ceramica/herivastore/9b97d7ba844b11f0a8da42010a480899/8e4770b2d7d68191a20b57dd3cfd40aa.jpeg" alt="Escova Secadora Britânia BEC02PR 1300W - 2 Velocidades Cerâmica"></div>
       <h3>Escova Secadora Britânia BEC02PR 1300W - 2 Velocidades Cerâmica</h3>
       <p class="descricao">A Escova Secadora Britânia BEC02PR 1300W é 4 em 1: seca, alisa, modela e dá volume com 2 velocidades, 3 temperaturas, revestimento cerâmico e cerdas mistas. Bivolt, prática e eficiente para resultados rápidos e com conforto.</p>
-      <p class="preco">147,11</p>
-      <p class="meta">magalu · cuidados cabelos</p>
-      <a class="botao" href="https://divulgador.magalu.com/Izmo0hSX" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/Izmo0hSX" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/cetaphil-kit-com-dois-cremes-hidratantes-pele-extremamente-seca-e-sensivel/epocacosmeticos-integra/70769/befc7f5d4fe4b55d67cd5a9445c8428c.jpeg" alt="Cetaphil Kit com Dois Cremes Hidratantes Pele Extremamente Seca e Sensível"></div>
       <h3>Cetaphil Kit com Dois Cremes Hidratantes Pele Extremamente Seca e Sensível</h3>
       <p class="descricao">O Kit Cetaphil Hidratante traz dois cremes desenvolvidos para pele extremamente seca e sensível, com fórmula de textura leve, sem fragrância e tecnologia moisture lock que hidrata por até 48h, deixando a pele macia, saudável e protegida.</p>
-      <p class="preco">198,90</p>
-      <p class="meta">magalu · cuidados pele</p>
-      <a class="botao" href="https://divulgador.magalu.com/25OAPRuw" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/25OAPRuw" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/depilador-feminino-laser-eletrico-sem-fio-110v-220v-removedor-recarregavel-corporal/oliststore/mglon8fi0p4k7fwi/1e9b2d4f508052423769c9cf1f4d89d9.jpeg" alt="Depilador Feminino Laser Eletríco Sem Fio 110V/220V - Removedor Recarregável Corporal"></div>
       <h3>Depilador Feminino Laser Eletríco Sem Fio 110V/220V - Removedor Recarregável Corporal</h3>
       <p class="descricao">O Depilador Feminino Laser Elétrico Sem Fio é recarregável, portátil e indicado para remover pelos do corpo todo com segurança e sem dor. Possui 5 intensidades, sensor que ativa somente ao toque na pele, bateria de íon de lítio, uso bivolt e design compacto. Acompanha cabeça depilatória, cabeça microfólio para esfoliação, cabo USB e acessórios.</p>
-      <p class="preco">50,04</p>
-      <p class="meta">magalu · cuidados pele</p>
-      <a class="botao" href="https://divulgador.magalu.com/vlNcjrPL" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/vlNcjrPL" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://m.magazineluiza.com.br/a-static/420x420/balanca-digital-de-controle-corporal-ate-150kg-mondial-ellegance-bl-03/magazineluiza/236545700/ed1578ffd1c59c16c3f008cb04189622.jpg" alt="Balança Digital de Controle Corporal até 150kg - Mondial Ellegance BL-03"></div>
       <h3>Balança Digital de Controle Corporal até 150kg - Mondial Ellegance BL-03</h3>
       <p class="descricao">A Balança Digital Mondial Ellegance BL-03 suporta até 150kg, possui vidro temperado resistente, visor LCD, acionamento automático, pés antiderrapantes e indicador de bateria fraca, oferecendo praticidade, segurança e design moderno para o controle corporal diário.</p>
-      <p class="preco">76,63</p>
-      <p class="meta">magalu · saude cuidados pessoais</p>
-      <a class="botao" href="https://divulgador.magalu.com/rBOtTFd_" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/rBOtTFd_" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/bicicleta-aro-26-colli-allegra-city-cazelle-freio-v-brake-aco-carbono-18-marchas/magazineluiza/237943800/feb8f61e6213261d0e95859355350002.jpg" alt="Bicicleta Aro 26 Colli Allegra City Cazelle - Freio V-Brake Aço Carbono 18 Marchas"></div>
       <h3>Bicicleta Aro 26 Colli Allegra City Cazelle - Freio V-Brake Aço Carbono 18 Marchas</h3>
       <p class="descricao">Bicicleta Colli Allegra City Cazelle aro 26 com 18 marchas, freios V-Brake e quadro em aço carbono. Versátil, resistente e com design feminino rosa neon, ideal para passeios, treinos leves e mais qualidade de vida no dia a dia.</p>
-      <p class="preco">721,05</p>
-      <p class="meta">magalu · equipamentos esportivos</p>
-      <a class="botao" href="https://divulgador.magalu.com/D9EQE5FA" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/D9EQE5FA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/patinete-3-rodas-skatenet-max-com-led-bandeirante/magazineluiza/235241200/fb79265192f798919139be77af18c5f0.jpg" alt="Patinete 3 Rodas Skatenet Max com LED - Bandeirante"></div>
       <h3>Patinete 3 Rodas Skatenet Max com LED - Bandeirante</h3>
       <p class="descricao">Patinete 3 Rodas Skatenet Max com LED, ideal para desenvolver equilíbrio e coordenação motora. Possui rodas com luz, freio traseiro, guidão ajustável e base antiderrapante, garantindo diversão segura para crianças a partir dos 3 anos.</p>
-      <p class="preco">484,70</p>
-      <p class="meta">magalu · equipamentos esportivos</p>
-      <a class="botao" href="https://divulgador.magalu.com/28VtS8BA" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/28VtS8BA" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/212-vip-rose-carolina-herrera-body-spray/epocacosmeticos-integra/41990/a79ba79b28a0711bf2e28c9d33256d93.jpeg" alt="212 Vip Rosé Carolina Herrera - Body Spray"></div>
       <h3>212 Vip Rosé Carolina Herrera - Body Spray</h3>
       <p class="descricao">Body Spray 212 VIP Rosé Carolina Herrera, fragrância feminina floral frutal com notas de champagne rosé, pêssego, flor de pêssego, almíscar branco e âmbar, ideal para uso diário com frescor, atitude e elegância.</p>
-      <p class="preco">229,90</p>
-      <p class="meta">magalu · perfumaria</p>
-      <a class="botao" href="https://divulgador.magalu.com/7cn57cyl" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/7cn57cyl" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/tenis-feminino-olympikus-treinos-amortecedor-corrida-apolis-206/kaiuscalcados/0000001030136/6282d3597dfb47bf6e07ad4704a21ed0.jpeg" alt="Tenis Feminino Olympikus treinos Amortecedor Corrida Apolis 206"></div>
       <h3>Tenis Feminino Olympikus treinos Amortecedor Corrida Apolis 206</h3>
       <p class="descricao">Tênis Olympikus Apolis 206 com tecnologia Evasense, cabedal em jacquard resistente e design moderno. Leve, confortável e ideal para treinos e uso diário. Produto original com nota fiscal.</p>
-      <p class="preco">183,99</p>
-      <p class="meta">magalu · calcados tenis</p>
-      <a class="botao" href="https://divulgador.magalu.com/obLcdoWd" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/obLcdoWd" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/colonia-granado-terrapeutics-cardamomo-e-gengibre-230ml/farmaciaindiana/176261/f5484c8323b2c7813d3800f955e3268d.jpeg" alt="Colônia Granado Terrapeutics Cardamomo e Gengibre 230ML"></div>
       <h3>Colônia Granado Terrapeutics Cardamomo e Gengibre 230ML</h3>
       <p class="descricao">Colônia Granado Terrapeutics Cardamomo e Gengibre 230ml com fragrância aromática especiada, vegana, refrescante e unissex. Ideal para quem busca frescor, elegância e conexão com a natureza.</p>
-      <p class="preco">59,30</p>
-      <p class="meta">magalu · perfumaria</p>
-      <a class="botao" href="https://divulgador.magalu.com/0tcLb0XQ" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/0tcLb0XQ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/kit-2-frasco-levedura-de-cerveja-suplemento-alimentar-natural-100-puro-po-original-premium-green-120-capsulas-natunectar/natu7suplementos/2xnt0015/2fce310f0c8dd2bf249cf1af2f475df1.jpeg" alt="Kit 2 Frasco Levedura de Cerveja Suplemento Alimentar Natural 100% Puro Pó Original Premium Green 120 Cápsulas Natunéctar"></div>
       <h3>Kit 2 Frasco Levedura de Cerveja Suplemento Alimentar Natural 100% Puro Pó Original Premium Green 120 Cápsulas Natunéctar</h3>
       <p class="descricao">Suplemento alimentar natural à base de levedura de cerveja, em cápsulas, ideal para complementar a alimentação e apoiar saúde, beleza e bem-estar no dia a dia.</p>
-      <p class="preco">44,90</p>
-      <p class="meta">magalu · suplementos alimentares</p>
-      <a class="botao" href="https://divulgador.magalu.com/9rxiYihg" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/9rxiYihg" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/conjunto-feminino-3-pecas-blazer-short-saia-cropped-preto-josy-modas/jmf/65d13634110a11ec81b34201ac185013/64836bcca2d41d5efe32ea8dab46bc3f.jpeg" alt="Conjunto Feminino 3 Peças Blazer Short Saia Cropped Preto - Josy Modas"></div>
       <h3>Conjunto Feminino 3 Peças Blazer Short Saia Cropped Preto - Josy Modas</h3>
       <p class="descricao">Conjunto feminino 3 peças preto com blazer, short saia cintura alta e cropped em tecido ponto roma, moderno, confortável e ideal para criar looks elegantes e versáteis.</p>
-      <p class="preco">175,77</p>
-      <p class="meta">magalu · roupas femininas</p>
-      <a class="botao" href="https://divulgador.magalu.com/ebumffqh" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/ebumffqh" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/bermuda-cargo-masculina-short-masculino-grafite-100-algodao-nobrand/otterstore/bermudagrafite/6357cdc2676ed93bb5f1eb5ab6523076.jpeg" alt="Bermuda Cargo Masculina Short Masculino Grafite 100% Algodão - NoBrand"></div>
       <h3>Bermuda Cargo Masculina Short Masculino Grafite 100% Algodão - NoBrand</h3>
       <p class="descricao">Bermuda cargo masculina grafite 100% algodão, confortável, respirável e versátil, com bolsos funcionais e caimento moderno, ideal para looks casuais, urbanos e uso diário.</p>
-      <p class="preco">76,95</p>
-      <p class="meta">magalu · roupas masculinas</p>
-      <a class="botao" href="https://divulgador.magalu.com/HXb2pAun" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/HXb2pAun" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/1500x1500/conjunto-feminino-academia-esportivo-camisa-e-short-confortavel-zero-transparencia-moda-fitness-treino-look-esportivo-mais-vendido-keitemodaebeleza/keitefariasmodaebelezaltda/bloguerinha-preto-branco/69ad579c4db66aa0ad38d68a94b1f222.jpeg" alt="Conjunto feminino academia esportivo camisa e short confortavel zero transparencia moda fitness treino look esportivo mais vendido - KEITEMODAEBELEZA"></div>
       <h3>Conjunto feminino academia esportivo camisa e short confortavel zero transparencia moda fitness treino look esportivo mais vendido - KEITEMODAEBELEZA</h3>
       <p class="descricao">Conjunto feminino fitness com camiseta e short, confortável, zero transparência e tecido que estica bem, ideal para academia, treino, corrida ou uso casual com estilo e liberdade de movimento.</p>
-      <p class="preco">65,10</p>
-      <p class="meta">magalu · moda esportiva</p>
-      <a class="botao" href="https://divulgador.magalu.com/X0Jg2xO2" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/X0Jg2xO2" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     
     <div class="produto-card">
       <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/anel-infinito-amor-prata-925-dourada-ouro-18k-tudo-prata/tudoprata/mlb1361411457ouro-24/9fefcf0d7652d5170900def1123a2b49.jpeg" alt="Anel Infinito Amor Prata 925 Dourada Ouro 18k - Tudo Prata"></div>
       <h3>Anel Infinito Amor Prata 925 Dourada Ouro 18k - Tudo Prata</h3>
       <p class="descricao">Anel Infinito Amor em Prata 925 banhado a Ouro 18k, delicado, sofisticado e cheio de significado, ideal para uso diário ou para presentear com elegância e simbolismo.</p>
-      <p class="preco">63,90</p>
-      <p class="meta">magalu · acessorios joias</p>
-      <a class="botao" href="https://divulgador.magalu.com/HRvxY0XK" target="_blank" rel="noopener">Ver produto</a>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://divulgador.magalu.com/HRvxY0XK" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
     </div>
     </div></main>
 <footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
