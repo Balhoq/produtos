@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+.produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
+.produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
+.produto-card h3{font-size:15px;margin:6px 0;color:#111}
+.descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
+.botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
+</style>
+</head>
+<body>
+<main><div class="produtos">
+    <div class="produto-card">
+      <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-820lm-mr3grmj5g9acd2.webp" alt="Máscara de Dormir 3D Blackout"></div>
+      <h3>Máscara de Dormir 3D Blackout</h3>
+      <p class="descricao">Máscara 3D blackout preta em lycra e espuma de memória, com elástico ajustável e vedação nasal.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/gPqO0zsbP" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m86nwyi2v21d2a.webp" alt="Chinelo Pantufa de Pelúcia Confortável"></div>
+      <h3>Chinelo Pantufa de Pelúcia Confortável</h3>
+      <p class="descricao">Pantufa unissex de pelúcia com solado antiderrapante, do 33/34 ao 43/44.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/5foWLYC63F" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-81zup-ml40ktk9xc031c.webp" alt="Kit 2 Protetor Solar Parabrisa"></div>
+      <h3>Kit 2 Protetor Solar Parabrisa</h3>
+      <p class="descricao">Kit 2 protetores solares para-brisa, proteção UV, dobráveis, com ventosas</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/8AVrMbtZWU" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m781lc732bm2db.webp" alt="kit Mop Rodo Flat Limpa e Seca Cabo Com Balde 5 litros"></div>
+      <h3>kit Mop Rodo Flat Limpa e Seca Cabo Com Balde 5 litros</h3>
+      <p class="descricao">Kit mop rodo flat com balde 5L e refil de microfibra ajustável</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://s.shopee.com.br/8KpHZKVNEy" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    </div></main>
+<footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
+</body></html>
