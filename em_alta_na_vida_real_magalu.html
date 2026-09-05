@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+.produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
+.produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
+.produto-card h3{font-size:15px;margin:6px 0;color:#111}
+.descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
+.botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
+</style>
+</head>
+<body>
+<main><div class="produtos">
+    <div class="produto-card">
+      <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/cadeira-de-escritorio-diretor-giratoria-preta-dir-002b-otello/magazineluiza/238844000/497428fe34426ed3d379cf319972908e.jpg" alt="Cadeira de Escritório Diretor Giratória Preta DIR-002B Otello"></div>
+      <h3>Cadeira de Escritório Diretor Giratória Preta DIR-002B Otello</h3>
+      <p class="descricao">Cadeira diretor Otello preta giratória, com ajuste de altura e 5 rodas.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://magazineluiza.onelink.me/589508454/bw7zzheu" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/ventilador-de-mesa-britania-bvt301-30cm-6-pas-3-velocidades-preto/magazineluiza/237756400/a7d745fb58d9f82101897170fdaa135f.jpg" alt="Ventilador de Mesa Britânia BVT301 30cm"></div>
+      <h3>Ventilador de Mesa Britânia BVT301 30cm</h3>
+      <p class="descricao">Ventilador Britânia BVT301 30cm, 60W, 6 pás e 3 velocidades, preto.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://magazineluiza.onelink.me/589508454/6xpi6bsl" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/ring-light-iluminador-led-10-polegada-26cm-tripe-110m-profissional-blogueira-youtube-ms322-mimi/mimistore/480954b8dbbc11ee987c4201ac185040/13867fc3f93a006cd4ccf55541ba6470.jpeg" alt="Ring Light Iluminador Led 10 Polegada"></div>
+      <h3>Ring Light Iluminador Led 10 Polegada</h3>
+      <p class="descricao">Ring light LED 26 cm com tripé de 1,10 m e três tons de luz para vídeos.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://magazineluiza.onelink.me/589508454/unpkghei" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://a-static.mlcdn.com.br/800x560/squeeze-garrafa-termica-circinus-1-litro-termopro/atacadogourmet2/var-tp6622/f2cabf3d19acd1cbf5594e62b7289b13.jpeg" alt="Squeeze Garrafa Termica Circinus 1 Litro"></div>
+      <h3>Squeeze Garrafa Termica Circinus 1 Litro</h3>
+      <p class="descricao">Squeeze térmico Termopro 1L em aço inox, quente por até 6h e frio por até 12h.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://magazineluiza.onelink.me/589508454/76kkdyhs" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    </div></main>
+<footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
+</body></html>
