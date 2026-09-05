@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+.produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
+.produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
+.produto-card h3{font-size:15px;margin:6px 0;color:#111}
+.descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
+.botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
+</style>
+</head>
+<body>
+<main><div class="produtos">
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/51W4Uo0BtFL._AC_SX679_.jpg" alt="Doaf Cafeteira Espresso Prensa Francesa Filtro Inox 350ml"></div>
+      <h3>Doaf Cafeteira Espresso Prensa Francesa Filtro Inox 350ml</h3>
+      <p class="descricao">Prensa francesa Doaf 350ml com vidro borossilicato e filtro inox, ideal para 1-2 xícaras de café.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://link.amazon/B0fGdBWuU" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/61fS57w53WL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Travesseiro Sonos Nasa Light Alto 14cm de Altura"></div>
+      <h3>Travesseiro Sonos Nasa Light Alto 14cm de Altura</h3>
+      <p class="descricao">Travesseiro Sonos 14 cm com espuma de suporte e tecido de algodão macio.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://link.amazon/B0fSlhGi2" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/51SikbdZy3L._AC_SX522_.jpg" alt="JBL, Fone de Ouvido Bluetooth Over-Ear, Tune 530BT"></div>
+      <h3>JBL, Fone de Ouvido Bluetooth Over-Ear, Tune 530BT</h3>
+      <p class="descricao">Fone JBL Tune 530BT sem fio com Pure Bass, 76h de bateria e chamadas claras.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://link.amazon/B0cxUqXqQ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T3/images/I/61JxLLRd5CL._AC_SX522_.jpg" alt="Planner Semanal Colorido 50 Páginas para Organização de Rotinas"></div>
+      <h3>Planner Semanal Colorido 50 Páginas para Organização de Rotinas</h3>
+      <p class="descricao">Planner semanal colorido com 50 páginas para organizar tarefas, hábitos e compromissos</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://link.amazon/B0ca7yYkb" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    </div></main>
+<footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
+</body></html>
