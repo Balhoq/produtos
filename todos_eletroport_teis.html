@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;margin:0;padding:18px}
+/* REMOÇÃO: REMOVEMOS O CSS DO HEADER AQUI */
+.produtos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.produto-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:transform .16s;
+    /* NOVO CSS PARA ALINHAMENTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    /* Define uma altura mínima para evitar que cards muito vazios fiquem pequenos */
+    min-height: 350px;
+}
+.produto-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+
+/* CSS CORRIGIDO PARA AS IMAGENS */
+.produto-card .thumb{
+    height:160px; /* Altura fixa para todos os cards */
+    display:flex; /* Usado para centralizar a imagem */
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+.produto-card .thumb img{
+    max-width:100%; /* Garante que a largura máxima seja 100% do contêiner */
+    max-height:100%; /* Garante que a altura máxima seja 100% do contêiner (160px) */
+    object-fit:contain; /* Redimensiona a imagem para caber inteira, sem cortar */
+    border-radius:8px;
+}
+/* FIM DO CSS CORRIGIDO */
+
+.produto-card h3{font-size:15px;margin:6px 0;color:#111}
+.descricao{font-size:13px;color:#444;height:42px;overflow:hidden;margin-bottom:8px}
+.preco-sugestao{font-weight:700;color:#007bff; /* Azul para incentivar o clique */ margin-bottom:8px; font-size: 14px;}
+.botao{display:inline-block;padding:8px 12px;background:#ff6600;color:#fff;text-decoration:none;border-radius:6px}
+.botao:hover{background:#e55c00}footer{margin-top:18px;font-size:12px;color:#666;text-align:center}
+</style>
+</head>
+<body>
+<main><div class="produtos">
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/519hV4uwXHL._AC_SX679_.jpg" alt="Robô Aspirador KaBuM! Smart 900 Preto IR360°"></div>
+      <h3>Robô Aspirador KaBuM! Smart 900 Preto IR360°</h3>
+      <p class="descricao">Robô aspirador KaBuM! Smart 900 4 em 1 com app e navegação a laser 3D.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://link.amazon/B0dAurmcJ" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/41SQPuj5lZL._AC_SX679_.jpg" alt="Xiaomi Aspirador Robô S40 3 em 1"></div>
+      <h3>Xiaomi Aspirador Robô S40 3 em 1</h3>
+      <p class="descricao">Robô Xiaomi S40 3 em 1 com sucção de 10.000Pa, filtro HEPA e controle por app</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://link.amazon/B00dpX12M" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    
+    <div class="produto-card">
+      <div class="thumb"><img src="https://m.media-amazon.com/images/I/51bNo79gFtL._AC_SY679_.jpg" alt="Xiaomi Robot Vacuum H50 EU"></div>
+      <h3>Xiaomi Robot Vacuum H50 EU</h3>
+      <p class="descricao">Robô Xiaomi H50 2 em 1 com app, navegação inteligente e base autolimpante.</p>
+      <p class="preco-sugestao">
+        💰 Ver Ofertas e Preço Atualizado
+      </p>
+      <a class="botao" href="https://link.amazon/B0h7oSQao" target="_blank" rel="noopener">Consultar Preço e Oferta</a>
+    </div>
+    </div></main>
+<footer>Portal Multicanal - conteúdo gerado automaticamente</footer>
+</body></html>
